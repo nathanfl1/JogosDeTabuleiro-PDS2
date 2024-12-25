@@ -13,7 +13,7 @@ class BoardGame {
         char **board = nullptr;
     public:
         BoardGame(int, int);
-        virtual void readRound(pair<int, int>) = 0;
+        virtual void readRound(pair<int, int>, Player *player) = 0;
         virtual bool roundIsValid(pair<int, int>) = 0;
         virtual bool didPlayerWin() = 0;
         void printBoard();

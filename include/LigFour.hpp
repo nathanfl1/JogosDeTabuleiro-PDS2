@@ -2,17 +2,22 @@
 #define LIGFOUR_H
 
 #include "BoardGame.hpp"
+#include "Player.hpp"
+#include <map>
 
 using namespace std;
 class LigFour : public BoardGame
 {
     private:
-        /* data */
+        Player *player1;
+        Player *player2;
+        map<string, char> playerSymbols;
+
     public:
-        LigFour();
+        LigFour(Player *, Player *);
         ~LigFour();
         bool didPlayerWin();
-        void readRound(pair<int,int>) override;
+        void readRound(pair<int,int>, Player *player) override;
         bool roundIsValid(pair<int,int>) override;
         bool didPlayerWin() override;
 };

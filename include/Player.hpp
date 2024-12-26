@@ -7,17 +7,22 @@ using namespace std;
 
 class Player{
     private:
-        string name, nickname;
+        string nickname, name;
         int wins, losses;
 
     public:
-        Player(string name, string nickname);
-        void addWin(){};
-        void addLoss(){};
-        int getWins(){};
-        int getLosses(){};
-        string getName(){};
-        string getNickname(){};
+        static bool compararPlayerComPlayer(Player*);
+        Player(string nickname, string name);
+        void addWin();
+        void addLoss();
+        int getWins();
+        int getLosses();
+        string getName();
+        string getNickname();
+        bool operator==(const Player &a)
+        {
+            return nickname == a.nickname;
+        }
 };
 
 

@@ -1,6 +1,6 @@
 #include "../include/Player.hpp"
 
-Player::Player(string name, string nickname): name(name), nickname(nickname){
+Player::Player(string nickname, string name): nickname(nickname),name(name){
     wins = 0;
     losses = 0;
 }

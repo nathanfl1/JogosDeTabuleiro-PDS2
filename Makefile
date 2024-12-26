@@ -23,9 +23,14 @@ $(OBJ_DIR)/Checkers.o: $(INCLUDE_DIR)/Checkers.hpp $(INCLUDE_DIR)/BoardGame.hpp 
 $(OBJ_DIR)/main.o: $(INCLUDE_DIR)/BoardGame.hpp $(INCLUDE_DIR)/Checkers.hpp $(SRC_DIR)/main.cpp  
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/main.o
 
+$(OBJ_DIR)/Player.o: $(INCLUDE_DIR)/Player.hpp $(SRC_DIR)/Player.cpp
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/Player.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/Player.o
 
-main: $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Checkers.o
-	$(CC) $(CFLAGS) $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Checkers.o -o main
+$(OBJ_DIR)/PlayerList.o: $(INCLUDE_DIR)/PlayerList.hpp $(SRC_DIR)/PlayerList.cpp
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/PlayerList.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/PlayerList.o
+
+main: $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Checkers.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o
+	$(CC) $(CFLAGS) $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Checkers.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o  -o main
 
 
 clean:

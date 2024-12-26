@@ -27,6 +27,48 @@ bool LigFour::roundIsValid(pair<int,int> place) {
     return false;
 };
 
-bool LigFour::didPlayerWin(){
+bool LigFour::didPlayerWin(Player *player){
+    char symbol = playerSymbols[player->getNickname()];
 
+    // runningh through all the board (except last 3 collumns and lines, as they are not needed)
+    for (int l = 0; l < (getSize().first - 3); l++){
+        for (int c = 0; c < (getSize().second - 3); c++){
+
+            if(board[l][c] == symbol){
+
+                // vertical test
+                for(int i=1; i<=3; i++){
+                    if(board[l+i][c] != symbol)
+                        break;
+                    else if(i==3)
+                        return true;
+                }
+
+                // horizontal test
+                for(int i=1; i<=3; i++){
+                    if(board[l][c+i] != symbol)
+                        break;
+                    else if(i==3)
+                        return true;
+                }
+
+                // primary diagonal test
+                for(int i=1; i<=3; i++){
+                    if(board[l+i][c+i] != symbol)
+                        break;
+                    else if(i==3)
+                        return true;
+                }
+            }
+            // secondary diagonal test
+            if(board[l][(getSize().second-1)-c] == symbol)
+                for(int i=1; i<=3; i++){
+                    if(board[l+i][(getSize().second-1)-c-i] != symbol)
+                        break;
+                    else if(i==3)
+                        return true;
+                }
+        }
+    }
+    return false;
 };

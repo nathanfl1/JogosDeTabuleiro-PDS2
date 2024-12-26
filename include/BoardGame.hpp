@@ -1,8 +1,8 @@
 #ifndef BOARDGAME_H
 #define BOARDGAME_H
 
-// #include <iostream>
 #include <vector>
+#include "Player.hpp"
 
 using namespace std;
 
@@ -15,7 +15,7 @@ class BoardGame {
         BoardGame(int, int);
         virtual void readRound(pair<int, int>, Player *player) = 0;
         virtual bool roundIsValid(pair<int, int>) = 0;
-        virtual bool didPlayerWin() = 0;
+        virtual bool didPlayerWin(Player *player) = 0;
         void printBoard();
         void setBoard();
         void setSize(int, int);

@@ -19,7 +19,7 @@ class LigFour : public BoardGame
         bool didPlayerWin();
         void readRound(pair<int,int>, Player *player) override;
         bool roundIsValid(pair<int,int>) override;
-        bool didPlayerWin() override;
+        bool didPlayerWin(Player *player) override;
 };
 
 #endif

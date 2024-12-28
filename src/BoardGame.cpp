@@ -57,8 +57,6 @@ BoardGame::~BoardGame(){
     }
     
     delete[] board;
-    
-
 }
 
 

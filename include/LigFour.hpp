@@ -16,10 +16,13 @@ class LigFour : public BoardGame
     public:
         LigFour(Player *, Player *);
         ~LigFour();
-        bool didPlayerWin();
+        void startGame(Player *player1, Player *player2) override;
         void readRound(pair<int,int>, Player *player) override;
+        bool didPlayerWin();
         bool roundIsValid(pair<int,int>) override;
         bool didPlayerWin(Player *player) override;
+        bool isBoardFull();
+        bool isBoardEmpty();
 };
 
 #endif

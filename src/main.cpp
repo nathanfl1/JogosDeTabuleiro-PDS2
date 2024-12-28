@@ -1,4 +1,5 @@
 #include "../include/BoardGame.hpp"
+#include "../include/LigFour.hpp"
 #include "../include/PlayerList.hpp"
 #include <iostream>
 using namespace std;

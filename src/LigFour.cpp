@@ -92,53 +92,6 @@ bool LigFour::didPlayerWin(Player *player){
     return false;
 };
 
-// bool LigFour::didPlayerWin(Player *player){
-//     char symbol = playerSymbols[player->getNickname()];
-
-//     // runningh through all the board (except last 3 columns and lines, as they are not needed)
-//     for (int l = 0; l < (getSize().first - 3); l++){
-//         for (int c = 0; c < (getSize().second - 3); c++){
-
-//             if(board[l][c] == symbol){
-
-//                 // vertical test
-//                 for(int i=1; i<=3; i++){
-//                     if(board[l+i][c] != symbol)
-//                         break;
-//                     else if(i==3)
-//                         return true;
-//                 }
-
-//                 // horizontal test
-//                 for(int i=1; i<=3; i++){
-//                     if(board[l][c+i] != symbol)
-//                         break;
-//                     else if(i==3)
-//                         return true;
-//                 }
-
-//                 // primary diagonal test
-//                 for(int i=1; i<=3; i++){
-//                     if(board[l+i][c+i] != symbol)
-//                         break;
-//                     else if(i==3)
-//                         return true;
-//                 }
-//             }
-//             // secondary diagonal test
-//             if(board[l][(getSize().second-1)-c] == symbol)
-//                 for(int i=1; i<=3; i++){
-//                     if(board[l+i][(getSize().second-1)-c-i] != symbol)
-//                         break;
-//                     else if(i==3)
-//                         return true;
-//                 }
-//         }
-//     }
-//     return false;
-// };
-
-
 void LigFour::startGame(Player *player1, Player *player2){
     Player *currentPlayer = player2;
     pair<int, int> input(-1, -1);
@@ -151,16 +104,23 @@ void LigFour::startGame(Player *player1, Player *player2){
         currentPlayer = (currentPlayer == player1) ? player2 : player1;
 
         printBoard();
-        cout << "Vez do jogador " << currentPlayer->getNickname() << "!" << endl << "Escolha uma coluna para inserir a peça: ";
+        cout << "Turno de jogador " << currentPlayer->getNickname() << ":" << endl;
 
         // loop while the column chosen is invalid (first run is default)
         while (input.first == -1){
             cin >> input.second; //reading the column
             input.second--;
 
+            // treating wrong inputs
+             if (cin.fail()) { 
+                cin.clear();  // Limpa o estado de erro
+                cin.ignore(1000, '\n'); // Descarta até 1000 caracteres ou até encontrar uma nova linha
+                cout << " ERRO: formato incorreto" << endl;
+                continue;
+            }
+
             if (input.second < 0 || input.second >= getSize().second) {
-                cout << "Coluna inválida!" << endl;
-                cout << "Escolha uma nova coluna: ";
+                cout << " ERRO: jogada inválida" << endl;
                 continue;
             }
 
@@ -171,15 +131,14 @@ void LigFour::startGame(Player *player1, Player *player2){
                     break;
                 }
             }
-            // if there isn't any empty place in  this column: don't let roun happen
+            // checking if the column is avaliable 
             if(input.first == -1){
-                cout << "A coluna informada está cheia!" << endl;
-                printBoard();
-                cout << "Escolha uma nova coluna: ";
+                cout << " ERRO: jogada inválida" << endl;
+                // printBoard();
                 continue;
             }
         }
-        cout << "|*|*| coluna valida, par: (" << input.first << " ," << input.second << ")" << endl;
+        // cout << "|*|*| coluna valida, par: (" << input.first << " ," << input.second << ")" << endl;
 
         readRound(input, currentPlayer);
         cout << "**** FIM DA JOGADA ****" << endl << endl;
@@ -187,6 +146,8 @@ void LigFour::startGame(Player *player1, Player *player2){
 
     } while (!didPlayerWin(currentPlayer) && !isBoardFull());
     
+    cout << endl << "**** FIM DE JOGO ****"  << endl;
+
     if(didPlayerWin(currentPlayer)){
         printBoard();
         cout << currentPlayer->getNickname() << " venceu a partida, parabéns!!!";
@@ -194,8 +155,6 @@ void LigFour::startGame(Player *player1, Player *player2){
         currentPlayer == player1? player1->addLoss() : player2->addLoss();
     }
     else
-        cout << "A partida terminou em empate! Ninguém venceu desta vez." << endl;
-
-    
+        cout << "A partida terminou em empate! Ninguém venceu desta vez." << endl;    
 
 };

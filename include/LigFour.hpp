@@ -14,7 +14,8 @@ class LigFour : public BoardGame
         map<string, char> playerSymbols;
 
     public:
-        LigFour(Player *, Player *);
+        LigFour(Player*, Player*);
+        LigFour();
         ~LigFour();
         void startGame(Player *player1, Player *player2) override;
         void readRound(pair<int,int>, Player *player) override;

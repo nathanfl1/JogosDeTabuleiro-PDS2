@@ -17,6 +17,8 @@ int PlayerList::addPlayer(Player *p)
             return ERR_REPEATED_PLAYER;
     }
     players.push_back(p);
+    count++;
+    saveData();
     return SUCCESS;
 }
 
@@ -33,6 +35,7 @@ void PlayerList::sortByName()
 {
     players.sort(compareName);
 }
+
 void PlayerList::sortByNickname()
 {
     players.sort(compareNickname);
@@ -50,25 +53,61 @@ int PlayerList::removePlayer(string s)
         if(player->getNickname() == s)
         {
             players.remove(player);
+            saveData();
             return SUCCESS;
         }
     }
+
     return ERR_PLAYER_NOT_FOUND;
 }
 void PlayerList::display()
 {
     for(auto p : players)
     {
+        int* wins = p->getWins();        
         cout << p->getNickname() << " " << p->getName() << endl;
-        cout << "REVERSI - em breve" << endl;
-        cout << "LIG4 - em breve" << endl;
-        cout << "VELHA - em breve" << endl;
-        cout << "DAMAS - em breve" << endl;
+        cout << "REVERSI - " << wins[0] << endl;
+        cout << "LIG4 - " << wins[1] << endl;
+        cout << "VELHA - " << wins[2] << endl;
+        cout << "DAMAS - " << wins[3] << endl;
         cout << "------------------" << endl;
 
 
     }
 }
+
+//int PlayerList::searchPlayer(string s)
+//{
+//    int index = 0;
+//    for(auto player : players)
+//    {
+//        if(player->getNickname() == s)
+//            return index;
+//        index++;
+//    }
+//    return ERR_PLAYER_NOT_FOUND;
+//}
+Player* PlayerList::searchPlayer(string s)
+{
+    for(auto player : players)
+        if(player->getNickname() == s)
+            return player;
+    
+    return nullptr;
+}
+
+void PlayerList::saveData() {
+    ofstream file("data/data.txt");
+
+    for (auto player : players) {
+        file << player->getName() << '\n';
+        file << player->getNickname() << '\n';
+    }
+
+    
+}
+
+
 PlayerList::~PlayerList()
 {
 

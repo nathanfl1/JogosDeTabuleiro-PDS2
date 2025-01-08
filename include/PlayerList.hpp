@@ -5,6 +5,8 @@
 #include <iostream>
 #include <algorithm>
 #include <list>
+#include <fstream>
+
 
 using namespace std;
 class PlayerList
@@ -26,6 +28,10 @@ public:
     void sortByNickname();
     int removePlayer(string);
     void display();
+    //int searchPlayer(string);
+    Player* searchPlayer(string);
+    void saveData();
+    void loadData();
     ~PlayerList();
 };
 

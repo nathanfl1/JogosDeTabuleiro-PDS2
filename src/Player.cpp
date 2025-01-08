@@ -1,20 +1,24 @@
 #include "../include/Player.hpp"
 
 Player::Player(string nickname, string name): nickname(nickname),name(name){
-    wins = 0;
-    losses = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        wins[i] = 0;
+        losses[i] = 0;
+    }
+    
 }
 
-void Player::addWin(){
-    wins++;
+void Player::addWin(int game){
+    wins[game]++;
 }
-void Player::addLoss(){
-    losses++;
+void Player::addLoss(int game){
+    losses[game]++;
 }
-int Player::getWins(){
+int* Player::getWins(){
     return wins;
 }
-int Player::getLosses(){
+int* Player::getLosses(){
     return losses;
 }
 string Player::getName(){

@@ -8,7 +8,10 @@ LigFour::LigFour(Player *player1, Player *player2): BoardGame(6, 7), player1(pla
     playerSymbols[player1->getNickname()] = 'X';
     playerSymbols[player2->getNickname()] = 'O';
 };
+LigFour::LigFour(): BoardGame(6, 7)
+{
 
+};
 LigFour::~LigFour(){
 
 }
@@ -151,8 +154,8 @@ void LigFour::startGame(Player *player1, Player *player2){
     if(didPlayerWin(currentPlayer)){
         printBoard();
         cout << currentPlayer->getNickname() << " venceu a partida, parabéns!!!";
-        currentPlayer->addWin();
-        currentPlayer == player1? player1->addLoss() : player2->addLoss();
+        currentPlayer->addWin(Player::LIGFOUR);
+        currentPlayer == player1? player1->addLoss(Player::LIGFOUR) : player2->addLoss(Player::LIGFOUR);
     }
     else
         cout << "A partida terminou em empate! Ninguém venceu desta vez." << endl;    

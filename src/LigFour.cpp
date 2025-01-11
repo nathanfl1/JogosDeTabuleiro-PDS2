@@ -15,6 +15,8 @@ LigFour::LigFour(): BoardGame(6, 7)
 LigFour::~LigFour(){
 
 }
+void LigFour::readRound(pair<int, int> input, pair<int, int> input2, Player *player){
+}
 
 void LigFour::readRound(pair<int, int> input, Player *player){
     if (roundIsValid(input)){

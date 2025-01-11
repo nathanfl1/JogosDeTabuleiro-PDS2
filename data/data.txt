@@ -22,3 +22,11 @@ t
 tulio
 0 0 0 0
 0 0 0 0
+guerreiro1
+guerreiro
+0 0 0 0
+0 0 0 0
+guerreiro2
+guerra
+0 0 0 0
+0 0 0 0

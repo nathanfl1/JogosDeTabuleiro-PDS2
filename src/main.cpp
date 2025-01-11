@@ -1,6 +1,7 @@
 #include "../include/BoardGame.hpp"
 #include "../include/LigFour.hpp"
 #include "../include/PlayerList.hpp"
+#include "../include/Checkers.hpp"
 #include <iostream>
 using namespace std;
 
@@ -16,6 +17,7 @@ int main(void)
     Player *player2 = nullptr;
 
     LigFour l = LigFour();
+    Checkers c = Checkers();
     PlayerList list;
     list.loadData();
    // list.saveData();
@@ -62,6 +64,7 @@ int main(void)
 
             switch (option2) {
             case 'R':
+                list.saveData();
                 break;
 
             case 'L':
@@ -71,12 +74,20 @@ int main(void)
 
                 l = LigFour(player1, player2);
                 l.startGame(player1, player2);
+                list.saveData();
                 break;
 
             case 'V':
+                list.saveData();
                 break;
 
             case 'D':
+                cin >> param1 >> param2;
+                player1 = list.searchPlayer(param1);
+                player2 = list.searchPlayer(param2);
+
+                c.startGame(player1, player2);
+                list.saveData();
                 break;
 
             default:

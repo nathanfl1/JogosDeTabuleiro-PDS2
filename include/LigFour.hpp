@@ -19,8 +19,10 @@ class LigFour : public BoardGame
         ~LigFour();
         void startGame(Player *player1, Player *player2) override;
         void readRound(pair<int,int>, Player *player) override;
+        void readRound(pair<int, int>, pair<int,int>, Player*);
         bool didPlayerWin();
         bool roundIsValid(pair<int,int>) override;
+        
         bool didPlayerWin(Player *player) override;
         bool isBoardFull();
         bool isBoardEmpty();

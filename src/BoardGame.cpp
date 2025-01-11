@@ -5,7 +5,16 @@
 using namespace std;
 
 void BoardGame::printBoard(){
+
+    //Imprimir os números em cima do tabuleiro
+    cout << " ";
+    for (int i = 0; i < getSize().second; i++)
+        cout << "   " << i;
+    
+    cout << endl;
+    
     for(int l=0; l<getSize().first; l++){
+        cout << l << " ";
         for(int c=0; c<getSize().second; c++){
             cout << "| " << board[l][c] << " "; 
         }
@@ -17,6 +26,7 @@ void BoardGame::setBoard()
 {
     for(int l=0; l<getSize().first; l++){
         for(int c=0; c<getSize().second; c++){
+            if(l == 0)
             board[l][c] = ' '; 
         }
     }

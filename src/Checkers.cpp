@@ -1,7 +1,7 @@
 #include "../include/Checkers.hpp"
 
 
-bool Checkers::didPlayerWin()
+bool Checkers::didPlayerWin(Player* p)
 {
     return true;
 }

@@ -9,7 +9,7 @@ class Checkers : public BoardGame
 private:
     /* data */
 public:
-    bool didPlayerWin();
+    bool didPlayerWin(Player*);
     Checkers(/* args */);
     ~Checkers();
 };

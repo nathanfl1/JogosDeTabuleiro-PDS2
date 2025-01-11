@@ -21,10 +21,13 @@ class Player{
         static bool compararPlayerComPlayer(Player*);
         
         Player(string nickname, string name);
+        Player(string, string, int[], int[]);
         void addWin(int game);
         void addLoss(int game);
         int* getWins();
         int* getLosses();
+        void setWins(int *);
+        void setLosses(int *);
         string getName();
         string getNickname();
 };

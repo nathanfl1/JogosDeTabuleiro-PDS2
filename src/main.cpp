@@ -13,41 +13,45 @@ int main(void)
 
     string param1, param2;
 
-    Player *player1 = nullptr;    
+    Player *player1 = nullptr;
     Player *player2 = nullptr;
 
     LigFour l = LigFour();
     Checkers c = Checkers();
     PlayerList list;
     list.loadData();
-   // list.saveData();
+    // list.saveData();
 
-    while (true)  {
+    while (true)
+    {
         cin >> option;
 
-        if (option == "CJ" || option == "cj") {
+        if (option == "CJ" || option == "cj")
+        {
             cin >> param1 >> param2;
             result = list.addPlayer(new Player(param1, param2));
-            
+
             if (result == PlayerList::ERR_REPEATED_PLAYER)
                 cout << "ERRO: jogador repetido" << endl;
 
             else if (result == PlayerList::SUCCESS)
-                cout << "Jogador <" << param1  << "> adicionado com sucesso" << endl;
+                cout << "Jogador <" << param1 << "> adicionado com sucesso" << endl;
         }
 
-        else if (option == "RJ" || option == "rj") {
+        else if (option == "RJ" || option == "rj")
+        {
             cin >> param1;
             result = list.removePlayer(param1);
 
             if (result == PlayerList::SUCCESS)
-                cout << "Jogador <" << param1  << "> removido com sucesso" << endl;
+                cout << "Jogador <" << param1 << "> removido com sucesso" << endl;
 
-            else if (result == PlayerList::ERR_PLAYER_NOT_FOUND) 
+            else if (result == PlayerList::ERR_PLAYER_NOT_FOUND)
                 cout << "ERRO: jogador inexistente" << endl;
         }
 
-        else if (option == "LJ") {
+        else if (option == "LJ")
+        {
             cin >> param1;
 
             if (param1 == "A")
@@ -59,10 +63,12 @@ int main(void)
             list.display();
         }
 
-        else if (option == "EP") {
+        else if (option == "EP")
+        {
             cin >> option2;
 
-            switch (option2) {
+            switch (option2)
+            {
             case 'R':
                 list.saveData();
                 break;
@@ -71,10 +77,16 @@ int main(void)
                 cin >> param1 >> param2;
                 player1 = list.searchPlayer(param1);
                 player2 = list.searchPlayer(param2);
-
-                l = LigFour(player1, player2);
-                l.startGame(player1, player2);
-                list.saveData();
+                if (player1 == nullptr)
+                    cout << "o jogador <" << param1 << "> não existe!" << endl;
+                else if (player2 == nullptr)
+                    cout << "o jogador <" << param2 << "> não existe!" << endl;
+                else
+                {
+                    l = LigFour(player1, player2);
+                    l.startGame(player1, player2);
+                    list.saveData();
+                }
                 break;
 
             case 'V':
@@ -86,8 +98,16 @@ int main(void)
                 player1 = list.searchPlayer(param1);
                 player2 = list.searchPlayer(param2);
 
-                c.startGame(player1, player2);
-                list.saveData();
+                if (player1 == nullptr)
+                    cout << "o jogador <" << param1 << "> não existe!" << endl;
+                else if (player2 == nullptr)
+                    cout << "o jogador <" << param2 << "> não existe!" << endl;
+                else
+                {
+                    c.startGame(player1, player2);
+                    list.saveData();
+                }
+
                 break;
 
             default:

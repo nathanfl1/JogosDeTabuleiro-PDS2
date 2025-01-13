@@ -42,10 +42,6 @@ void Checkers::setBoard()
             }
         }
     }
-
-
-    board[0][0] = 'Q';
-    board[6][0] = 'K';
 }
 
 bool Checkers::didPlayerWin(int player)
@@ -82,9 +78,9 @@ bool Checkers::canCaptureQueen(pair<int, int> coordinate, pair<int, int> destina
     {
         if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && board[i + 1][j + 1] == ' ')
             return true;
-        else if((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && (board[i + 1][j + 1] == opponentLetter || board[i + 1][j + 1] == opponentQueen))
+        else if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && (board[i + 1][j + 1] == opponentLetter || board[i + 1][j + 1] == opponentQueen))
             return false;
-    }       
+    }
 
     // diagonal principal subindo
     for (int i = cf, j = cs; i > 0 && j > 0; i--, j--)
@@ -294,6 +290,36 @@ bool Checkers::canCapture(pair<int, int> coordinate, pair<int, int> destination,
     return false;
 }
 
+void Checkers::captureAllAvaliablePieces(pair<int, int> currentCoordinate, int playerNumber, Player *player)
+{
+    vector<pair<int, int>> coordinates = {{-2, -2}, {2, 2}, {2, -2}, {-2, 2}};
+    int result;
+    pair<int, int> testCoordinate;
+    for (auto coordinate : coordinates)
+    {
+        testCoordinate.first = currentCoordinate.first + coordinate.first;
+        testCoordinate.second = currentCoordinate.second + coordinate.second;
+
+        if (canCapture(currentCoordinate, testCoordinate, playerNumber))
+            result = roundIsValid(currentCoordinate, testCoordinate, playerNumber);
+
+        if (result == Checkers::CAPTURE_AGAIN)
+        {
+            cout << "digite as coordenadas de destino da peça" << endl;
+            cin >> testCoordinate.first >> testCoordinate.second;
+            if(roundIsValid(testCoordinate) != Checkers::NOT_SUCCESS)
+            {
+                readRound(currentCoordinate, testCoordinate, player);
+                printBoard();
+                captureAllAvaliablePieces(testCoordinate, playerNumber, player);
+            }
+            else
+                cout << "Jogada inválida" << endl;
+            break;
+        }
+    }
+}
+
 void Checkers::startGame(Player *player1, Player *player2)
 {
     cout << player1->getNickname() << " versus " << player2->getNickname() << endl;
@@ -304,8 +330,6 @@ void Checkers::startGame(Player *player1, Player *player2)
     pair<int, int> currentCoordinate;
     pair<int, int> movedCoordinate;
     pair<int, int> testCoordinate;
-
-    vector<pair<int, int>> coordinates = {{-2, -2}, {2, 2}, {2, -2}, {-2, 2}};
 
     // Turno de jogador <Apelido>:
     Player *actualPlayer;
@@ -328,47 +352,33 @@ void Checkers::startGame(Player *player1, Player *player2)
         cout << "Selecione a coordenada de destino da peça" << endl;
 
         cin >> movedCoordinate.first >> movedCoordinate.second;
-        if(board[currentCoordinate.first][currentCoordinate.second] == 'K' ||board[currentCoordinate.first][currentCoordinate.second] == 'Q')
+
+        if (board[currentCoordinate.first][currentCoordinate.second] == 'K' || board[currentCoordinate.first][currentCoordinate.second] == 'Q')
             result = roundIsValidQueen(currentCoordinate, movedCoordinate, playerNumber);
         else
             result = roundIsValid(currentCoordinate, movedCoordinate, playerNumber);
-            
+
         switch (result)
         {
         case Checkers::SUCCESS:
             readRound(currentCoordinate, movedCoordinate, actualPlayer);
+            printBoard();
             break;
 
         case Checkers::NOT_SUCCESS:
             cout << "Jogada invalida" << endl;
+            printBoard();
             break;
 
         case Checkers::CAPTURE_AGAIN:
             readRound(currentCoordinate, movedCoordinate, actualPlayer);
             printBoard();
-            currentCoordinate = movedCoordinate;
-
-            for (auto coordinate : coordinates)
-            {
-                testCoordinate.first = movedCoordinate.first + coordinate.first;
-                testCoordinate.second = movedCoordinate.second + coordinate.second;
-
-                if (canCapture(movedCoordinate, testCoordinate, playerNumber))
-                    result = roundIsValid(movedCoordinate, testCoordinate, playerNumber);
-
-                if (result == Checkers::CAPTURE_AGAIN)
-                {
-                    cout << "Selecione a coordenada de destino da peça" << endl;
-                    cin >> testCoordinate.first >> testCoordinate.second;
-                    readRound(movedCoordinate, testCoordinate, actualPlayer);
-                    break;
-                }
-            }
+            captureAllAvaliablePieces(movedCoordinate, playerNumber, actualPlayer);
 
             break;
         }
 
-        printBoard();
+        
 
         if (didPlayerWin(1))
         {

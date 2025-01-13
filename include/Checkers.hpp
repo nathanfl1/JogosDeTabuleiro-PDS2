@@ -24,6 +24,7 @@ public:
     bool canCaptureQueen(pair<int, int>, pair<int, int>, int);
     bool roundIsValid(pair<int, int>);
     bool canCapture(pair<int, int>, pair<int, int>, int);
+    void captureAllAvaliablePieces(pair<int, int>, int, Player*);
     void setBoard();
     void startGame(Player *, Player *);
     ~Checkers();

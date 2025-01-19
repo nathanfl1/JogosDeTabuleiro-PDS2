@@ -16,7 +16,6 @@ class BoardGame {
     public:
         BoardGame(int, int);
         virtual void readRound(pair<int, int>, Player *player) = 0;
-        virtual void readRound(pair<int, int>, pair<int,int>, Player*) = 0;
         virtual bool roundIsValid(pair<int, int>) = 0;
         virtual bool didPlayerWin(Player *player) = 0;
         virtual void startGame(Player *player1, Player *player2) = 0;

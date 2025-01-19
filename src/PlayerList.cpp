@@ -191,7 +191,7 @@ void PlayerList::loadData() {
 
 
 
-PlayerList::~PlayerList()
-{
-
+PlayerList::~PlayerList() {
+    for (auto player : players)
+        delete player;
 }

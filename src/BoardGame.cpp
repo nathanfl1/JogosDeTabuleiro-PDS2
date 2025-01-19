@@ -24,12 +24,10 @@ void BoardGame::printBoard(){
 
 void BoardGame::setBoard()
 {
-    for(int l=0; l<getSize().first; l++){
-        for(int c=0; c<getSize().second; c++){
-            if(l == 0)
+    for(int l=0; l<getSize().first; l++)
+        for(int c=0; c<getSize().second; c++)
             board[l][c] = ' '; 
-        }
-    }
+        
 }
 
 BoardGame::BoardGame(int x, int y)

@@ -116,7 +116,6 @@ void LigFour::startGame(Player *player1, Player *player2){
         // loop while the column chosen is invalid (first run is default)
         while (input.first == -1){
             cin >> input.second; //reading the column
-            input.second--;
 
             // treating wrong inputs
              if (cin.fail()) { 
@@ -131,7 +130,7 @@ void LigFour::startGame(Player *player1, Player *player2){
                 continue;
             }
 
-            // checking if is there any place empty in the column (from bottom to top)
+            // checking if there is any place empty in the column (from bottom to top)
             for (int i = (getSize().first-1); i >= 0; i--){
                 if(board[i][input.second] == ' '){
                     input.first = i;
@@ -157,7 +156,7 @@ void LigFour::startGame(Player *player1, Player *player2){
 
     if(didPlayerWin(currentPlayer)){
         printBoard();
-        cout << currentPlayer->getNickname() << " venceu a partida, parabéns!!!";
+        cout << currentPlayer->getNickname() << " venceu a partida, parabens!!!";
         currentPlayer->addWin(Player::LIGFOUR);
         currentPlayer == player1? player1->addLoss(Player::LIGFOUR) : player2->addLoss(Player::LIGFOUR);
     }

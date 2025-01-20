@@ -64,45 +64,20 @@ bool Checkers::didPlayerWin(int player)
 
 bool Checkers::canCaptureQueen(pair<int, int> coordinate, pair<int, int> destination, int player)
 {
-    int cf = coordinate.first, cs = coordinate.second;
-    int df = destination.first, ds = destination.second;
+    int directions[4][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
-    char opponentLetter = player == 1 ? 'X' : 'O';
-    char opponentQueen = player == 1 ? 'Q' : 'K';
-    // diagonal principal
-    // i, j
-    // ir até i = 7 ou j = 7
-
-    // diagonal principal descendo
-    for (int i = cf, j = cs; cf < 7 && cs < 7; cf++, cs++)
+    for (int i = 0; i < 4; i++)
     {
-        if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && board[i + 1][j + 1] == ' ')
-            return true;
-        else if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && (board[i + 1][j + 1] == opponentLetter || board[i + 1][j + 1] == opponentQueen))
-            return false;
+        int direction1 = directions[i][0];
+        int direction2 = directions[i][1];
+        int j = 1;
+        while (board[coordinate.first + j * direction1][coordinate.second + j * direction2] == ' ')
+        {
+            if (coordinate.first + j * direction1 == destination.first && coordinate.second + j * direction2 == destination.second)
+                return true;
+            j++;
+        }
     }
-
-    // diagonal principal subindo
-    for (int i = cf, j = cs; i > 0 && j > 0; i--, j--)
-    {
-        if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && board[i - 1][j - 1] == ' ')
-            return true;
-    }
-
-    // diagonal secundária subindo
-    for (int i = cf, j = cs; i > 0 && j < 7; i--, j++)
-    {
-        if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && board[i - 1][j + 1] == ' ')
-            return true;
-    }
-
-    // diagonal secundária descendo
-    for (int i = cf, j = cs; i < 7 && j > 0; i++, j--)
-    {
-        if ((board[i][j] == opponentLetter || board[i][j] == opponentQueen) && board[i + 1][j - 1] == ' ')
-            return true;
-    }
-
     return false;
 }
 
@@ -114,10 +89,21 @@ void Checkers::readRound(pair<int, int> coordinate, pair<int, int> destination, 
 {
 
     int cf = coordinate.first, cs = coordinate.second;
-    int df = destination.first, ds = destination.second;
+    // int df = destination.first, ds = destination.second;
     char piece = board[coordinate.first][coordinate.second];
-    char opponentPiece = piece == 'O' ? 'X' : 'O';
-    char opponentQueen = piece == 'Q' ? 'K' : 'Q';
+    char opponentPiece, opponentQueen, queen;
+    if (piece == 'O' || piece == 'K')
+    {
+        opponentPiece = 'X';
+        opponentQueen = 'Q';
+        queen = 'K';
+    }
+    else
+    {
+        opponentPiece = 'O';
+        opponentQueen = 'K';
+        queen = 'Q';
+    }
 
     board[destination.first][destination.second] = piece;
     board[coordinate.first][coordinate.second] = ' ';
@@ -138,41 +124,25 @@ void Checkers::readRound(pair<int, int> coordinate, pair<int, int> destination, 
     else if (piece == 'O' && destination.first == 7)
     {
         board[destination.first][destination.second] = 'K';
-        cout << "<" << player->getNickname() << "> teve um peça promovida para DAMA-TRANSEXUAL" << endl;
+        cout << "<" << player->getNickname() << "> teve um peça promovida para DAMA" << endl;
     }
     else if (piece == 'K' || piece == 'Q')
     {
-        if (cf < df && cs < ds)
+        if (abs(destination.first - coordinate.first) == abs(coordinate.second - destination.second))
         {
-            cout << "diagonal principal descendo" << endl;
-            // diagonal principal descendo
-            for (int i = cf, j = cs; i < 7 && j < 7; i++, j++)
-                if (board[i][j] == opponentPiece || board[i][j] == opponentQueen)
-                    board[i][j] = ' ';
-        }
-        else if (cf > df && cs > ds)
-        {
-            cout << "diagonal principal descendo" << endl;
-            // diagonal principal descendo
-            for (int i = cf, j = cs; i > 0 && j > 0; i--, j--)
-                if (board[i][j] == opponentPiece || board[i][j] == opponentQueen)
-                    board[i][j] = ' ';
-        }
-        else if (ds > cs && df > cf)
-        {
-            cout << "diagonal secundária subindo" << endl;
-            // diagonal secundária subindo
-            for (int i = cf, j = cs; i > 0 && j < 7; i--, j++)
-                if (board[i][j] == opponentPiece || board[i][j] == opponentQueen)
-                    board[i][j] = ' ';
-        }
-        else if (cf < df && cs > ds)
-        {
-            cout << "diagonal secundária descendo" << endl;
-            // diagonal secundária descendo
-            for (int i = cf, j = cs; i < 7 && j > 0; i++, j--)
-                if (board[i][j] == opponentPiece || board[i][j] == opponentQueen)
-                    board[i][j] = ' ';
+            int direction = destination.first - coordinate.first > 0 ? 1 : -1;
+            int direction2 = destination.second - coordinate.second > 0 ? 1 : -1;
+
+            pair<int, int> current = coordinate;
+            while (isInsideBoard(current) && current != destination)
+            {
+                current.first += direction;
+                current.second += direction2;
+                if (board[current.first][current.second] == opponentPiece || board[current.first][current.second] == opponentQueen)
+                    board[current.first][current.second] = ' ';
+                if (current == destination)
+                    board[destination.first][destination.second] = queen;
+            }
         }
     }
 }
@@ -185,23 +155,59 @@ bool Checkers::roundIsValid(pair<int, int>)
 int Checkers::roundIsValidQueen(pair<int, int> coordinate, pair<int, int> destination, int player)
 {
     char piece = board[coordinate.first][coordinate.second];
-    char destinationPiece = board[destination.first][destination.second];
+    // char destinationPiece = board[destination.first][destination.second];
+    int countOpponentsInARow = 0;
 
     if ((player == 1 && piece == 'Q') || (player == 2 && piece == 'K'))
         return Checkers::NOT_SUCCESS;
 
-    if (abs(destination.first - coordinate.first) == abs(coordinate.second - destination.second))
-        return Checkers::SUCCESS;
+    if (abs(destination.first - coordinate.first) != abs(coordinate.second - destination.second))
+        return Checkers::NOT_SUCCESS;
+
+    int direction = destination.first - coordinate.first > 0 ? 1 : -1;
+    int direction2 = destination.second - coordinate.second > 0 ? 1 : -1;
+
+    char opponentPiece, opponentQueen;
+    if (player == 1)
+    {
+        opponentPiece = 'X';
+        opponentQueen = 'Q';
+    }
+    else
+    {
+        opponentPiece = 'O';
+        opponentQueen = 'K';
+    }
+
+    pair<int, int> current = coordinate;
+    while (isInsideBoard(current) && current != destination)
+    {
+        current.first += direction;
+        current.second += direction2;
+        if (board[current.first][current.second] == piece)
+            return Checkers::NOT_SUCCESS;
+
+        if (board[current.first][current.second] == opponentPiece || board[current.first][current.second] == opponentQueen)
+            countOpponentsInARow++;
+        
+        else
+            countOpponentsInARow = 0;
+
+        if (countOpponentsInARow > 1)
+            return Checkers::NOT_SUCCESS;
+        
+        if(current == destination)
+        {
+            return Checkers::SUCCESS;
+        }
+    }
 
     return Checkers::NOT_SUCCESS;
 }
 
 int Checkers::roundIsValid(pair<int, int> coordinate, pair<int, int> destination, int player)
 {
-    if (coordinate.first < 0 || coordinate.first >= getSize().first || coordinate.second < 0 || coordinate.second >= getSize().second)
-        return Checkers::NOT_SUCCESS;
-
-    if (destination.second < 0 || destination.second >= getSize().second || destination.first < 0 || destination.first >= getSize().first)
+    if (!isInsideBoard(coordinate) || !isInsideBoard(destination))
         return Checkers::NOT_SUCCESS;
 
     pair<int, int> middle;
@@ -227,15 +233,6 @@ int Checkers::roundIsValid(pair<int, int> coordinate, pair<int, int> destination
 
         if (canCapture(coordinate, destination, 2))
             return Checkers::CAPTURE_AGAIN;
-
-        /* if (destination.first == coordinate.first - 2)
-        {
-            middle.first = (coordinate.first + destination.first) / 2;
-            middle.second = (coordinate.second + destination.second) / 2;
-
-            if (board[middle.first][middle.second] == 'O')
-                return true;
-        } */
     }
 
     if (piece == 'O')
@@ -245,15 +242,6 @@ int Checkers::roundIsValid(pair<int, int> coordinate, pair<int, int> destination
 
         if (canCapture(coordinate, destination, 1))
             return Checkers::CAPTURE_AGAIN;
-
-        // if (destination.first == coordinate.first + 2)
-        // {
-        //     middle.first = (coordinate.first + destination.first) / 2;
-        //     middle.second = (coordinate.second + destination.second) / 2;
-
-        //     if (board[middle.first][middle.second] == 'X')
-        //         return true;
-        // }
     }
 
     return false;
@@ -266,16 +254,22 @@ bool Checkers::didPlayerWin(Player *p)
 
 bool Checkers::canCapture(pair<int, int> coordinate, pair<int, int> destination, int player)
 {
-    // char piece = board[coordinate.first][coordinate.second];
-    // char destinationPiece = board[destination.first][destination.second];
-    char opponentPiece;
+    if (!isInsideBoard(coordinate) || !isInsideBoard(destination))
+        return false;
+    char opponentPiece, opponentQueen;
     // int direction = 0;
 
     if (player == 1)
+    {
         opponentPiece = 'X';
+        opponentQueen = 'Q';
+    }
 
     else
+    {
         opponentPiece = 'O';
+        opponentQueen = 'K';
+    }
 
     pair<int, int> middle;
 
@@ -284,8 +278,9 @@ bool Checkers::canCapture(pair<int, int> coordinate, pair<int, int> destination,
         middle.first = (coordinate.first + destination.first) / 2;
         middle.second = (coordinate.second + destination.second) / 2;
 
-        if (board[middle.first][middle.second] == opponentPiece && board[destination.first][destination.second] == ' ')
-            return true;
+        if (board[middle.first][middle.second] == opponentPiece || board[middle.first][middle.second] == opponentQueen)
+            if (board[destination.first][destination.second] == ' ')
+                return true;
     }
     return false;
 }
@@ -307,7 +302,7 @@ void Checkers::captureAllAvaliablePieces(pair<int, int> currentCoordinate, int p
         {
             cout << "digite as coordenadas de destino da peça" << endl;
             cin >> testCoordinate.first >> testCoordinate.second;
-            if(roundIsValid(testCoordinate) != Checkers::NOT_SUCCESS)
+            if (roundIsValid(testCoordinate) != Checkers::NOT_SUCCESS)
             {
                 readRound(currentCoordinate, testCoordinate, player);
                 printBoard();
@@ -341,9 +336,9 @@ void Checkers::startGame(Player *player1, Player *player2)
         cout << "Turno de jogador <" << actualPlayer->getNickname() << ">" << endl;
 
         if (playerNumber == 1)
-            cout << "Você é o O" << endl;
+            cout << "Você é o O (ou dama K)" << endl;
         else
-            cout << "Você é o X" << endl;
+            cout << "Você é o X (ou dama Q)" << endl;
 
         cout << "Selecione uma peça para mexer" << endl;
 
@@ -377,8 +372,6 @@ void Checkers::startGame(Player *player1, Player *player2)
 
             break;
         }
-
-        
 
         if (didPlayerWin(1))
         {

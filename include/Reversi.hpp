@@ -18,7 +18,6 @@ public:
     bool didPlayerWin(Player* player) override; 
     bool didPlayerWin(int player);
     void startGame(Player* player1, Player* player2) override; 
-    bool isInsideBoard(pair<int, int> coordinate);
     bool roundIsValid(pair<int, int> destination, int player);
     bool roundIsValid(pair<int, int> destination) override;
     void readRound(pair<int, int> destination, int player);

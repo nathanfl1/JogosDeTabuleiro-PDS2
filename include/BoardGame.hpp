@@ -2,6 +2,7 @@
 #define BOARDGAME_H
 
 #include <vector>
+#include <algorithm>
 #include "Player.hpp"
 
 using namespace std;
@@ -22,6 +23,7 @@ class BoardGame {
         void printBoard();
         void setBoard();
         void setSize(int, int);
+        bool isInsideBoard(pair<int, int>);
         pair<int, int> getSize();
         int getX();
         int getY();

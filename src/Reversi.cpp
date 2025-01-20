@@ -117,11 +117,6 @@ bool Reversi::validMove(int player)
     return false;
 }
 
-bool Reversi::isInsideBoard(pair<int, int> coordinate)
-{
-    return coordinate.first >= 0 && coordinate.first < getSize().first && coordinate.second >= 0 && coordinate.second < getSize().second;
-}
-
 bool Reversi::didPlayerWin(int player)
 {
     char piece = player == 1 ? 'O' : 'X';

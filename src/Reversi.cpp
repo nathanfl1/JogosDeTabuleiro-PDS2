@@ -19,6 +19,14 @@ void Reversi::setBoard()
     board[3][4] = 'O';
     board[4][3] = 'O';
 
+    // for (int i = 0; i < 4; i++)
+    //     for (int j = 0; j < 4; j++)
+    //         board[i][j] = 'X';
+    
+    // for (int i = 4; i < 8; i++)
+    //     for (int j = 4; j < 8; j++)
+    //         board[i][j] = 'O';
+
     // board[3][2] = 'O';
     // board[4][3] = 'O';
     // board[3][3] = 'X';

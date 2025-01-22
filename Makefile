@@ -33,5 +33,16 @@ main: $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Checkers.o $(OBJ_DIR)/
 	$(CC) $(CFLAGS) $(OBJ_DIR)/main.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/LigFour.o $(OBJ_DIR)/Checkers.o $(OBJ_DIR)/Reversi.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o  -o main
 
 
+# $(OBJ_DIR)/ReversiTest.o: tests/ReversiTest.cpp $(SRC_DIR)/Reversi.cpp $(SRC_DIR)/BoardGame.cpp $(SRC_DIR)/Player.cpp $(SRC_DIR)/PlayerList.cpp 
+# 	$(CC) $(CFLAGS) tests/ReversiTest.cpp $(OBJ_DIR)/Reversi.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o -c tests/ReversiTest.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/ReversiTest.o
+
+# test_reversi: tests/ReversiTest.cpp (OBJ_DIR)/ReversiTest.o $(INCLUDE_DIR)/Reversi.hpp $(SRC_DIR)/Reversi.cpp $(SRC_DIR)/BoardGame.cpp $(SRC_DIR)/Player.cpp $(SRC_DIR)/PlayerList.cpp
+# 	$(CC) $(CFLAGS) tests/ReversiTest.cpp $(OBJ_DIR)/ReversiTest.o $(OBJ_DIR)/Reversi.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o -o test_reversi
+# 	./test_reversi
+
+
+test_reversi: tests/ReversiTest.cpp $(OBJ_DIR)/Reversi.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o
+	$(CC) $(CFLAGS) tests/ReversiTest.cpp $(SRC_DIR)/Reversi.cpp $(SRC_DIR)/BoardGame.cpp $(SRC_DIR)/Player.cpp $(SRC_DIR)/PlayerList.cpp -I$(INCLUDE_DIR) -o teste
+
 clean:
-	rm -f main $(OBJ_DIR)/*.o
+	rm -f main $(OBJ_DIR)/*.o test_reversi

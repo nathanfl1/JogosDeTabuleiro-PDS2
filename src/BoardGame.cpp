@@ -62,6 +62,10 @@ int BoardGame::getY() {
 bool BoardGame::isInsideBoard(pair<int, int> coordinate){
     return coordinate.first >= 0 && coordinate.first < getX() && coordinate.second >= 0 && coordinate.second < getY();
 }
+char** BoardGame::getBoard()
+{
+    return board;
+}
 BoardGame::~BoardGame(){
     for(int i=0; i<getX(); i++) {
         delete[] board[i];

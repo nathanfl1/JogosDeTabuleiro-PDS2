@@ -27,6 +27,7 @@ class BoardGame {
         pair<int, int> getSize();
         int getX();
         int getY();
+        char** getBoard();
         ~BoardGame();
     };
 

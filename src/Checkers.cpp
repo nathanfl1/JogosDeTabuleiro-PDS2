@@ -47,20 +47,37 @@ void Checkers::setBoard()
 
 bool Checkers::didPlayerWin(int player)
 {
-    char opponentPiece;
-
+    char opponentPiece, piece;
+    char opponentQueen, queen;
+    int cont = 0;
     if (player == 1)
+    {
+        queen = 'K';
+        opponentQueen = 'Q';
         opponentPiece = 'X';
+        piece = 'O';
+    }
 
     else
+    {  
+        queen = 'Q';
+        opponentQueen = 'K';
         opponentPiece = 'O';
+        piece = 'X';
+    }
 
     for (int l = 0; l < getSize().first; l++)
+    {
         for (int c = 0; c < getSize().second; c++)
-            if (board[l][c] == opponentPiece)
+        {
+            if (board[l][c] == opponentPiece || board[l][c] == opponentQueen)
                 return false;
+            else if(board[l][c] == piece || board[l][c] == queen)
+                cont++;
+        }
+    }
 
-    return true;
+    return cont > 0;
 }
 
 bool Checkers::canCaptureQueen(pair<int, int> coordinate, pair<int, int> destination, int player)
@@ -156,6 +173,7 @@ bool Checkers::roundIsValid(pair<int, int>)
 int Checkers::roundIsValidQueen(pair<int, int> coordinate, pair<int, int> destination, int player)
 {
     char piece = board[coordinate.first][coordinate.second];
+    char friendPiece, friendQueen;
     // char destinationPiece = board[destination.first][destination.second];
     int countOpponentsInARow = 0;
 
@@ -173,11 +191,15 @@ int Checkers::roundIsValidQueen(pair<int, int> coordinate, pair<int, int> destin
     {
         opponentPiece = 'X';
         opponentQueen = 'Q';
+        friendPiece = 'O';
+        friendQueen = 'K';
     }
     else
     {
         opponentPiece = 'O';
         opponentQueen = 'K';
+        friendPiece = 'X';
+        friendQueen = 'Q';
     }
 
     pair<int, int> current = coordinate;
@@ -185,7 +207,7 @@ int Checkers::roundIsValidQueen(pair<int, int> coordinate, pair<int, int> destin
     {
         current.first += direction;
         current.second += direction2;
-        if (board[current.first][current.second] == piece)
+        if (board[current.first][current.second] == friendPiece || board[current.first][current.second] == friendQueen)
             return Checkers::NOT_SUCCESS;
 
         if (board[current.first][current.second] == opponentPiece || board[current.first][current.second] == opponentQueen)

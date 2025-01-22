@@ -74,10 +74,8 @@ TEST_CASE("Damas")
 
     // supondo que tenha uma peça do mesmo time na diagonal, então a dama não pode fazer o movimento
     c.getBoard()[4][4] = 'X';
-    c.printBoard();
-    c.readRound({0, 0}, {7, 7}, &p);
-    c.printBoard();
-
+    
+    
     CHECK_FALSE(c.roundIsValidQueen({0, 0}, {7, 7}, 2));
 
     // se a peça for do outro time, então é possível fazer o movimento
@@ -93,4 +91,40 @@ TEST_CASE("Damas")
     c.getBoard()[6][6] = 'O';
 
     CHECK(c.roundIsValidQueen({0, 0}, {7, 7}, 2));
+}
+
+TEST_CASE("Teste de didPlayerWin")
+{
+    Checkers c;
+    c.setBoard();
+
+    //teste com o tabuleiro no estado inicial
+    CHECK_FALSE(c.didPlayerWin(1));
+    CHECK_FALSE(c.didPlayerWin(2));
+
+    //esvaziando o tabuleiro.
+    for (int i = 0; i < 8; i++)
+        for (int j = 0; j < 8; j++)
+            c.getBoard()[i][j] = ' ';
+
+    //adicionando uma peça para o jogador 1
+    c.getBoard()[0][0] = 'O';
+    CHECK(c.didPlayerWin(1));
+
+    //adicionando uma dama para o jogador 1
+
+    c.getBoard()[0][0] = 'K';
+    CHECK(c.didPlayerWin(1));
+
+    //limpando o tabuleiro de novo
+    c.getBoard()[0][0] = ' ';
+
+
+    //adicionando uma peça para o jogador 2
+    c.getBoard()[7][7] = 'X';
+    CHECK(c.didPlayerWin(2));
+    
+    //adicionando uma dama para o jogador 2
+    c.getBoard()[7][7] = 'Q';
+    CHECK(c.didPlayerWin(2));
 }

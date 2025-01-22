@@ -42,6 +42,7 @@ void Checkers::setBoard()
             }
         }
     }
+    
 }
 
 bool Checkers::didPlayerWin(int player)
@@ -88,7 +89,7 @@ void Checkers::readRound(pair<int, int> coordinate, Player *player)
 void Checkers::readRound(pair<int, int> coordinate, pair<int, int> destination, Player *player)
 {
 
-    int cf = coordinate.first, cs = coordinate.second;
+    //int cf = coordinate.first, cs = coordinate.second;
     // int df = destination.first, ds = destination.second;
     char piece = board[coordinate.first][coordinate.second];
     char opponentPiece, opponentQueen, queen;

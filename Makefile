@@ -20,7 +20,7 @@ $(OBJ_DIR)/Reversi.o: $(INCLUDE_DIR)/Reversi.hpp $(SRC_DIR)/Reversi.cpp
 $(OBJ_DIR)/TicTacToe.o: $(INCLUDE_DIR)/TicTacToe.hpp $(SRC_DIR)/TicTacToe.cpp
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/TicTacToe.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/TicTacToe.o
 	
-$(OBJ_DIR)/main.o: $(INCLUDE_DIR)/BoardGame.hpp $(INCLUDE_DIR)/Checkers.hpp $(INCLUDE_DIR)/LigFour.hpp $(SRC_DIR)/TicTacToe.hpp $(SRC_DIR)/main.cpp  
+$(OBJ_DIR)/main.o: $(INCLUDE_DIR)/BoardGame.hpp $(INCLUDE_DIR)/Checkers.hpp $(INCLUDE_DIR)/LigFour.hpp $(INCLUDE_DIR)/TicTacToe.hpp $(SRC_DIR)/main.cpp  
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/main.o
 
 $(OBJ_DIR)/Player.o: $(INCLUDE_DIR)/Player.hpp $(SRC_DIR)/Player.cpp

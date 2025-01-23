@@ -3,7 +3,7 @@
 #include "../include/PlayerList.hpp"
 #include "../include/Checkers.hpp"
 #include "../include/Reversi.hpp"
-#include "../include/Tictactoe.hpp"
+#include "../include/TicTacToe.hpp"
 #include <iostream>
 
 using namespace std;

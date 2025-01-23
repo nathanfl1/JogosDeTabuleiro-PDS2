@@ -1,5 +1,5 @@
 #ifndef PLAYERLIST_H
-#define PLAYLERLIST_H
+#define PLAYERLIST_H
 
 #include "Player.hpp"
 #include <iostream>
@@ -28,10 +28,14 @@ public:
     void sortByNickname();
     int removePlayer(string);
     void display();
+    void sortVictoriesTotal();
+    void sortByWinsGame(int);
     //int searchPlayer(string);
     Player* searchPlayer(string);
     void saveData();
     void loadData();
+
+
     ~PlayerList();
 };
 

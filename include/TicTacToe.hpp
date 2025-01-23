@@ -12,7 +12,7 @@ private:
 public:
     TicTacToe(); // Construtor
     void setBoard(); // Inicializa o tabuleiro
-    void printBoard(); // Imprime o tabuleiro
+    //void printBoard(); // Imprime o tabuleiro
     bool roundIsValid(std::pair<int, int> move); // Verifica se a jogada é válida
     void readRound(std::pair<int, int> move, Player *player); // Realiza a jogada
     bool didPlayerWin(Player *player); // Verifica se o jogador venceu

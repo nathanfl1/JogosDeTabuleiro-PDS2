@@ -9,9 +9,9 @@ using namespace std;
 
 /**
  * @class Reversi
- * @brief Representa o jogo de Reversi (ou Othello).
+ * @brief Representa o jogo de Reversi
  * 
- * A classe Reversi implementa a lógica do jogo de Reversi, incluindo regras de movimento,
+ * A classe Reversi implementa
  * validação de jogadas, e verificação de vitória.
  */
 class Reversi : public BoardGame {
@@ -19,14 +19,14 @@ public:
     /**
      * @brief Construtor da classe Reversi.
      * 
-     * Inicializa o jogo configurando o tabuleiro e os parâmetros necessários.
+     * Seta o jogo com um tabuleiro 8x8
      */
     Reversi();
 
     /**
      * @brief Configura o tabuleiro do jogo.
      * 
-     * Inicializa o tabuleiro com as peças iniciais do jogo Reversi.
+     * Inicializa o tabuleiro com as peças iniciais do jogo Reversi
      */
     void setBoard(); 
 

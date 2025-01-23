@@ -41,13 +41,69 @@ int PlayerList::removePlayer(string s)
 
 int compareName(Player *a, Player *b)
 {
-    return a->getName() < b->getName();
+    return a->getName() > b->getName();
 }
 
 int compareNickname(Player*a, Player *b)
 {
-    return a->getNickname() < b->getNickname();
+    return a->getNickname() > b->getNickname();
 }
+
+int compareVictoriesCheckers(Player* a, Player* b)
+{
+    return a->getWins()[Player::CHECKERS] > b->getWins()[Player::CHECKERS];
+}
+
+int compareVictoriesLigFour(Player* a, Player* b)
+{
+    return a->getWins()[Player::LIGFOUR] > b->getWins()[Player::LIGFOUR];
+}
+
+int compareVictoriesTicTacToe(Player* a, Player* b)
+{
+    return a->getWins()[Player::TIKTAKTOE] > b->getWins()[Player::TIKTAKTOE];
+}
+
+int compareVictoriesReversi(Player* a, Player* b)
+{
+    return a->getWins()[Player::REVERSI] > b->getWins()[Player::REVERSI];
+}
+
+
+int compareVictoriesTotal(Player* a, Player* b) {
+    int totalA = a->getWins()[Player::CHECKERS] + a->getWins()[Player::LIGFOUR] + a->getWins()[Player::TIKTAKTOE] + a->getWins()[Player::REVERSI];
+    int totalB = b->getWins()[Player::CHECKERS] + b->getWins()[Player::LIGFOUR] + b->getWins()[Player::TIKTAKTOE] + b->getWins()[Player::REVERSI];
+
+    return totalA > totalB;
+}
+
+void PlayerList::sortVictoriesTotal() {
+    players.sort(compareVictoriesTotal);
+}
+
+void PlayerList::sortByWinsGame(int game)
+{
+    switch (game)
+    {
+    case Player::TIKTAKTOE:
+        players.sort(compareVictoriesTicTacToe);
+        break;
+    case Player::REVERSI:
+        players.sort(compareVictoriesReversi);
+        break;
+    case Player::CHECKERS:
+        players.sort(compareVictoriesCheckers);
+        break;
+    case Player::LIGFOUR:
+        players.sort(compareVictoriesLigFour);
+
+
+    default:
+        break;
+    }
+    
+}
+
 
 void PlayerList::sortByName()
 {

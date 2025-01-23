@@ -17,19 +17,20 @@ void TicTacToe::setBoard() {
     }
 }
 
-// Imprime o tabuleiro
-void TicTacToe::printBoard() {
-    cout << "   0   1   2\n"; // Indice das colunas
-    for (int i = 0; i < getX(); i++) {
-        cout << i << " "; //Indice da linha
-        for (int j = 0; j < getY(); j++) {
-            cout << " " << (getBoard()[i][j] == '\0' ? ' ' : getBoard()[i][j]) << " ";
-            if (j < getY() - 1) cout << "|"; // Adiciona separadores verticais
-        }
-        cout << endl;
-        if (i < getX() - 1) cout << " ---|---|---\n";  // Separadores horizontais
-    }
-}
+// // Imprime o tabuleiro
+// void TicTacToe::printBoard() {
+//     cout << "   0   1   2\n"; // Indice das colunas
+//     for (int i = 0; i < getX(); i++) {
+//         cout << i << " "; //Indice da linha
+//         for (int j = 0; j < getY(); j++) {
+//             cout << " " << (getBoard()[i][j] == '\0' ? ' ' : getBoard()[i][j]) << " ";
+//             if (j < getY() - 1) cout << "|"; // Adiciona separadores verticais
+//         }
+//         cout << endl;
+//         if (i < getX() - 1) cout << " ---|---|---\n";  // Separadores horizontais
+//     }
+// }
+
 
 // Verifica se uma jogada é válida
 bool TicTacToe::roundIsValid(pair<int, int> move) {

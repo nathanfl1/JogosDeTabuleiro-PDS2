@@ -97,9 +97,23 @@ public:
      * horizontal, vertical, diagonal principal e diagonal secundária.
      * 
      * @param player Ponteiro para o jogador.
+     * @param move Jogada feita pelo jogador.
      * @return true se o jogador venceu, false caso contrário.
      */
-    bool didPlayerWin(Player *player) override;
+    bool didPlayerWin(Player *player, pair<int, int> move);
+
+
+    /**
+     * @brief Verifica se um jogador venceu a partida.
+     * 
+     * Checa combinações de 4 símbolos consecutivos do jogador nas direções:
+     * horizontal, vertical, diagonal principal e diagonal secundária.
+     * 
+     * @param player Ponteiro para o jogador.
+     * @return true se o jogador venceu, false caso contrário.
+     */
+    bool didPlayerWin(Player *player);
+
 
     /**
      * @brief Verifica se o tabuleiro está completamente cheio.

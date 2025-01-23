@@ -22,17 +22,17 @@ void LigFour::readRound(pair<int, int> input, pair<int, int> input2, Player *pla
 
 void LigFour::readRound(pair<int, int> input, Player *player){
     if (roundIsValid(input)){
-        cout << "|*|*| ROUND VALIDO" << endl;
         board[input.first][input.second] = playerSymbols[player->getNickname()];
     }
 };
 
 bool LigFour::roundIsValid(pair<int,int> place) {
-    if(place.first <= 5 && place.first >= 0 && place.second >= 0 && place.second <=6)
+    if(place.first <= 5 && place.first >= 0 && place.second >= 0 && place.second <=6){
         if(isBoardEmpty())
             return true;
         else if(board[place.first][place.second]==' ')
             return true;
+    }
     return false;
 };
 
@@ -52,50 +52,53 @@ bool LigFour::isBoardEmpty(){
     return true;
 }
 
-
 bool LigFour::didPlayerWin(Player *player){
+    return false;
+}
+
+bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
     char symbol = playerSymbols[player->getNickname()];
-
+    int l = move.first;
+    int c = move.second;
     // runningh through all the board (except last 3 columns and lines, as they are not needed)
-    for (int l = 0; l < getSize().first; l++){
-        for (int c = 0; c < getSize().second; c++){
-
-            if(board[l][c] == symbol){
-
-                // vertical test
-                for(int i=1; i<=3 && l+i < getSize().first; i++){
-                    if(board[l+i][c] != symbol)
-                        break;
-                    else if(i==3)
-                        return true;
-                }
-
-                // horizontal test
-                for(int i=1; i<=3 && c+i < getSize().second; i++){
-                    if(board[l][c+i] != symbol)
-                        break;
-                    else if(i==3)
-                        return true;
-                }
-
-                // primary diagonal test
-                for(int i=1; i<=3 && l+i < getSize().first && c+i < getSize().second; i++){
-                    if(board[l+i][c+i] != symbol)
-                        break;
-                    else if(i==3)
-                        return true;
-                }
-
-                // secondary diagonal test
-                for(int i=1; i<=3 && l+i < getSize().first && c-i >= 0; i++){
-                    if(board[l+i][c-i] != symbol)
-                        break;
-                    else if(i==3)
-                        return true;
-                }
-            }
+   
+    // vertical test
+    for(int i=1; i<=3 && l+i < getSize().first; i++){
+        if(board[l+i][c] != symbol){
+            break;
+        }
+        else if(i==3){
+            return true;
         }
     }
+
+    // horizontal test
+    for(int i=1; i<=3 && c+i < getSize().second; i++){
+        if(board[l][c+i] != symbol)
+            break;
+        else if(i==3){
+            return true;
+        }
+    }
+
+    // primary diagonal test
+    for(int i=1; i<=3 && l+i < getSize().first && c+i < getSize().second; i++){
+        if(board[l+i][c+i] != symbol)
+            break;
+        else if(i==3){
+            return true;
+        }
+    }
+
+    // secondary diagonal test
+    for(int i=1; i<=3 && l+i < getSize().first && c-i >= 0; i++){
+        if(board[l+i][c-i] != symbol)
+            break;
+        else if(i==3){
+            return true;
+        }
+    }
+
     return false;
 };
 
@@ -126,7 +129,7 @@ void LigFour::startGame(Player *player1, Player *player2){
             }
 
             if (input.second < 0 || input.second >= getSize().second) {
-                cout << " ERRO: jogada inválida" << endl;
+                cout << " ERRO: jogada invalida" << endl;
                 continue;
             }
 
@@ -139,7 +142,7 @@ void LigFour::startGame(Player *player1, Player *player2){
             }
             // checking if the column is avaliable 
             if(input.first == -1){
-                cout << " ERRO: jogada inválida" << endl;
+                cout << " ERRO: jogada invalida" << endl;
                 // printBoard();
                 continue;
             }
@@ -150,17 +153,17 @@ void LigFour::startGame(Player *player1, Player *player2){
         cout << "**** FIM DA JOGADA ****" << endl << endl;
         
 
-    } while (!didPlayerWin(currentPlayer) && !isBoardFull());
+    } while (!didPlayerWin(currentPlayer, input) && !isBoardFull());
     
     cout << endl << "**** FIM DE JOGO ****"  << endl;
 
-    if(didPlayerWin(currentPlayer)){
+    if(didPlayerWin(currentPlayer, input)){
         printBoard();
         cout << currentPlayer->getNickname() << " venceu a partida, parabens!!!";
         currentPlayer->addWin(Player::LIGFOUR);
-        currentPlayer == player1? player1->addLoss(Player::LIGFOUR) : player2->addLoss(Player::LIGFOUR);
+        (currentPlayer == player1)? (player2->addLoss(Player::LIGFOUR)) : (player1->addLoss(Player::LIGFOUR));
     }
     else
-        cout << "A partida terminou em empate! Ninguém venceu desta vez." << endl;    
+        cout << "A partida terminou em empate! Ninguem venceu desta vez." << endl;    
 
 };

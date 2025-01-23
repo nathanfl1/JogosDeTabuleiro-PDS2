@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Construtor: define o tamanho do tabuleiro para 3x3
+// Define o tamanho do tabuleiro para 3x3
 TicTacToe::TicTacToe() : BoardGame(3, 3), localPlayer1(nullptr), localPlayer2(nullptr) {}
 
 // Inicializa o tabuleiro com espaços vazios
@@ -17,7 +17,7 @@ void TicTacToe::setBoard() {
     }
 }
 
-// Imprime o tabuleiro no console
+// Imprime o tabuleiro
 void TicTacToe::printBoard() {
     for (int i = 0; i < getX(); i++) {
         cout << " " << i << " ";
@@ -107,7 +107,7 @@ void TicTacToe::startGame(Player *p1, Player *p2) {
         }
     }
 
-    // Caso empate
+    // Caso ocorra empate
     printBoard();
     cout << "O jogo terminou empatado!" << endl;
 }

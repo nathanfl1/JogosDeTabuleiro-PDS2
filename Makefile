@@ -20,7 +20,7 @@ $(OBJ_DIR)/Reversi.o: $(INCLUDE_DIR)/Reversi.hpp $(SRC_DIR)/Reversi.cpp
 $(OBJ_DIR)/TicTacToe.o: $(INCLUDE_DIR)/TicTacToe.hpp $(SRC_DIR)/TicTacToe.cpp
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/TicTacToe.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/TicTacToe.o
 	
-$(OBJ_DIR)/main.o: $(INCLUDE_DIR)/BoardGame.hpp $(INCLUDE_DIR)/Checkers.hpp $(INCLUDE_DIR)/LigFour.hpp $(SRC_DIR)/main.cpp  
+$(OBJ_DIR)/main.o: $(INCLUDE_DIR)/BoardGame.hpp $(INCLUDE_DIR)/Checkers.hpp $(INCLUDE_DIR)/LigFour.hpp $(SRC_DIR)/TicTacToe.hpp $(SRC_DIR)/main.cpp  
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.cpp -I$(INCLUDE_DIR) -o $(OBJ_DIR)/main.o
 
 $(OBJ_DIR)/Player.o: $(INCLUDE_DIR)/Player.hpp $(SRC_DIR)/Player.cpp
@@ -50,5 +50,9 @@ test_checkers: tests/CheckersTest.cpp $(OBJ_DIR)/Checkers.o $(OBJ_DIR)/BoardGame
 test_ligfour: tests/LigFourTest.cpp $(OBJ_DIR)/LigFour.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o
 	$(CC) $(CFLAGS) tests/LigFourTest.cpp $(SRC_DIR)/LigFour.cpp $(SRC_DIR)/BoardGame.cpp $(SRC_DIR)/Player.cpp $(SRC_DIR)/PlayerList.cpp -I$(INCLUDE_DIR) -o testeLigFour
 
+test_tictactoe: tests/TicTacToeTest.cpp $(OBJ_DIR)/TicTacToe.o $(OBJ_DIR)/BoardGame.o $(OBJ_DIR)/Player.o $(OBJ_DIR)/PlayerList.o
+	$(CC) $(CFLAGS) tests/TicTacToeTest.cpp $(SRC_DIR)/TicTacToe.cpp $(SRC_DIR)/BoardGame.cpp $(SRC_DIR)/Player.cpp $(SRC_DIR)/PlayerList.cpp -I$(INCLUDE_DIR) -o testeTicTacToe
+
 clean:
-	rm -f main $(OBJ_DIR)/*.o test_reversi
+	rm -f main $(OBJ_DIR)/*.o testeReversi testeCheckers testeLigFour testeTicTacToe
+

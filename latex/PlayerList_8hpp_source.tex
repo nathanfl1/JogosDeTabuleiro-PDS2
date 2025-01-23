@@ -1,0 +1,44 @@
+\doxysection{Player\+List.\+hpp}
+\hypertarget{PlayerList_8hpp_source}{}\label{PlayerList_8hpp_source}\index{include/PlayerList.hpp@{include/PlayerList.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYERLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYLERLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlayerList}{PlayerList}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ count;}
+\DoxyCodeLine{00016\ \ \ \ \ list<Player*>\ players;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SUCCESS\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ERR\_REPEATED\_PLAYER\ =\ -\/1;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ERR\_PLAYER\_NOT\_FOUND\ =\ -\/2;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ERR\_INCORRECT\_DATA\ =\ -\/3;}
+\DoxyCodeLine{00022\ \ \ \ \ list<Player*>\ getPlayers();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayers(list<Player*>);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ getCount();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setCount(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ addPlayer(\mbox{\hyperlink{classPlayer}{Player}}*);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ sortByName();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ sortByNickname();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ removePlayer(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ display();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//int\ searchPlayer(string);}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}*\ searchPlayer(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ saveData();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ loadData();}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classPlayerList}{\string~PlayerList}}();}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

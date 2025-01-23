@@ -356,6 +356,8 @@ void Checkers::startGame(Player *player1, Player *player2)
     {
         actualPlayer = playerNumber == 1 ? player1 : player2;
 
+        cout << "Turno <" << getTurn() + 1 << ">"<< endl;
+
         cout << "Turno de jogador <" << actualPlayer->getNickname() << ">" << endl;
 
         if (playerNumber == 1)
@@ -381,6 +383,7 @@ void Checkers::startGame(Player *player1, Player *player2)
         case Checkers::SUCCESS:
             readRound(currentCoordinate, movedCoordinate, actualPlayer);
             printBoard();
+            incrementTurn();
             break;
 
         case Checkers::NOT_SUCCESS:
@@ -392,7 +395,7 @@ void Checkers::startGame(Player *player1, Player *player2)
             readRound(currentCoordinate, movedCoordinate, actualPlayer);
             printBoard();
             captureAllAvaliablePieces(movedCoordinate, playerNumber, actualPlayer);
-
+            incrementTurn();
             break;
         }
 

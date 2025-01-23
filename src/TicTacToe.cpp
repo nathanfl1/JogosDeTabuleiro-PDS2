@@ -35,6 +35,9 @@ void TicTacToe::printBoard() {
 bool TicTacToe::roundIsValid(pair<int, int> move) {
     if (!isInsideBoard(move)) return false;  // Fora do tabuleiro
     if (getBoard()[move.first][move.second] != ' ') return false;  // Posição ocupada
+
+    incrementTurn();
+
     return true;
 }
 
@@ -76,6 +79,9 @@ void TicTacToe::startGame(Player *p1, Player *p2) {
 
     while (moves < maxMoves) {
         printBoard();
+
+        cout << "Turno <" << getTurn() + 1 << ">"<< endl;
+
         cout << "Turno de jogador " << currentPlayer->getNickname() << ": ";
 
         string input;

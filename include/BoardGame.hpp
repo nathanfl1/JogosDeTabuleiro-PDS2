@@ -12,6 +12,7 @@ class BoardGame {
         Player *player1;
         Player *player2;
         pair<int, int> size;
+        int turnCounter = 0;
     protected:
         char **board = nullptr;
     public:
@@ -28,6 +29,12 @@ class BoardGame {
         int getX();
         int getY();
         char** getBoard();
+
+
+        void incrementTurn();
+        int getTurn();
+
+
         ~BoardGame();
     };
 

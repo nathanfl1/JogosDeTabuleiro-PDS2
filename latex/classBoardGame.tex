@@ -1,0 +1,110 @@
+\doxysection{Board\+Game Class Reference}
+\hypertarget{classBoardGame}{}\label{classBoardGame}\index{BoardGame@{BoardGame}}
+Inheritance diagram for Board\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBoardGame}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}\label{classBoardGame_a578f9cb3356ffa6456bac6038d98f203} 
+{\bfseries Board\+Game} (int, int)
+\item 
+virtual void \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{read\+Round}} (pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)=0
+\item 
+virtual bool \mbox{\hyperlink{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}{round\+Is\+Valid}} (pair$<$ int, int $>$)=0
+\item 
+virtual bool \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)=0
+\item 
+virtual void \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2)=0
+\item 
+\Hypertarget{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}\label{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48} 
+void {\bfseries print\+Board} ()
+\item 
+\Hypertarget{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}\label{classBoardGame_ab43ab2da43e93e98e5da2720ad535255} 
+void {\bfseries set\+Board} ()
+\item 
+\Hypertarget{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}\label{classBoardGame_a97de7e07df7a7c8511a820974861d7d6} 
+void {\bfseries set\+Size} (int, int)
+\item 
+\Hypertarget{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}\label{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72} 
+bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+\item 
+\Hypertarget{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}\label{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54} 
+pair$<$ int, int $>$ {\bfseries get\+Size} ()
+\item 
+\Hypertarget{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}\label{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3} 
+int {\bfseries getX} ()
+\item 
+\Hypertarget{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}\label{classBoardGame_a9d4b5e343eb985225a87c25665fd6566} 
+int {\bfseries getY} ()
+\item 
+\Hypertarget{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}\label{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+\item 
+\Hypertarget{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}\label{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf} 
+void {\bfseries increment\+Turn} ()
+\item 
+\Hypertarget{classBoardGame_a5b2d790f0522fa9aab4ee92b98b94602}\label{classBoardGame_a5b2d790f0522fa9aab4ee92b98b94602} 
+void {\bfseries reset\+Turn} ()
+\item 
+\Hypertarget{classBoardGame_a1324d53f927d76415a412c992d4a5061}\label{classBoardGame_a1324d53f927d76415a412c992d4a5061} 
+int {\bfseries get\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}\label{classBoardGame_aecee3147084d29f1639aff6e0ac873d2} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}\index{BoardGame@{BoardGame}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}}
+{\footnotesize\ttfamily \label{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430} 
+virtual bool Board\+Game\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLigFour_a796b58ff92f3213d15a6666e9cb05764}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a8da89698bbcc8612c3ec312254ae66a3}{Reversi}}.
+
+\Hypertarget{classBoardGame_a1588a4ae703b50469797632d8a240d8a}\index{BoardGame@{BoardGame}!readRound@{readRound}}
+\index{readRound@{readRound}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}}
+{\footnotesize\ttfamily \label{classBoardGame_a1588a4ae703b50469797632d8a240d8a} 
+virtual void Board\+Game\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_aeb91d4a68f6bae8207a62fe752c4b162}{Reversi}}.
+
+\Hypertarget{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}\index{BoardGame@{BoardGame}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}}
+{\footnotesize\ttfamily \label{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061} 
+virtual bool Board\+Game\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLigFour_ab3673bad1af0b34bea597bc7e001537f}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a76c87d480dcd225fab3665953640c404}{Reversi}}.
+
+\Hypertarget{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}\index{BoardGame@{BoardGame}!startGame@{startGame}}
+\index{startGame@{startGame}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily \label{classBoardGame_a0d3bb9005b449021ce97307e25c606fb} 
+virtual void Board\+Game\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classLigFour_ae0c48bf9942cdc464f789b7c473db33b}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}{Reversi}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Board\+Game.\+hpp\item 
+src/Board\+Game.\+cpp\end{DoxyCompactItemize}

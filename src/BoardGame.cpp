@@ -41,6 +41,8 @@ BoardGame::BoardGame(int x, int y)
     }
     setBoard();
 
+    turnCounter = 0;
+
 }
 pair<int, int> BoardGame::getSize(){
     return size;
@@ -57,6 +59,14 @@ int BoardGame::getX() {
 
 int BoardGame::getY() {
     return getSize().second;
+}
+
+void BoardGame::incrementTurn(){
+    turnCounter++;
+}
+
+int BoardGame::getTurn(){
+    return turnCounter;
 }
 
 bool BoardGame::isInsideBoard(pair<int, int> coordinate){

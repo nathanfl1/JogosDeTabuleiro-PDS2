@@ -1,0 +1,39 @@
+\doxysection{Checkers.\+hpp}
+\hypertarget{Checkers_8hpp_source}{}\label{Checkers_8hpp_source}\index{include/Checkers.hpp@{include/Checkers.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHECKERS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHECKERS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Checkers\ :\ \textcolor{keyword}{public}\ BoardGame}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{/*\ data\ */}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ SUCCESS\ =\ 1;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ NOT\_SUCCESS\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CAPTURE\_AGAIN\ =\ 2;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ didPlayerWin(\mbox{\hyperlink{classPlayer}{Player}}*);}
+\DoxyCodeLine{00018\ \ \ \ \ Checkers(\textcolor{comment}{/*\ args\ */});}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ readRound(pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ readRound(pair<int,\ int>,\ pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ roundIsValid(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ roundIsValidQueen(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ didPlayerWin(\textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ canCaptureQueen(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ roundIsValid(pair<int,\ int>);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ canCapture(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ captureAllAvaliablePieces(pair<int,\ int>,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{classPlayer}{Player}}*);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setBoard();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{classPlayer}{Player}}\ *,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
+\DoxyCodeLine{00030\ \ \ \ \ \string~Checkers();}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

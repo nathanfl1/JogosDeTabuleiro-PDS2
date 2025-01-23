@@ -174,6 +174,8 @@ void Reversi::startGame(Player *player1, Player *player2)
     {
         actualPlayer = playerNumber == 1 ? player1 : player2;
 
+        cout << "Turno <" << getTurn() + 1 << ">"<< endl;
+
         cout << "Turno de jogador <" << actualPlayer->getNickname() << ">" << endl;
 
         if (playerNumber == 1)
@@ -187,12 +189,14 @@ void Reversi::startGame(Player *player1, Player *player2)
         cin >> moved.first >> moved.second;
         if (roundIsValid(moved, playerNumber))
         {
+            incrementTurn();
             readRound(moved, playerNumber);
             printBoard();
         }
 
-        else
+        else {
             cout << "Jogada inválida" << endl;
+        }
 
         if (didPlayerWin(1))
         {

@@ -1,0 +1,43 @@
+\doxysection{Reversi.\+hpp}
+\hypertarget{Reversi_8hpp_source}{}\label{Reversi_8hpp_source}\index{include/Reversi.hpp@{include/Reversi.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVERSI\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVERSI\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classReversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}}\ :\ \textcolor{keyword}{public}\ BoardGame\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classReversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReversi_a844ccb6c462f4363143bd97a43cf8cda}{setBoard}}();\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classReversi_a5b853088b9c77961fc6f402c508a58b8}{didPlayerWin}}(\textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classReversi_a5b853088b9c77961fc6f402c508a58b8}{didPlayerWin}}(\mbox{\hyperlink{classPlayer}{Player}}*\ player)\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}{startGame}}(\mbox{\hyperlink{classPlayer}{Player}}*\ player1,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player2)\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410}{roundIsValid}}(pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410}{roundIsValid}}(pair<int,\ int>)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96}{readRound}}(pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96}{readRound}}(pair<int,\ int>\ destination,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \ \ \ \ vector<pair<int,\ int>>\ \mbox{\hyperlink{classReversi_a8d7eafa5616f7cb8a88400a5ef7ef252}{allPiecesToFlip}}(pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classReversi_ac6a066091bc5dcf839910b182bc944c4}{validMove}}(\textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\string~Reversi}}();}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -23,6 +23,7 @@ void LigFour::readRound(pair<int, int> input, pair<int, int> input2, Player *pla
 void LigFour::readRound(pair<int, int> input, Player *player){
     if (roundIsValid(input)){
         board[input.first][input.second] = playerSymbols[player->getNickname()];
+        incrementTurn();
     }
 };
 
@@ -114,6 +115,9 @@ void LigFour::startGame(Player *player1, Player *player2){
         currentPlayer = (currentPlayer == player1) ? player2 : player1;
 
         printBoard();
+
+        cout << "Turno <" << getTurn() + 1 << ">"<< endl;
+
         cout << "Turno de jogador " << currentPlayer->getNickname() << ":" << endl;
 
         // loop while the column chosen is invalid (first run is default)

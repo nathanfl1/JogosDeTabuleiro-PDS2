@@ -1,0 +1,298 @@
+\doxysection{Lig\+Four Class Reference}
+\hypertarget{classLigFour}{}\label{classLigFour}\index{LigFour@{LigFour}}
+
+
+Classe que implementa o jogo Lig Four (Conecta 4).  
+
+
+
+
+{\ttfamily \#include $<$Lig\+Four.\+hpp$>$}
+
+Inheritance diagram for Lig\+Four\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLigFour}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLigFour_a64bb65f68ea9823c4e6573b0b2f79ffd}{Lig\+Four}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classLigFour}{Lig\+Four}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLigFour_af4586899121f9a402d535567791d3448}{Lig\+Four}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classLigFour}{Lig\+Four}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLigFour_ab032cec3c9934a59d2c9ac5e0dbf2341}{\texorpdfstring{$\sim$}{\string~}\+Lig\+Four}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{classLigFour}{Lig\+Four}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLigFour_ae0c48bf9942cdc464f789b7c473db33b}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2) override
+\begin{DoxyCompactList}\small\item\em Inicia uma partida de Lig Four. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed}{read\+Round}} (pair$<$ int, int $>$ input, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Lê a jogada de um jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLigFour_a4b3fc8cdee4068d918533009709b4f88}{read\+Round}} (pair$<$ int, int $>$ input, pair$<$ int, int $>$ input2, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Lê a jogada de um jogador (versão com dois inputs). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLigFour_ab3673bad1af0b34bea597bc7e001537f}{round\+Is\+Valid}} (pair$<$ int, int $>$ place) override
+\begin{DoxyCompactList}\small\item\em Verifica se uma jogada é válida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLigFour_a0fcbf94f214b55a6a7c2be89bf8ff4a6}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player, pair$<$ int, int $>$ move)
+\begin{DoxyCompactList}\small\item\em Verifica se um jogador venceu a partida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLigFour_a796b58ff92f3213d15a6666e9cb05764}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Verifica se um jogador venceu a partida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLigFour_a8134ec78f189250441d86fedbd0e8f1e}{is\+Board\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o tabuleiro está completamente cheio. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLigFour_a31de1d6dcf95392f6575c2eafef645f8}{is\+Board\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o tabuleiro está completamente vazio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board\+Game} (int, int)
+\item 
+void {\bfseries print\+Board} ()
+\item 
+void {\bfseries set\+Board} ()
+\item 
+void {\bfseries set\+Size} (int, int)
+\item 
+bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+\item 
+pair$<$ int, int $>$ {\bfseries get\+Size} ()
+\item 
+int {\bfseries getX} ()
+\item 
+int {\bfseries getY} ()
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+\item 
+void {\bfseries increment\+Turn} ()
+\item 
+void {\bfseries reset\+Turn} ()
+\item 
+int {\bfseries get\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que implementa o jogo Lig Four (Conecta 4). 
+
+Essa classe herda de \doxylink{classBoardGame}{Board\+Game} e gerencia a lógica do jogo, incluindo turnos, validação de jogadas, verificação de vitória e controle de jogadores. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLigFour_a64bb65f68ea9823c4e6573b0b2f79ffd}\index{LigFour@{LigFour}!LigFour@{LigFour}}
+\index{LigFour@{LigFour}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{LigFour()}{LigFour()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classLigFour_a64bb65f68ea9823c4e6573b0b2f79ffd} 
+Lig\+Four\+::\+Lig\+Four (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classLigFour}{Lig\+Four}. 
+
+Inicializa o jogo com os dois jogadores fornecidos, configurando o tabuleiro com 6 linhas e 7 colunas, e associa os símbolos \textquotesingle{}X\textquotesingle{} e \textquotesingle{}O\textquotesingle{} aos jogadores.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1} & Ponteiro para o primeiro jogador. \\
+\hline
+{\em player2} & Ponteiro para o segundo jogador. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLigFour_af4586899121f9a402d535567791d3448}\index{LigFour@{LigFour}!LigFour@{LigFour}}
+\index{LigFour@{LigFour}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{LigFour()}{LigFour()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classLigFour_af4586899121f9a402d535567791d3448} 
+Lig\+Four\+::\+Lig\+Four (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{classLigFour}{Lig\+Four}. 
+
+Inicializa o tabuleiro com 6 linhas e 7 colunas sem associar jogadores. \Hypertarget{classLigFour_ab032cec3c9934a59d2c9ac5e0dbf2341}\index{LigFour@{LigFour}!````~LigFour@{\texorpdfstring{$\sim$}{\string~}LigFour}}
+\index{````~LigFour@{\texorpdfstring{$\sim$}{\string~}LigFour}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LigFour()}{\string~LigFour()}}
+{\footnotesize\ttfamily \label{classLigFour_ab032cec3c9934a59d2c9ac5e0dbf2341} 
+Lig\+Four\+::\texorpdfstring{$\sim$}{\string~}\+Lig\+Four (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxylink{classLigFour}{Lig\+Four}. 
+
+Libera recursos utilizados pela classe, se necessário. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLigFour_a796b58ff92f3213d15a6666e9cb05764}\index{LigFour@{LigFour}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classLigFour_a796b58ff92f3213d15a6666e9cb05764} 
+bool Lig\+Four\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifica se um jogador venceu a partida. 
+
+Checa combinações de 4 símbolos consecutivos do jogador nas direções\+: horizontal, vertical, diagonal principal e diagonal secundária.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Ponteiro para o jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o jogador venceu, false caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classLigFour_a0fcbf94f214b55a6a7c2be89bf8ff4a6}\index{LigFour@{LigFour}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classLigFour_a0fcbf94f214b55a6a7c2be89bf8ff4a6} 
+bool Lig\+Four\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{pair$<$ int, int $>$}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se um jogador venceu a partida. 
+
+Checa combinações de 4 símbolos consecutivos do jogador nas direções\+: horizontal, vertical, diagonal principal e diagonal secundária.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Ponteiro para o jogador. \\
+\hline
+{\em move} & Jogada feita pelo jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o jogador venceu, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classLigFour_a31de1d6dcf95392f6575c2eafef645f8}\index{LigFour@{LigFour}!isBoardEmpty@{isBoardEmpty}}
+\index{isBoardEmpty@{isBoardEmpty}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{isBoardEmpty()}{isBoardEmpty()}}
+{\footnotesize\ttfamily \label{classLigFour_a31de1d6dcf95392f6575c2eafef645f8} 
+bool Lig\+Four\+::is\+Board\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o tabuleiro está completamente vazio. 
+
+Itera sobre todas as células do tabuleiro e verifica se todas estão vazias.
+
+\begin{DoxyReturn}{Returns}
+true se o tabuleiro estiver vazio, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classLigFour_a8134ec78f189250441d86fedbd0e8f1e}\index{LigFour@{LigFour}!isBoardFull@{isBoardFull}}
+\index{isBoardFull@{isBoardFull}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{isBoardFull()}{isBoardFull()}}
+{\footnotesize\ttfamily \label{classLigFour_a8134ec78f189250441d86fedbd0e8f1e} 
+bool Lig\+Four\+::is\+Board\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o tabuleiro está completamente cheio. 
+
+Itera sobre todas as células do tabuleiro e verifica se há alguma vazia.
+
+\begin{DoxyReturn}{Returns}
+true se o tabuleiro estiver cheio, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classLigFour_a4b3fc8cdee4068d918533009709b4f88}\index{LigFour@{LigFour}!readRound@{readRound}}
+\index{readRound@{readRound}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classLigFour_a4b3fc8cdee4068d918533009709b4f88} 
+void Lig\+Four\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{input}{, }\item[{pair$<$ int, int $>$}]{input2}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Lê a jogada de um jogador (versão com dois inputs). 
+
+Este método é uma sobrecarga, mas não está implementado na lógica atual.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Coordenadas da jogada. \\
+\hline
+{\em input2} & Coordenadas adicionais (não utilizadas). \\
+\hline
+{\em player} & Ponteiro para o jogador atual. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed}\index{LigFour@{LigFour}!readRound@{readRound}}
+\index{readRound@{readRound}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed} 
+void Lig\+Four\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{input}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Lê a jogada de um jogador. 
+
+Verifica se a jogada é válida e atualiza o tabuleiro com o símbolo do jogador, caso seja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Coordenadas da jogada no tabuleiro. \\
+\hline
+{\em player} & Ponteiro para o jogador atual. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classLigFour_ab3673bad1af0b34bea597bc7e001537f}\index{LigFour@{LigFour}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}}
+{\footnotesize\ttfamily \label{classLigFour_ab3673bad1af0b34bea597bc7e001537f} 
+bool Lig\+Four\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{place}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Verifica se uma jogada é válida. 
+
+Checa se a jogada está dentro dos limites do tabuleiro e se a célula correspondente está vazia.
+
+
+\begin{DoxyParams}{Parameters}
+{\em place} & Coordenadas da jogada no tabuleiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a jogada for válida, false caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classLigFour_ae0c48bf9942cdc464f789b7c473db33b}\index{LigFour@{LigFour}!startGame@{startGame}}
+\index{startGame@{startGame}!LigFour@{LigFour}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily \label{classLigFour_ae0c48bf9942cdc464f789b7c473db33b} 
+void Lig\+Four\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicia uma partida de Lig Four. 
+
+Gerencia o fluxo do jogo, alternando turnos entre os jogadores até que haja um vencedor ou o tabuleiro esteja cheio. Atualiza estatísticas dos jogadores ao final da partida.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1} & Ponteiro para o primeiro jogador. \\
+\hline
+{\em player2} & Ponteiro para o segundo jogador. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Lig\+Four.\+hpp\item 
+src/Lig\+Four.\+cpp\end{DoxyCompactItemize}

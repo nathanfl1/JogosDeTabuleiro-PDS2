@@ -1,0 +1,294 @@
+\doxysection{Reversi Class Reference}
+\hypertarget{classReversi}{}\label{classReversi}\index{Reversi@{Reversi}}
+
+
+Representa o jogo de \doxylink{classReversi}{Reversi} (ou Othello).  
+
+
+
+
+{\ttfamily \#include $<$Reversi.\+hpp$>$}
+
+Inheritance diagram for Reversi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classReversi}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classReversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classReversi}{Reversi}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReversi_a844ccb6c462f4363143bd97a43cf8cda}{set\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Configura o tabuleiro do jogo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReversi_a5b853088b9c77961fc6f402c508a58b8}{did\+Player\+Win}} (int player)
+\begin{DoxyCompactList}\small\item\em Verifica se o jogador venceu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReversi_a8da89698bbcc8612c3ec312254ae66a3}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Verifica se o jogador venceu (usando um ponteiro para o jogador). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2) override
+\begin{DoxyCompactList}\small\item\em Inicia o jogo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410}{round\+Is\+Valid}} (pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Verifica se a jogada do jogador é válida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReversi_a76c87d480dcd225fab3665953640c404}{round\+Is\+Valid}} (pair$<$ int, int $>$) override
+\begin{DoxyCompactList}\small\item\em Verifica se a jogada é válida (overload para usar apenas a coordenada). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96}{read\+Round}} (pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Realiza a jogada de um jogador, colocando a peça no tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReversi_aeb91d4a68f6bae8207a62fe752c4b162}{read\+Round}} (pair$<$ int, int $>$ destination, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Realiza a jogada de um jogador, colocando a peça no tabuleiro. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{classReversi_a8d7eafa5616f7cb8a88400a5ef7ef252}{all\+Pieces\+To\+Flip}} (pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Encontra todas as peças que devem ser viradas após uma jogada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classReversi_ac6a066091bc5dcf839910b182bc944c4}{valid\+Move}} (int player)
+\begin{DoxyCompactList}\small\item\em Verifica se há um movimento válido para o jogador. \end{DoxyCompactList}\item 
+\Hypertarget{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\label{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Reversi} ()
+\begin{DoxyCompactList}\small\item\em Destruidor da classe \doxylink{classReversi}{Reversi}. Libera qualquer recurso alocado, caso necessário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board\+Game} (int, int)
+\item 
+void {\bfseries print\+Board} ()
+\item 
+void {\bfseries set\+Board} ()
+\item 
+void {\bfseries set\+Size} (int, int)
+\item 
+bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+\item 
+pair$<$ int, int $>$ {\bfseries get\+Size} ()
+\item 
+int {\bfseries getX} ()
+\item 
+int {\bfseries getY} ()
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+\item 
+void {\bfseries increment\+Turn} ()
+\item 
+void {\bfseries reset\+Turn} ()
+\item 
+int {\bfseries get\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o jogo de \doxylink{classReversi}{Reversi} (ou Othello). 
+
+A classe \doxylink{classReversi}{Reversi} implementa a lógica do jogo de \doxylink{classReversi}{Reversi}, incluindo regras de movimento, validação de jogadas, e verificação de vitória. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classReversi_a73e3ca5c21b634f9c490b404d62f0e01}\index{Reversi@{Reversi}!Reversi@{Reversi}}
+\index{Reversi@{Reversi}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{Reversi()}{Reversi()}}
+{\footnotesize\ttfamily \label{classReversi_a73e3ca5c21b634f9c490b404d62f0e01} 
+Reversi\+::\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classReversi}{Reversi}. 
+
+Inicializa o jogo configurando o tabuleiro e os parâmetros necessários. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classReversi_a8d7eafa5616f7cb8a88400a5ef7ef252}\index{Reversi@{Reversi}!allPiecesToFlip@{allPiecesToFlip}}
+\index{allPiecesToFlip@{allPiecesToFlip}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{allPiecesToFlip()}{allPiecesToFlip()}}
+{\footnotesize\ttfamily \label{classReversi_a8d7eafa5616f7cb8a88400a5ef7ef252} 
+vector$<$ pair$<$ int, int $>$ $>$ Reversi\+::all\+Pieces\+To\+Flip (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Encontra todas as peças que devem ser viradas após uma jogada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Coordenada da jogada. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna um vetor de coordenadas das peças a serem viradas. 
+\end{DoxyReturn}
+\Hypertarget{classReversi_a5b853088b9c77961fc6f402c508a58b8}\index{Reversi@{Reversi}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classReversi_a5b853088b9c77961fc6f402c508a58b8} 
+bool Reversi\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o jogador venceu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & O número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o jogador venceu, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classReversi_a8da89698bbcc8612c3ec312254ae66a3}\index{Reversi@{Reversi}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classReversi_a8da89698bbcc8612c3ec312254ae66a3} 
+bool Reversi\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Verifica se o jogador venceu (usando um ponteiro para o jogador). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Ponteiro para o objeto jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o jogador venceu, false caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96}\index{Reversi@{Reversi}!readRound@{readRound}}
+\index{readRound@{readRound}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96} 
+void Reversi\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Realiza a jogada de um jogador, colocando a peça no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Coordenada de destino da jogada. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). Atualiza o tabuleiro e as peças do jogo de acordo com as regras. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classReversi_aeb91d4a68f6bae8207a62fe752c4b162}\index{Reversi@{Reversi}!readRound@{readRound}}
+\index{readRound@{readRound}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classReversi_aeb91d4a68f6bae8207a62fe752c4b162} 
+void Reversi\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{destination}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Realiza a jogada de um jogador, colocando a peça no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Coordenada de destino da jogada. \\
+\hline
+{\em player} & Ponteiro para o jogador. Atualiza o tabuleiro e as peças do jogo de acordo com as regras. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410}\index{Reversi@{Reversi}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410} 
+bool Reversi\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a jogada do jogador é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Coordenada de destino da jogada. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a jogada é válida, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classReversi_a76c87d480dcd225fab3665953640c404}\index{Reversi@{Reversi}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classReversi_a76c87d480dcd225fab3665953640c404} 
+bool Reversi\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Verifica se a jogada é válida (overload para usar apenas a coordenada). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & Coordenada de destino da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna false (não implementado, mas pode ser extendido). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classReversi_a844ccb6c462f4363143bd97a43cf8cda}\index{Reversi@{Reversi}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{setBoard()}{setBoard()}}
+{\footnotesize\ttfamily \label{classReversi_a844ccb6c462f4363143bd97a43cf8cda} 
+void Reversi\+::set\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configura o tabuleiro do jogo. 
+
+Inicializa o tabuleiro com as peças iniciais do jogo \doxylink{classReversi}{Reversi}. \Hypertarget{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}\index{Reversi@{Reversi}!startGame@{startGame}}
+\index{startGame@{startGame}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily \label{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70} 
+void Reversi\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicia o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1} & Ponteiro para o jogador 1. \\
+\hline
+{\em player2} & Ponteiro para o jogador 2. Inicia a partida, alternando entre os jogadores e realizando as jogadas. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classReversi_ac6a066091bc5dcf839910b182bc944c4}\index{Reversi@{Reversi}!validMove@{validMove}}
+\index{validMove@{validMove}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{validMove()}{validMove()}}
+{\footnotesize\ttfamily \label{classReversi_ac6a066091bc5dcf839910b182bc944c4} 
+bool Reversi\+::valid\+Move (\begin{DoxyParamCaption}\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se há um movimento válido para o jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se houver um movimento válido, false caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Reversi.\+hpp\item 
+src/Reversi.\+cpp\end{DoxyCompactItemize}

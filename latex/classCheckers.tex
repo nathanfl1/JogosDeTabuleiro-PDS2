@@ -1,0 +1,137 @@
+\doxysection{Checkers Class Reference}
+\hypertarget{classCheckers}{}\label{classCheckers}\index{Checkers@{Checkers}}
+Inheritance diagram for Checkers\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCheckers}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9}{read\+Round}} (pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{classCheckers_a783785e26d6208825c44579cfb792414}\label{classCheckers_a783785e26d6208825c44579cfb792414} 
+void {\bfseries read\+Round} (pair$<$ int, int $>$, pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{classCheckers_a3aa17fe7684ce371074114c79e72ab2c}\label{classCheckers_a3aa17fe7684ce371074114c79e72ab2c} 
+int {\bfseries round\+Is\+Valid} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
+\item 
+\Hypertarget{classCheckers_a87a9e744957df32ae4536ce92325515e}\label{classCheckers_a87a9e744957df32ae4536ce92325515e} 
+int {\bfseries round\+Is\+Valid\+Queen} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
+\item 
+\Hypertarget{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4}\label{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4} 
+bool {\bfseries did\+Player\+Win} (int player)
+\item 
+\Hypertarget{classCheckers_ac8c14f666cd6daff9b26e566ca2b0d2f}\label{classCheckers_ac8c14f666cd6daff9b26e566ca2b0d2f} 
+bool {\bfseries can\+Capture\+Queen} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
+\item 
+bool \mbox{\hyperlink{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e}{round\+Is\+Valid}} (pair$<$ int, int $>$)
+\item 
+\Hypertarget{classCheckers_a52c331711f6e854acdfb3c444de07de9}\label{classCheckers_a52c331711f6e854acdfb3c444de07de9} 
+bool {\bfseries can\+Capture} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
+\item 
+\Hypertarget{classCheckers_a91fc5703d3d4f9664bb2d48cffdbf552}\label{classCheckers_a91fc5703d3d4f9664bb2d48cffdbf552} 
+void {\bfseries capture\+All\+Avaliable\+Pieces} (pair$<$ int, int $>$, int, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
+\item 
+\Hypertarget{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26}\label{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26} 
+void {\bfseries set\+Board} ()
+\item 
+void \mbox{\hyperlink{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board\+Game} (int, int)
+\item 
+void {\bfseries print\+Board} ()
+\item 
+void {\bfseries set\+Board} ()
+\item 
+void {\bfseries set\+Size} (int, int)
+\item 
+bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+\item 
+pair$<$ int, int $>$ {\bfseries get\+Size} ()
+\item 
+int {\bfseries getX} ()
+\item 
+int {\bfseries getY} ()
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+\item 
+void {\bfseries increment\+Turn} ()
+\item 
+void {\bfseries reset\+Turn} ()
+\item 
+int {\bfseries get\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2}\label{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2} 
+static const int {\bfseries SUCCESS} = 1
+\item 
+\Hypertarget{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5}\label{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5} 
+static const int {\bfseries NOT\+\_\+\+SUCCESS} = 0
+\item 
+\Hypertarget{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30}\label{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30} 
+static const int {\bfseries CAPTURE\+\_\+\+AGAIN} = 2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1}\index{Checkers@{Checkers}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}}
+{\footnotesize\ttfamily \label{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1} 
+bool Checkers\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9}\index{Checkers@{Checkers}!readRound@{readRound}}
+\index{readRound@{readRound}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}}
+{\footnotesize\ttfamily \label{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9} 
+void Checkers\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e}\index{Checkers@{Checkers}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}}
+{\footnotesize\ttfamily \label{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e} 
+bool Checkers\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+\Hypertarget{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b}\index{Checkers@{Checkers}!startGame@{startGame}}
+\index{startGame@{startGame}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily \label{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b} 
+void Checkers\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Checkers.\+hpp\item 
+src/Checkers.\+cpp\end{DoxyCompactItemize}

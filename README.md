@@ -32,29 +32,5 @@ Deve ser realizada na seguinte ordem dentro da pasta descompatada JogosDeTabulei
 
 ```make```
 
-```./bin/main```
+```bin/./main```
 
-   Para executar a aplicação, basta realizar o download dos arquivos no projeto e executar o seguinte comando:
-
-    
-   
-   Pronto! agora você poderá desfrutar da aplicação de gerenciamento de livros! 📚
-   
-## Tecnologias utilizadas
-<ul>
-  <li><a href="https://www.java.com/pt-BR/">Java</a></li>
-  <li><a href="https://openjfx.io/">JavaFX</a></li>
-  <li><a href="https://www.mongodb.com/">MongoDB</a></li>
- </ul>
-  
-## Desenvolvedores
-
-* <a href="https://github.com/alfacet">👨‍💻 Filipe Davi</a>
-
-* <a href="https://github.com/FranciscoAlvesAlmeida">👨‍💻 Francisco Alves</a>
-
-* <a href="https://github.com/JuliaReisSilvaLima">👩‍💻 Júlia Reis</a>
-
-* <a href="https://github.com/Letsts">👩‍💻 Letícia Schmidt</a>
-
-* <a href="https://github.com/nathanfl1">👨‍💻 Nathan Filipe</a>

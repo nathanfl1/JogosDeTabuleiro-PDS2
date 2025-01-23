@@ -3,6 +3,7 @@
 #include "../include/PlayerList.hpp"
 #include "../include/Checkers.hpp"
 #include "../include/Reversi.hpp"
+#include "../include/Tictactoe.hpp"
 #include <iostream>
 
 using namespace std;
@@ -21,7 +22,8 @@ int main(void) {
     LigFour* l = new LigFour();
     Checkers* c = new Checkers();
     Reversi* r = new Reversi();
-    
+    TicTacToe* t = new TicTacToe(); 
+
     PlayerList* list = new PlayerList();
     list->loadData();
 
@@ -72,7 +74,7 @@ int main(void) {
 
             switch (option2)
             {
-            case 'R':
+            case 'R'://Reversi
                 cin >> param1 >> param2;
                 player1 = list->searchPlayer(param1);
                 player2 = list->searchPlayer(param2);
@@ -89,7 +91,7 @@ int main(void) {
 
                 break;
 
-            case 'L':
+            case 'L'://LigFour
                 cin >> param1 >> param2;
                 player1 = list->searchPlayer(param1);
                 player2 = list->searchPlayer(param2);
@@ -108,11 +110,23 @@ int main(void) {
                 }
                 break;
 
-            case 'V':
-                list->saveData();
+            case 'V': //Tictactoe
+                cin >> param1 >> param2;
+                player1 = list->searchPlayer(param1);
+                player2 = list->searchPlayer(param2);
+
+                if (player1 == nullptr)
+                    cout << "o jogador <" << param1 << "> não existe!" << endl;
+                else if (player2 == nullptr)
+                    cout << "o jogador <" << param2 << "> não existe!" << endl;
+                    
+                else {
+                    t->startGame(player1, player2); // Inicia o jogo da velha
+                    list->saveData();
+                }
                 break;
 
-            case 'D':
+            case 'D'://Checkers
                 cin >> param1 >> param2;
                 player1 = list->searchPlayer(param1);
                 player2 = list->searchPlayer(param2);

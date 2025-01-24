@@ -1,5 +1,7 @@
 # Implementação de jogos de tabuleiro em CPP
 
+# DOCUMENTAÇÃO: https://printfgabriel.github.io/JogosDeTabuleiro-PDS2/html
+
 ## Introdução e funcionalidades
   Este é um trabalho da disciplina de Programação e Desenvolvimento de Software II, dada no 2º semestre do cursos de Ciência da Computação e Sistemas de Informação na Universidade Federal de Minas Gerais (UFMG). Trata-se de um software no terminal em C++ que se propõe a gerenciar jogos de tabuleiro, que permite ao seu usuário realizar as seguintes operações:
 <ul>

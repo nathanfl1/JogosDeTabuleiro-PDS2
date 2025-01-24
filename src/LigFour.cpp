@@ -65,9 +65,6 @@ bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
     int c = move.second;
     // runningh through all the board (except last 3 columns and lines, as they are not needed)
 
-   
-    cout << "JOGADA: " << l << ", " << c << endl;
-
     // vertical test
     for(int i=1; i<=3 && l+i < getSize().first; i++){
         if(board[l+i][c] != symbol){

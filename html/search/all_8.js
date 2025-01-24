@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['setboard_0',['setBoard',['../classReversi.html#a844ccb6c462f4363143bd97a43cf8cda',1,'Reversi']]],
-  ['startgame_1',['startGame',['../classLigFour.html#ae0c48bf9942cdc464f789b7c473db33b',1,'LigFour::startGame()'],['../classReversi.html#a2d1f732cd4d7cc6ab9539cca299cff70',1,'Reversi::startGame()']]]
+  ['main_0',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['manager_2',['Manager',['../classManager.html',1,'Manager'],['../classManager.html#a1658ff9f18e38ccd9cb8b0b371b9c20b',1,'Manager::Manager()']]],
+  ['manager_2ecpp_3',['Manager.cpp',['../Manager_8cpp.html',1,'']]],
+  ['manager_2ehpp_4',['Manager.hpp',['../Manager_8hpp.html',1,'']]]
 ];

@@ -8,10 +8,12 @@ LigFour::LigFour(Player *player1, Player *player2): BoardGame(6, 7), player1(pla
     playerSymbols[player1->getNickname()] = 'X';
     playerSymbols[player2->getNickname()] = 'O';
 };
+
 LigFour::LigFour(): BoardGame(6, 7)
 {
 
 };
+
 LigFour::~LigFour(){
 
 }
@@ -62,7 +64,10 @@ bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
     int l = move.first;
     int c = move.second;
     // runningh through all the board (except last 3 columns and lines, as they are not needed)
+
    
+    cout << "JOGADA: " << l << ", " << c << endl;
+
     // vertical test
     for(int i=1; i<=3 && l+i < getSize().first; i++){
         if(board[l+i][c] != symbol){
@@ -73,16 +78,31 @@ bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
         }
     }
 
-    // horizontal test
-    for(int i=1; i<=3 && c+i < getSize().second; i++){
-        if(board[l][c+i] != symbol)
+    // horizontal-forward test
+    for(int i=1; i<=3 && c+i <= getSize().second; i++){
+        cout << "pos: " << l << ", " << c+i << " || symbol: " << board[l][c+i] << endl; 
+        if(board[l][c+i] != symbol){
+            cout << "DIFERENTE: " << endl;
             break;
+        }
         else if(i==3){
             return true;
         }
     }
 
-    // primary diagonal test
+    // horizontal-back test
+    for(int i=1; i<=3 && c-i >= 0; i++){
+        cout << "pos: " << l << ", " << c-i << " || symbol: " << board[l][c-i] << endl; 
+        if(board[l][c-i] != symbol){
+            cout << "DIFERENTE: " << endl;
+            break;
+        }
+        else if(i==3){
+            return true;
+        }
+    }
+
+    // primary diagonal-forward test
     for(int i=1; i<=3 && l+i < getSize().first && c+i < getSize().second; i++){
         if(board[l+i][c+i] != symbol)
             break;
@@ -91,7 +111,16 @@ bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
         }
     }
 
-    // secondary diagonal test
+    // primary diagonal-back test
+    for(int i=1; i<=3 && l-i >= 0 && c-i >= 0; i++){
+        if(board[l-i][c-i] != symbol)
+            break;
+        else if(i==3){
+            return true;
+        }
+    }
+
+    // secondary diagonal-forward test
     for(int i=1; i<=3 && l+i < getSize().first && c-i >= 0; i++){
         if(board[l+i][c-i] != symbol)
             break;
@@ -100,8 +129,17 @@ bool LigFour::didPlayerWin(Player *player, pair<int,int> move){
         }
     }
 
+    // secondary diagonal-back test
+    for(int i=1; i<=3 && l-i >= 0 && c+i < getSize().second; i++){
+        if(board[l-i][c+i] != symbol)
+            break;
+        else if(i==3){
+            return true;
+        }
+    }
+
     return false;
-};
+}
 
 void LigFour::startGame(Player *player1, Player *player2){
     Player *currentPlayer = player2;

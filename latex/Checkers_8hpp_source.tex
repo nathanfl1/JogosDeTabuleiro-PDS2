@@ -1,39 +1,54 @@
 \doxysection{Checkers.\+hpp}
 \hypertarget{Checkers_8hpp_source}{}\label{Checkers_8hpp_source}\index{include/Checkers.hpp@{include/Checkers.hpp}}
-
+\mbox{\hyperlink{Checkers_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHECKERS\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHECKERS\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame_8hpp}{BoardGame.hpp}}"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Checkers\ :\ \textcolor{keyword}{public}\ BoardGame}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCheckers_aac46ea0bb5bdeb648d59710785633838}{Checkers}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{BoardGame}}}
+\DoxyCodeLine{00009\ \{}
 \DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{/*\ data\ */}}
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ SUCCESS\ =\ 1;}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ NOT\_SUCCESS\ =\ 0;}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CAPTURE\_AGAIN\ =\ 2;}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ didPlayerWin(\mbox{\hyperlink{classPlayer}{Player}}*);}
-\DoxyCodeLine{00018\ \ \ \ \ Checkers(\textcolor{comment}{/*\ args\ */});}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ readRound(pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ readRound(pair<int,\ int>,\ pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ roundIsValid(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ roundIsValidQueen(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ didPlayerWin(\textcolor{keywordtype}{int}\ player);}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ canCaptureQueen(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ roundIsValid(pair<int,\ int>);}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ canCapture(pair<int,\ int>,\ pair<int,\ int>,\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ captureAllAvaliablePieces(pair<int,\ int>,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{classPlayer}{Player}}*);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setBoard();}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{classPlayer}{Player}}\ *,\ \mbox{\hyperlink{classPlayer}{Player}}\ *);}
-\DoxyCodeLine{00030\ \ \ \ \ \string~Checkers();}
-\DoxyCodeLine{00031\ \};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Nenhum\ dado\ adicional\ privado\ específico\ foi\ adicionado\ até\ o\ momento.}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Definições\ de\ status\ para\ as\ jogadas}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2}{SUCCESS}}\ =\ 1;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5}{NOT\_SUCCESS}}\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30}{CAPTURE\_AGAIN}}\ =\ 2;\ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classCheckers_aac46ea0bb5bdeb648d59710785633838}{Checkers}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCheckers_a01645fca7e2056356f947d5aa19fe54f}{didPlayerWin}}(\mbox{\hyperlink{classPlayer}{Player}}*\ p);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c}{readRound}}(pair<int,\ int>\ coordinate,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c}{readRound}}(pair<int,\ int>\ coordinate,\ pair<int,\ int>\ destination,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCheckers_a80bf615e4f438b47f68dc4410add5188}{roundIsValid}}(pair<int,\ int>\ coordinate,\ pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCheckers_a7f2117e6ada8c6c380beabdb9e56bacb}{roundIsValidQueen}}(pair<int,\ int>\ coordinate,\ pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCheckers_a01645fca7e2056356f947d5aa19fe54f}{didPlayerWin}}(\textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCheckers_a1aa1fb0f0487f88845b98597f85eb761}{canCaptureQueen}}(pair<int,\ int>\ coordinate,\ pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCheckers_a80bf615e4f438b47f68dc4410add5188}{roundIsValid}}(pair<int,\ int>\ coordinate);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCheckers_a854f392a053b7f1783443328c11a6964}{canCapture}}(pair<int,\ int>\ coordinate,\ pair<int,\ int>\ destination,\ \textcolor{keywordtype}{int}\ player);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCheckers_a8a91b18cbf31a7c03cc18bca87c30652}{captureAllAvaliablePieces}}(pair<int,\ int>\ currentCoordinate,\ \textcolor{keywordtype}{int}\ playerNumber,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26}{setBoard}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCheckers_acd02b621e2c2fe38d288ac33769cab92}{startGame}}(\mbox{\hyperlink{classPlayer}{Player}}*\ player1,\ \mbox{\hyperlink{classPlayer}{Player}}*\ player2);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{classCheckers_a9805a86a35232f36bae37607b6db5ae3}{\string~Checkers}}();}
+\DoxyCodeLine{00124\ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

@@ -1,10 +1,11 @@
 var annotated_dup =
 [
-    [ "BoardGame", "classBoardGame.html", null ],
-    [ "Checkers", "classCheckers.html", null ],
+    [ "BoardGame", "classBoardGame.html", "classBoardGame" ],
+    [ "Checkers", "classCheckers.html", "classCheckers" ],
     [ "LigFour", "classLigFour.html", "classLigFour" ],
-    [ "Player", "classPlayer.html", null ],
-    [ "PlayerList", "classPlayerList.html", null ],
+    [ "Manager", "classManager.html", "classManager" ],
+    [ "Player", "classPlayer.html", "classPlayer" ],
+    [ "PlayerList", "classPlayerList.html", "classPlayerList" ],
     [ "Reversi", "classReversi.html", "classReversi" ],
-    [ "TicTacToe", "classTicTacToe.html", null ]
+    [ "TicTacToe", "classTicTacToe.html", "classTicTacToe" ]
 ];

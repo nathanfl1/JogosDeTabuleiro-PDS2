@@ -40,39 +40,40 @@ vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{classReversi_a8d7eafa5616f7c
 \begin{DoxyCompactList}\small\item\em Encontra todas as peças que devem ser viradas após uma jogada. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classReversi_ac6a066091bc5dcf839910b182bc944c4}{valid\+Move}} (int player)
 \begin{DoxyCompactList}\small\item\em verifica se há um movimento válido para o jogador \end{DoxyCompactList}\item 
-\Hypertarget{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\label{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
-{\bfseries \texorpdfstring{$\sim$}{\string~}\+Reversi} ()
+\mbox{\hyperlink{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\texorpdfstring{$\sim$}{\string~}\+Reversi}} ()
 \begin{DoxyCompactList}\small\item\em Destruidor da classe \doxylink{classReversi}{Reversi}. Libera qualquer recurso alocado, caso necessário. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Board\+Game} (int, int)
+\mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{Board\+Game}} (int, int)
 \item 
-void {\bfseries print\+Board} ()
+void \mbox{\hyperlink{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}{print\+Board}} ()
 \item 
-void {\bfseries set\+Board} ()
+void \mbox{\hyperlink{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}{set\+Board}} ()
 \item 
-void {\bfseries set\+Size} (int, int)
+void \mbox{\hyperlink{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}{set\+Size}} (int, int)
 \item 
-bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+bool \mbox{\hyperlink{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}{is\+Inside\+Board}} (pair$<$ int, int $>$)
 \item 
-pair$<$ int, int $>$ {\bfseries get\+Size} ()
+pair$<$ int, int $>$ \mbox{\hyperlink{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}{get\+Size}} ()
 \item 
-int {\bfseries getX} ()
+int \mbox{\hyperlink{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}{getX}} ()
 \item 
-int {\bfseries getY} ()
+int \mbox{\hyperlink{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}{getY}} ()
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}{get\+Board}} ()
 \item 
-void {\bfseries increment\+Turn} ()
+void \mbox{\hyperlink{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}{increment\+Turn}} ()
 \item 
-int {\bfseries get\+Turn} ()
+int \mbox{\hyperlink{classBoardGame_a1324d53f927d76415a412c992d4a5061}{get\+Turn}} ()
+\item 
+virtual \mbox{\hyperlink{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}{\texorpdfstring{$\sim$}{\string~}\+Board\+Game}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}{board}} = nullptr
 \end{DoxyCompactItemize}
 
 
@@ -92,7 +93,17 @@ Reversi\+::\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Construtor da classe \doxylink{classReversi}{Reversi}. 
 
-Seta o jogo com um tabuleiro 8x8 
+Seta o jogo com um tabuleiro 8x8 \Hypertarget{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\index{Reversi@{Reversi}!````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}}
+\index{````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}!Reversi@{Reversi}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reversi()}{\string~Reversi()}}
+{\footnotesize\ttfamily \label{classReversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
+Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruidor da classe \doxylink{classReversi}{Reversi}. Libera qualquer recurso alocado, caso necessário. 
+
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classReversi_a8d7eafa5616f7cb8a88400a5ef7ef252}\index{Reversi@{Reversi}!allPiecesToFlip@{allPiecesToFlip}}
@@ -153,7 +164,7 @@ Retorna true se o jogador venceu, false caso contrário.
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{Board\+Game}}.
 
 \Hypertarget{classReversi_a7e3dac25475b6ac6b6051b09dc2efc96}\index{Reversi@{Reversi}!readRound@{readRound}}
 \index{readRound@{readRound}!Reversi@{Reversi}}
@@ -191,7 +202,7 @@ Realiza a jogada de um jogador, colocando a peça no tabuleiro.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{Board\+Game}}.
 
 \Hypertarget{classReversi_a5d4e50f70f62a7d6cfe4a06199a99410}\index{Reversi@{Reversi}!roundIsValid@{roundIsValid}}
 \index{roundIsValid@{roundIsValid}!Reversi@{Reversi}}
@@ -233,7 +244,7 @@ Retorna false (não implementado, mas pode ser extendido).
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}{Board\+Game}}.
 
 \Hypertarget{classReversi_a844ccb6c462f4363143bd97a43cf8cda}\index{Reversi@{Reversi}!setBoard@{setBoard}}
 \index{setBoard@{setBoard}!Reversi@{Reversi}}
@@ -264,7 +275,7 @@ Inicia o jogo.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{Board\+Game}}.
 
 \Hypertarget{classReversi_ac6a066091bc5dcf839910b182bc944c4}\index{Reversi@{Reversi}!validMove@{validMove}}
 \index{validMove@{validMove}!Reversi@{Reversi}}
@@ -288,5 +299,5 @@ retorna true se houver um movimento válido, false caso contrário
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Reversi.\+hpp\item 
-src/Reversi.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Reversi_8hpp}{Reversi.\+hpp}}\item 
+src/\mbox{\hyperlink{Reversi_8cpp}{Reversi.\+cpp}}\end{DoxyCompactItemize}

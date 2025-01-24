@@ -105,10 +105,10 @@ $(function(){initNavTree('PlayerList_8hpp_source.html',''); initResizable(true);
   <div class="headertitle"><div class="title">PlayerList.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PLAYERLIST_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PLAYLERLIST_H</span></div>
+<a href="PlayerList_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PLAYERLIST_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PLAYERLIST_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Player.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Player_8hpp.html">Player.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;list&gt;</span></div>
@@ -123,36 +123,60 @@ $(function(){initNavTree('PlayerList_8hpp_source.html',''); initResizable(true);
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">int</span> count;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    list&lt;Player*&gt; players;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SUCCESS = 0;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> ERR_REPEATED_PLAYER = -1;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> ERR_PLAYER_NOT_FOUND = -2;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> ERR_INCORRECT_DATA = -3;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    list&lt;Player*&gt; getPlayers();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> setPlayers(list&lt;Player*&gt;);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> getCount();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> setCount(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">int</span> addPlayer(<a class="code hl_class" href="classPlayer.html">Player</a>*);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> sortByName();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> sortByNickname();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">int</span> removePlayer(<span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> display();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">//int searchPlayer(string);</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classPlayer.html">Player</a>* searchPlayer(<span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> saveData();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> loadData();</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="classPlayerList.html">~PlayerList</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
-</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classPlayerList.html#a19dce245b9e08f48872db270c6d126b9">   18</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classPlayerList.html#a19dce245b9e08f48872db270c6d126b9">SUCCESS</a> = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classPlayerList.html#a99687d9b501547c66ed97f2660597f28">   19</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classPlayerList.html#a99687d9b501547c66ed97f2660597f28">ERR_REPEATED_PLAYER</a> = -1;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classPlayerList.html#a20b328dab7632e50bbe8312dcfc03807">   20</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classPlayerList.html#a20b328dab7632e50bbe8312dcfc03807">ERR_PLAYER_NOT_FOUND</a> = -2;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classPlayerList.html#aa8959f2fb407c756057612d5f16048a0">   21</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classPlayerList.html#aa8959f2fb407c756057612d5f16048a0">ERR_INCORRECT_DATA</a> = -3;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classPlayerList.html#a09945546952d39f26dadfd7832de21db">   22</a></span>    list&lt;Player*&gt; <a class="code hl_function" href="classPlayerList.html#a09945546952d39f26dadfd7832de21db">getPlayers</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classPlayerList.html#a1f4c0262c4cf2c39d75237bfe10de856">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a1f4c0262c4cf2c39d75237bfe10de856">setPlayers</a>(list&lt;Player*&gt;);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classPlayerList.html#afb1519ad3effbd61fead1b527efa6b59">getCount</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a7d2b1b517710b0cb278e1da7be35b43e">setCount</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classPlayerList.html#a675b7acfd2f3da8dcfbb4a0d3774d4e6">addPlayer</a>(<a class="code hl_class" href="classPlayer.html">Player</a>*);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a79631c811934c27727992aed6de50201">sortByName</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a8c507a1a8112f3f1949dedfe24dfcc0e">sortByNickname</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classPlayerList.html#adc183ba86e19d604f68fbd6b678b65e9">removePlayer</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#aa275c6fc7be693c9ffc5ce817e25e269">display</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a97e3a2b11776de369c5bec8202c4185f">sortVictoriesTotal</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#ac7717326447429cf4820a1e3108fcfbb">sortByWinsGame</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">//int searchPlayer(string);</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classPlayer.html">Player</a>* <a class="code hl_function" href="classPlayerList.html#abcf4c910a1e0fcb08c33d0ec193b6c07">searchPlayer</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a2126c67fa7668cea8467b68e66486696">saveData</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPlayerList.html#a49a7d057320289667ae77fada3e76778">loadData</a>();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="classPlayerList.html#a2ac6d6a745f2db4f68dfcd98370886f1">~PlayerList</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aPlayer_8hpp_html"><div class="ttname"><a href="Player_8hpp.html">Player.hpp</a></div></div>
 <div class="ttc" id="aclassPlayerList_html"><div class="ttname"><a href="classPlayerList.html">PlayerList</a></div><div class="ttdef"><b>Definition</b> PlayerList.hpp:13</div></div>
+<div class="ttc" id="aclassPlayerList_html_a09945546952d39f26dadfd7832de21db"><div class="ttname"><a href="classPlayerList.html#a09945546952d39f26dadfd7832de21db">PlayerList::getPlayers</a></div><div class="ttdeci">list&lt; Player * &gt; getPlayers()</div></div>
+<div class="ttc" id="aclassPlayerList_html_a19dce245b9e08f48872db270c6d126b9"><div class="ttname"><a href="classPlayerList.html#a19dce245b9e08f48872db270c6d126b9">PlayerList::SUCCESS</a></div><div class="ttdeci">static const int SUCCESS</div><div class="ttdef"><b>Definition</b> PlayerList.hpp:18</div></div>
+<div class="ttc" id="aclassPlayerList_html_a1f4c0262c4cf2c39d75237bfe10de856"><div class="ttname"><a href="classPlayerList.html#a1f4c0262c4cf2c39d75237bfe10de856">PlayerList::setPlayers</a></div><div class="ttdeci">void setPlayers(list&lt; Player * &gt;)</div></div>
+<div class="ttc" id="aclassPlayerList_html_a20b328dab7632e50bbe8312dcfc03807"><div class="ttname"><a href="classPlayerList.html#a20b328dab7632e50bbe8312dcfc03807">PlayerList::ERR_PLAYER_NOT_FOUND</a></div><div class="ttdeci">static const int ERR_PLAYER_NOT_FOUND</div><div class="ttdef"><b>Definition</b> PlayerList.hpp:20</div></div>
+<div class="ttc" id="aclassPlayerList_html_a2126c67fa7668cea8467b68e66486696"><div class="ttname"><a href="classPlayerList.html#a2126c67fa7668cea8467b68e66486696">PlayerList::saveData</a></div><div class="ttdeci">void saveData()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:160</div></div>
+<div class="ttc" id="aclassPlayerList_html_a2ac6d6a745f2db4f68dfcd98370886f1"><div class="ttname"><a href="classPlayerList.html#a2ac6d6a745f2db4f68dfcd98370886f1">PlayerList::~PlayerList</a></div><div class="ttdeci">~PlayerList()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:250</div></div>
+<div class="ttc" id="aclassPlayerList_html_a49a7d057320289667ae77fada3e76778"><div class="ttname"><a href="classPlayerList.html#a49a7d057320289667ae77fada3e76778">PlayerList::loadData</a></div><div class="ttdeci">void loadData()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:209</div></div>
+<div class="ttc" id="aclassPlayerList_html_a675b7acfd2f3da8dcfbb4a0d3774d4e6"><div class="ttname"><a href="classPlayerList.html#a675b7acfd2f3da8dcfbb4a0d3774d4e6">PlayerList::addPlayer</a></div><div class="ttdeci">int addPlayer(Player *)</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:13</div></div>
+<div class="ttc" id="aclassPlayerList_html_a79631c811934c27727992aed6de50201"><div class="ttname"><a href="classPlayerList.html#a79631c811934c27727992aed6de50201">PlayerList::sortByName</a></div><div class="ttdeci">void sortByName()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:108</div></div>
+<div class="ttc" id="aclassPlayerList_html_a7d2b1b517710b0cb278e1da7be35b43e"><div class="ttname"><a href="classPlayerList.html#a7d2b1b517710b0cb278e1da7be35b43e">PlayerList::setCount</a></div><div class="ttdeci">void setCount(int)</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:8</div></div>
+<div class="ttc" id="aclassPlayerList_html_a8c507a1a8112f3f1949dedfe24dfcc0e"><div class="ttname"><a href="classPlayerList.html#a8c507a1a8112f3f1949dedfe24dfcc0e">PlayerList::sortByNickname</a></div><div class="ttdeci">void sortByNickname()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:113</div></div>
+<div class="ttc" id="aclassPlayerList_html_a97e3a2b11776de369c5bec8202c4185f"><div class="ttname"><a href="classPlayerList.html#a97e3a2b11776de369c5bec8202c4185f">PlayerList::sortVictoriesTotal</a></div><div class="ttdeci">void sortVictoriesTotal()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:80</div></div>
+<div class="ttc" id="aclassPlayerList_html_a99687d9b501547c66ed97f2660597f28"><div class="ttname"><a href="classPlayerList.html#a99687d9b501547c66ed97f2660597f28">PlayerList::ERR_REPEATED_PLAYER</a></div><div class="ttdeci">static const int ERR_REPEATED_PLAYER</div><div class="ttdef"><b>Definition</b> PlayerList.hpp:19</div></div>
+<div class="ttc" id="aclassPlayerList_html_aa275c6fc7be693c9ffc5ce817e25e269"><div class="ttname"><a href="classPlayerList.html#aa275c6fc7be693c9ffc5ce817e25e269">PlayerList::display</a></div><div class="ttdeci">void display()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:124</div></div>
+<div class="ttc" id="aclassPlayerList_html_aa8959f2fb407c756057612d5f16048a0"><div class="ttname"><a href="classPlayerList.html#aa8959f2fb407c756057612d5f16048a0">PlayerList::ERR_INCORRECT_DATA</a></div><div class="ttdeci">static const int ERR_INCORRECT_DATA</div><div class="ttdef"><b>Definition</b> PlayerList.hpp:21</div></div>
+<div class="ttc" id="aclassPlayerList_html_abcf4c910a1e0fcb08c33d0ec193b6c07"><div class="ttname"><a href="classPlayerList.html#abcf4c910a1e0fcb08c33d0ec193b6c07">PlayerList::searchPlayer</a></div><div class="ttdeci">Player * searchPlayer(string)</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:151</div></div>
+<div class="ttc" id="aclassPlayerList_html_ac7717326447429cf4820a1e3108fcfbb"><div class="ttname"><a href="classPlayerList.html#ac7717326447429cf4820a1e3108fcfbb">PlayerList::sortByWinsGame</a></div><div class="ttdeci">void sortByWinsGame(int)</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:84</div></div>
+<div class="ttc" id="aclassPlayerList_html_adc183ba86e19d604f68fbd6b678b65e9"><div class="ttname"><a href="classPlayerList.html#adc183ba86e19d604f68fbd6b678b65e9">PlayerList::removePlayer</a></div><div class="ttdeci">int removePlayer(string)</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:27</div></div>
+<div class="ttc" id="aclassPlayerList_html_afb1519ad3effbd61fead1b527efa6b59"><div class="ttname"><a href="classPlayerList.html#afb1519ad3effbd61fead1b527efa6b59">PlayerList::getCount</a></div><div class="ttdeci">int getCount()</div><div class="ttdef"><b>Definition</b> PlayerList.cpp:3</div></div>
 <div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition</b> Player.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>PlayerList.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="PlayerList_8hpp.html">PlayerList.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

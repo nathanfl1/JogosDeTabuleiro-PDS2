@@ -6,6 +6,7 @@ var hierarchy =
       [ "Reversi", "classReversi.html", null ],
       [ "TicTacToe", "classTicTacToe.html", null ]
     ] ],
+    [ "Manager", "classManager.html", null ],
     [ "Player", "classPlayer.html", null ],
     [ "PlayerList", "classPlayerList.html", null ]
 ];

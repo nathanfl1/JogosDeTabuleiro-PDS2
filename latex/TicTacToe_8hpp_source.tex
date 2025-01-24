@@ -1,27 +1,27 @@
 \doxysection{Tic\+Tac\+Toe.\+hpp}
 \hypertarget{TicTacToe_8hpp_source}{}\label{TicTacToe_8hpp_source}\index{include/TicTacToe.hpp@{include/TicTacToe.hpp}}
-
+\mbox{\hyperlink{TicTacToe_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TICTACTOE\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TICTACTOE\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BoardGame.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BoardGame_8hpp}{BoardGame.hpp}}"{}}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }TicTacToe\ :\ \textcolor{keyword}{public}\ BoardGame\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{TicTacToe}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{BoardGame}}\ \{}
 \DoxyCodeLine{00007\ \ \ \ \ }
 \DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}\ *localPlayer1;\ \textcolor{comment}{//\ Variáveis\ locais\ para\ os\ jogadores}}
 \DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}\ *localPlayer2;}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ TicTacToe();\ \textcolor{comment}{//\ Construtor}}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ setBoard();\ \textcolor{comment}{//\ Inicializa\ o\ tabuleiro}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{TicTacToe}}();\ \textcolor{comment}{//\ Construtor}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTicTacToe_a9446367d0b624470f83d98853387d76a}{setBoard}}();\ \textcolor{comment}{//\ Inicializa\ o\ tabuleiro}}
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//void\ printBoard();\ //\ Imprime\ o\ tabuleiro}}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ roundIsValid(std::pair<int,\ int>\ move);\ \textcolor{comment}{//\ Verifica\ se\ a\ jogada\ é\ válida}}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ readRound(std::pair<int,\ int>\ move,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player);\ \textcolor{comment}{//\ Realiza\ a\ jogada}}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ didPlayerWin(\mbox{\hyperlink{classPlayer}{Player}}\ *player);\ \textcolor{comment}{//\ Verifica\ se\ o\ jogador\ venceu}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{classPlayer}{Player}}\ *p1,\ \mbox{\hyperlink{classPlayer}{Player}}\ *p2);\ \textcolor{comment}{//\ Inicia\ o\ jogo}}
-\DoxyCodeLine{00020\ \ \ \ \ \string~TicTacToe();\ \textcolor{comment}{//\ Destrutor}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTicTacToe_a162c81e1744ded4507b43457724c82a9}{roundIsValid}}(std::pair<int,\ int>\ move);\ \textcolor{comment}{//\ Verifica\ se\ a\ jogada\ é\ válida}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78}{readRound}}(std::pair<int,\ int>\ move,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player);\ \textcolor{comment}{//\ Realiza\ a\ jogada}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTicTacToe_a0e90d12e8b4fce19f5633ac4dedfb3cc}{didPlayerWin}}(\mbox{\hyperlink{classPlayer}{Player}}\ *player);\ \textcolor{comment}{//\ Verifica\ se\ o\ jogador\ venceu}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTicTacToe_ad8263e957b27f08cd40b7f246cf8d1c4}{startGame}}(\mbox{\hyperlink{classPlayer}{Player}}\ *p1,\ \mbox{\hyperlink{classPlayer}{Player}}\ *p2);\ \textcolor{comment}{//\ Inicia\ o\ jogo}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}{\string~TicTacToe}}();\ \textcolor{comment}{//\ Destrutor}}
 \DoxyCodeLine{00021\ \};}
 \DoxyCodeLine{00022\ }
 \DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}

@@ -19,7 +19,6 @@ class Manager {
         string getParam1();
         string getParam2();
 
-
     private:
         void showGameMenu();
         void selectOption();
@@ -30,13 +29,11 @@ class Manager {
 
         string param1, param2;
 
-
         PlayerList* playerList;
         LigFour* lig;
         Checkers* check;
         Reversi* rev;
         TicTacToe* tic;
-    
 };
 
 #endif

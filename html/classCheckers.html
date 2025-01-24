@@ -109,6 +109,8 @@ $(function(){initNavTree('classCheckers.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Checkers Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Checkers_8hpp_source.html">Checkers.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Checkers:</div>
 <div class="dyncontent">
@@ -121,95 +123,270 @@ Inheritance diagram for Checkers:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad51f99e159c2049bab19b7f7f805a8e1" id="r_ad51f99e159c2049bab19b7f7f805a8e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51f99e159c2049bab19b7f7f805a8e1">didPlayerWin</a> (<a class="el" href="classPlayer.html">Player</a> *)</td></tr>
-<tr class="separator:ad51f99e159c2049bab19b7f7f805a8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aed9fc5652f1f5849c6ffb4768ca6e9" id="r_a3aed9fc5652f1f5849c6ffb4768ca6e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aed9fc5652f1f5849c6ffb4768ca6e9">readRound</a> (pair&lt; int, int &gt;, <a class="el" href="classPlayer.html">Player</a> *)</td></tr>
-<tr class="separator:a3aed9fc5652f1f5849c6ffb4768ca6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783785e26d6208825c44579cfb792414" id="r_a783785e26d6208825c44579cfb792414"><td class="memItemLeft" align="right" valign="top"><a id="a783785e26d6208825c44579cfb792414" name="a783785e26d6208825c44579cfb792414"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readRound</b> (pair&lt; int, int &gt;, pair&lt; int, int &gt;, <a class="el" href="classPlayer.html">Player</a> *)</td></tr>
-<tr class="separator:a783785e26d6208825c44579cfb792414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa17fe7684ce371074114c79e72ab2c" id="r_a3aa17fe7684ce371074114c79e72ab2c"><td class="memItemLeft" align="right" valign="top"><a id="a3aa17fe7684ce371074114c79e72ab2c" name="a3aa17fe7684ce371074114c79e72ab2c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>roundIsValid</b> (pair&lt; int, int &gt;, pair&lt; int, int &gt;, int)</td></tr>
-<tr class="separator:a3aa17fe7684ce371074114c79e72ab2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a9e744957df32ae4536ce92325515e" id="r_a87a9e744957df32ae4536ce92325515e"><td class="memItemLeft" align="right" valign="top"><a id="a87a9e744957df32ae4536ce92325515e" name="a87a9e744957df32ae4536ce92325515e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>roundIsValidQueen</b> (pair&lt; int, int &gt;, pair&lt; int, int &gt;, int)</td></tr>
-<tr class="separator:a87a9e744957df32ae4536ce92325515e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53415e88cc050fbf8dfad11eba3fe7e4" id="r_a53415e88cc050fbf8dfad11eba3fe7e4"><td class="memItemLeft" align="right" valign="top"><a id="a53415e88cc050fbf8dfad11eba3fe7e4" name="a53415e88cc050fbf8dfad11eba3fe7e4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>didPlayerWin</b> (int player)</td></tr>
+<tr class="memitem:aac46ea0bb5bdeb648d59710785633838" id="r_aac46ea0bb5bdeb648d59710785633838"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac46ea0bb5bdeb648d59710785633838">Checkers</a> ()</td></tr>
+<tr class="memdesc:aac46ea0bb5bdeb648d59710785633838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="classCheckers.html">Checkers</a>. Inicia o jogo de damas, criando um tabuleiro de 8x8.  <br /></td></tr>
+<tr class="separator:aac46ea0bb5bdeb648d59710785633838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01645fca7e2056356f947d5aa19fe54f" id="r_a01645fca7e2056356f947d5aa19fe54f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01645fca7e2056356f947d5aa19fe54f">didPlayerWin</a> (<a class="el" href="classPlayer.html">Player</a> *p)</td></tr>
+<tr class="memdesc:a01645fca7e2056356f947d5aa19fe54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o jogador venceu o jogo.  <br /></td></tr>
+<tr class="separator:a01645fca7e2056356f947d5aa19fe54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea216ebaa9895eaecbd3274aefe7e2c" id="r_aeea216ebaa9895eaecbd3274aefe7e2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeea216ebaa9895eaecbd3274aefe7e2c">readRound</a> (pair&lt; int, int &gt; coordinate, <a class="el" href="classPlayer.html">Player</a> *player)</td></tr>
+<tr class="memdesc:aeea216ebaa9895eaecbd3274aefe7e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê e executa uma jogada simples, movendo uma peça do jogador para uma nova posição.  <br /></td></tr>
+<tr class="separator:aeea216ebaa9895eaecbd3274aefe7e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868a795d8328addb4a79c01f3d16c334" id="r_a868a795d8328addb4a79c01f3d16c334"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868a795d8328addb4a79c01f3d16c334">readRound</a> (pair&lt; int, int &gt; coordinate, pair&lt; int, int &gt; destination, <a class="el" href="classPlayer.html">Player</a> *player)</td></tr>
+<tr class="memdesc:a868a795d8328addb4a79c01f3d16c334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê e executa uma jogada onde uma peça se move para uma nova posição, podendo capturar uma peça adversária.  <br /></td></tr>
+<tr class="separator:a868a795d8328addb4a79c01f3d16c334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bf615e4f438b47f68dc4410add5188" id="r_a80bf615e4f438b47f68dc4410add5188"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80bf615e4f438b47f68dc4410add5188">roundIsValid</a> (pair&lt; int, int &gt; coordinate, pair&lt; int, int &gt; destination, int player)</td></tr>
+<tr class="memdesc:a80bf615e4f438b47f68dc4410add5188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a jogada é válida para uma peça comum (não dama).  <br /></td></tr>
+<tr class="separator:a80bf615e4f438b47f68dc4410add5188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2117e6ada8c6c380beabdb9e56bacb" id="r_a7f2117e6ada8c6c380beabdb9e56bacb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2117e6ada8c6c380beabdb9e56bacb">roundIsValidQueen</a> (pair&lt; int, int &gt; coordinate, pair&lt; int, int &gt; destination, int player)</td></tr>
+<tr class="memdesc:a7f2117e6ada8c6c380beabdb9e56bacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a jogada é válida para uma dama.  <br /></td></tr>
+<tr class="separator:a7f2117e6ada8c6c380beabdb9e56bacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53415e88cc050fbf8dfad11eba3fe7e4" id="r_a53415e88cc050fbf8dfad11eba3fe7e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53415e88cc050fbf8dfad11eba3fe7e4">didPlayerWin</a> (int player)</td></tr>
+<tr class="memdesc:a53415e88cc050fbf8dfad11eba3fe7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se o jogador venceu com base na peça dele.  <br /></td></tr>
 <tr class="separator:a53415e88cc050fbf8dfad11eba3fe7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c14f666cd6daff9b26e566ca2b0d2f" id="r_ac8c14f666cd6daff9b26e566ca2b0d2f"><td class="memItemLeft" align="right" valign="top"><a id="ac8c14f666cd6daff9b26e566ca2b0d2f" name="ac8c14f666cd6daff9b26e566ca2b0d2f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>canCaptureQueen</b> (pair&lt; int, int &gt;, pair&lt; int, int &gt;, int)</td></tr>
-<tr class="separator:ac8c14f666cd6daff9b26e566ca2b0d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e3631e6e7392b4ad9bbd9b1c9c476e" id="r_ae1e3631e6e7392b4ad9bbd9b1c9c476e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e3631e6e7392b4ad9bbd9b1c9c476e">roundIsValid</a> (pair&lt; int, int &gt;)</td></tr>
-<tr class="separator:ae1e3631e6e7392b4ad9bbd9b1c9c476e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52c331711f6e854acdfb3c444de07de9" id="r_a52c331711f6e854acdfb3c444de07de9"><td class="memItemLeft" align="right" valign="top"><a id="a52c331711f6e854acdfb3c444de07de9" name="a52c331711f6e854acdfb3c444de07de9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>canCapture</b> (pair&lt; int, int &gt;, pair&lt; int, int &gt;, int)</td></tr>
-<tr class="separator:a52c331711f6e854acdfb3c444de07de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91fc5703d3d4f9664bb2d48cffdbf552" id="r_a91fc5703d3d4f9664bb2d48cffdbf552"><td class="memItemLeft" align="right" valign="top"><a id="a91fc5703d3d4f9664bb2d48cffdbf552" name="a91fc5703d3d4f9664bb2d48cffdbf552"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>captureAllAvaliablePieces</b> (pair&lt; int, int &gt;, int, <a class="el" href="classPlayer.html">Player</a> *)</td></tr>
-<tr class="separator:a91fc5703d3d4f9664bb2d48cffdbf552"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abde3bc086dc2fc58a7bc0498c6e24d26" id="r_abde3bc086dc2fc58a7bc0498c6e24d26"><td class="memItemLeft" align="right" valign="top"><a id="abde3bc086dc2fc58a7bc0498c6e24d26" name="abde3bc086dc2fc58a7bc0498c6e24d26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBoard</b> ()</td></tr>
+<tr class="memitem:a1aa1fb0f0487f88845b98597f85eb761" id="r_a1aa1fb0f0487f88845b98597f85eb761"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa1fb0f0487f88845b98597f85eb761">canCaptureQueen</a> (pair&lt; int, int &gt; coordinate, pair&lt; int, int &gt; destination, int player)</td></tr>
+<tr class="memdesc:a1aa1fb0f0487f88845b98597f85eb761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a peça pode capturar uma dama adversária.  <br /></td></tr>
+<tr class="separator:a1aa1fb0f0487f88845b98597f85eb761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85670ea7f7a87cdb1e4aaaaef96c6fc2" id="r_a85670ea7f7a87cdb1e4aaaaef96c6fc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85670ea7f7a87cdb1e4aaaaef96c6fc2">roundIsValid</a> (pair&lt; int, int &gt; coordinate)</td></tr>
+<tr class="memdesc:a85670ea7f7a87cdb1e4aaaaef96c6fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a jogada é válida para uma peça comum (não dama).  <br /></td></tr>
+<tr class="separator:a85670ea7f7a87cdb1e4aaaaef96c6fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854f392a053b7f1783443328c11a6964" id="r_a854f392a053b7f1783443328c11a6964"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a854f392a053b7f1783443328c11a6964">canCapture</a> (pair&lt; int, int &gt; coordinate, pair&lt; int, int &gt; destination, int player)</td></tr>
+<tr class="memdesc:a854f392a053b7f1783443328c11a6964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a peça pode capturar outra peça adversária.  <br /></td></tr>
+<tr class="separator:a854f392a053b7f1783443328c11a6964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a91b18cbf31a7c03cc18bca87c30652" id="r_a8a91b18cbf31a7c03cc18bca87c30652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a91b18cbf31a7c03cc18bca87c30652">captureAllAvaliablePieces</a> (pair&lt; int, int &gt; currentCoordinate, int playerNumber, <a class="el" href="classPlayer.html">Player</a> *player)</td></tr>
+<tr class="memdesc:a8a91b18cbf31a7c03cc18bca87c30652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza a captura de todas as peças adversárias disponíveis no tabuleiro.  <br /></td></tr>
+<tr class="separator:a8a91b18cbf31a7c03cc18bca87c30652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde3bc086dc2fc58a7bc0498c6e24d26" id="r_abde3bc086dc2fc58a7bc0498c6e24d26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abde3bc086dc2fc58a7bc0498c6e24d26">setBoard</a> ()</td></tr>
+<tr class="memdesc:abde3bc086dc2fc58a7bc0498c6e24d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o tabuleiro de damas. A posição das peças é configurada para o início de um jogo de damas padrão.  <br /></td></tr>
 <tr class="separator:abde3bc086dc2fc58a7bc0498c6e24d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3dbcf50c1343065cf8058bf7e6e3b0b" id="r_ad3dbcf50c1343065cf8058bf7e6e3b0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3dbcf50c1343065cf8058bf7e6e3b0b">startGame</a> (<a class="el" href="classPlayer.html">Player</a> *, <a class="el" href="classPlayer.html">Player</a> *)</td></tr>
-<tr class="separator:ad3dbcf50c1343065cf8058bf7e6e3b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd02b621e2c2fe38d288ac33769cab92" id="r_acd02b621e2c2fe38d288ac33769cab92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd02b621e2c2fe38d288ac33769cab92">startGame</a> (<a class="el" href="classPlayer.html">Player</a> *player1, <a class="el" href="classPlayer.html">Player</a> *player2)</td></tr>
+<tr class="memdesc:acd02b621e2c2fe38d288ac33769cab92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o jogo entre dois jogadores. Controla os turnos e executa as jogadas de ambos os jogadores até que haja um vencedor.  <br /></td></tr>
+<tr class="separator:acd02b621e2c2fe38d288ac33769cab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9805a86a35232f36bae37607b6db5ae3" id="r_a9805a86a35232f36bae37607b6db5ae3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9805a86a35232f36bae37607b6db5ae3">~Checkers</a> ()</td></tr>
+<tr class="memdesc:a9805a86a35232f36bae37607b6db5ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruidor da classe <a class="el" href="classCheckers.html">Checkers</a>. Libera qualquer recurso alocado durante a execução do jogo.  <br /></td></tr>
+<tr class="separator:a9805a86a35232f36bae37607b6db5ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classBoardGame"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classBoardGame')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classBoardGame.html">BoardGame</a></td></tr>
-<tr class="memitem:a578f9cb3356ffa6456bac6038d98f203 inherit pub_methods_classBoardGame" id="r_a578f9cb3356ffa6456bac6038d98f203"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>BoardGame</b> (int, int)</td></tr>
+<tr class="memitem:a578f9cb3356ffa6456bac6038d98f203 inherit pub_methods_classBoardGame" id="r_a578f9cb3356ffa6456bac6038d98f203"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a578f9cb3356ffa6456bac6038d98f203">BoardGame</a> (int, int)</td></tr>
 <tr class="separator:a578f9cb3356ffa6456bac6038d98f203 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9861dcfc0dc88d5c9525c0bc9524bf48 inherit pub_methods_classBoardGame" id="r_a9861dcfc0dc88d5c9525c0bc9524bf48"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printBoard</b> ()</td></tr>
+<tr class="memitem:a9861dcfc0dc88d5c9525c0bc9524bf48 inherit pub_methods_classBoardGame" id="r_a9861dcfc0dc88d5c9525c0bc9524bf48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a9861dcfc0dc88d5c9525c0bc9524bf48">printBoard</a> ()</td></tr>
 <tr class="separator:a9861dcfc0dc88d5c9525c0bc9524bf48 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43ab2da43e93e98e5da2720ad535255 inherit pub_methods_classBoardGame" id="r_ab43ab2da43e93e98e5da2720ad535255"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBoard</b> ()</td></tr>
+<tr class="memitem:ab43ab2da43e93e98e5da2720ad535255 inherit pub_methods_classBoardGame" id="r_ab43ab2da43e93e98e5da2720ad535255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#ab43ab2da43e93e98e5da2720ad535255">setBoard</a> ()</td></tr>
 <tr class="separator:ab43ab2da43e93e98e5da2720ad535255 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97de7e07df7a7c8511a820974861d7d6 inherit pub_methods_classBoardGame" id="r_a97de7e07df7a7c8511a820974861d7d6"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSize</b> (int, int)</td></tr>
+<tr class="memitem:a97de7e07df7a7c8511a820974861d7d6 inherit pub_methods_classBoardGame" id="r_a97de7e07df7a7c8511a820974861d7d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a97de7e07df7a7c8511a820974861d7d6">setSize</a> (int, int)</td></tr>
 <tr class="separator:a97de7e07df7a7c8511a820974861d7d6 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3de4b0ee2af150cab9333b5e21f63d72 inherit pub_methods_classBoardGame" id="r_a3de4b0ee2af150cab9333b5e21f63d72"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInsideBoard</b> (pair&lt; int, int &gt;)</td></tr>
+<tr class="memitem:a3de4b0ee2af150cab9333b5e21f63d72 inherit pub_methods_classBoardGame" id="r_a3de4b0ee2af150cab9333b5e21f63d72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a3de4b0ee2af150cab9333b5e21f63d72">isInsideBoard</a> (pair&lt; int, int &gt;)</td></tr>
 <tr class="separator:a3de4b0ee2af150cab9333b5e21f63d72 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a602d1299dbfc4e4c7dcb9a3b65559e54 inherit pub_methods_classBoardGame" id="r_a602d1299dbfc4e4c7dcb9a3b65559e54"><td class="memItemLeft" align="right" valign="top">
-pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> ()</td></tr>
+<tr class="memitem:a602d1299dbfc4e4c7dcb9a3b65559e54 inherit pub_methods_classBoardGame" id="r_a602d1299dbfc4e4c7dcb9a3b65559e54"><td class="memItemLeft" align="right" valign="top">pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a602d1299dbfc4e4c7dcb9a3b65559e54">getSize</a> ()</td></tr>
 <tr class="separator:a602d1299dbfc4e4c7dcb9a3b65559e54 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a83ceebdbe84b06ef83b60df7cc7f3 inherit pub_methods_classBoardGame" id="r_a30a83ceebdbe84b06ef83b60df7cc7f3"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> ()</td></tr>
+<tr class="memitem:a30a83ceebdbe84b06ef83b60df7cc7f3 inherit pub_methods_classBoardGame" id="r_a30a83ceebdbe84b06ef83b60df7cc7f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a30a83ceebdbe84b06ef83b60df7cc7f3">getX</a> ()</td></tr>
 <tr class="separator:a30a83ceebdbe84b06ef83b60df7cc7f3 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4b5e343eb985225a87c25665fd6566 inherit pub_methods_classBoardGame" id="r_a9d4b5e343eb985225a87c25665fd6566"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> ()</td></tr>
+<tr class="memitem:a9d4b5e343eb985225a87c25665fd6566 inherit pub_methods_classBoardGame" id="r_a9d4b5e343eb985225a87c25665fd6566"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a9d4b5e343eb985225a87c25665fd6566">getY</a> ()</td></tr>
 <tr class="separator:a9d4b5e343eb985225a87c25665fd6566 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a066365894df3e7c83346ebb86b0f1d5a inherit pub_methods_classBoardGame" id="r_a066365894df3e7c83346ebb86b0f1d5a"><td class="memItemLeft" align="right" valign="top">
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>getBoard</b> ()</td></tr>
+<tr class="memitem:a066365894df3e7c83346ebb86b0f1d5a inherit pub_methods_classBoardGame" id="r_a066365894df3e7c83346ebb86b0f1d5a"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a066365894df3e7c83346ebb86b0f1d5a">getBoard</a> ()</td></tr>
 <tr class="separator:a066365894df3e7c83346ebb86b0f1d5a inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0327c77951b0cbe6d05a9a8ca06989bf inherit pub_methods_classBoardGame" id="r_a0327c77951b0cbe6d05a9a8ca06989bf"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>incrementTurn</b> ()</td></tr>
+<tr class="memitem:a0327c77951b0cbe6d05a9a8ca06989bf inherit pub_methods_classBoardGame" id="r_a0327c77951b0cbe6d05a9a8ca06989bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a0327c77951b0cbe6d05a9a8ca06989bf">incrementTurn</a> ()</td></tr>
 <tr class="separator:a0327c77951b0cbe6d05a9a8ca06989bf inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1324d53f927d76415a412c992d4a5061 inherit pub_methods_classBoardGame" id="r_a1324d53f927d76415a412c992d4a5061"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTurn</b> ()</td></tr>
+<tr class="memitem:a1324d53f927d76415a412c992d4a5061 inherit pub_methods_classBoardGame" id="r_a1324d53f927d76415a412c992d4a5061"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a1324d53f927d76415a412c992d4a5061">getTurn</a> ()</td></tr>
 <tr class="separator:a1324d53f927d76415a412c992d4a5061 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020723cb4542bd0e3ff4390abc260c35 inherit pub_methods_classBoardGame" id="r_a020723cb4542bd0e3ff4390abc260c35"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#a020723cb4542bd0e3ff4390abc260c35">~BoardGame</a> ()</td></tr>
+<tr class="separator:a020723cb4542bd0e3ff4390abc260c35 inherit pub_methods_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:af41fb5b6ee51ad13bd5e0fd2f2455fc2" id="r_af41fb5b6ee51ad13bd5e0fd2f2455fc2"><td class="memItemLeft" align="right" valign="top"><a id="af41fb5b6ee51ad13bd5e0fd2f2455fc2" name="af41fb5b6ee51ad13bd5e0fd2f2455fc2"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SUCCESS</b> = 1</td></tr>
+<tr class="memitem:af41fb5b6ee51ad13bd5e0fd2f2455fc2" id="r_af41fb5b6ee51ad13bd5e0fd2f2455fc2"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41fb5b6ee51ad13bd5e0fd2f2455fc2">SUCCESS</a> = 1</td></tr>
+<tr class="memdesc:af41fb5b6ee51ad13bd5e0fd2f2455fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jogada bem-sucedida.  <br /></td></tr>
 <tr class="separator:af41fb5b6ee51ad13bd5e0fd2f2455fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d77b4f98ca926c5936ac1d4e42929c5" id="r_a2d77b4f98ca926c5936ac1d4e42929c5"><td class="memItemLeft" align="right" valign="top"><a id="a2d77b4f98ca926c5936ac1d4e42929c5" name="a2d77b4f98ca926c5936ac1d4e42929c5"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>NOT_SUCCESS</b> = 0</td></tr>
+<tr class="memitem:a2d77b4f98ca926c5936ac1d4e42929c5" id="r_a2d77b4f98ca926c5936ac1d4e42929c5"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d77b4f98ca926c5936ac1d4e42929c5">NOT_SUCCESS</a> = 0</td></tr>
+<tr class="memdesc:a2d77b4f98ca926c5936ac1d4e42929c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jogada não válida.  <br /></td></tr>
 <tr class="separator:a2d77b4f98ca926c5936ac1d4e42929c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf4f7c040f1b846a1cc352efcd2ea30" id="r_acbf4f7c040f1b846a1cc352efcd2ea30"><td class="memItemLeft" align="right" valign="top"><a id="acbf4f7c040f1b846a1cc352efcd2ea30" name="acbf4f7c040f1b846a1cc352efcd2ea30"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>CAPTURE_AGAIN</b> = 2</td></tr>
+<tr class="memitem:acbf4f7c040f1b846a1cc352efcd2ea30" id="r_acbf4f7c040f1b846a1cc352efcd2ea30"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbf4f7c040f1b846a1cc352efcd2ea30">CAPTURE_AGAIN</a> = 2</td></tr>
+<tr class="memdesc:acbf4f7c040f1b846a1cc352efcd2ea30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captura disponível, o jogador deve capturar novamente.  <br /></td></tr>
 <tr class="separator:acbf4f7c040f1b846a1cc352efcd2ea30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classBoardGame"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classBoardGame')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classBoardGame.html">BoardGame</a></td></tr>
-<tr class="memitem:aecee3147084d29f1639aff6e0ac873d2 inherit pro_attribs_classBoardGame" id="r_aecee3147084d29f1639aff6e0ac873d2"><td class="memItemLeft" align="right" valign="top">
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullptr</td></tr>
+<tr class="memitem:aecee3147084d29f1639aff6e0ac873d2 inherit pro_attribs_classBoardGame" id="r_aecee3147084d29f1639aff6e0ac873d2"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoardGame.html#aecee3147084d29f1639aff6e0ac873d2">board</a> = nullptr</td></tr>
 <tr class="separator:aecee3147084d29f1639aff6e0ac873d2 inherit pro_attribs_classBoardGame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aac46ea0bb5bdeb648d59710785633838" name="aac46ea0bb5bdeb648d59710785633838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac46ea0bb5bdeb648d59710785633838">&#9670;&#160;</a></span>Checkers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Checkers::Checkers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="classCheckers.html">Checkers</a>. Inicia o jogo de damas, criando um tabuleiro de 8x8. </p>
+
+</div>
+</div>
+<a id="a9805a86a35232f36bae37607b6db5ae3" name="a9805a86a35232f36bae37607b6db5ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9805a86a35232f36bae37607b6db5ae3">&#9670;&#160;</a></span>~Checkers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Checkers::~Checkers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruidor da classe <a class="el" href="classCheckers.html">Checkers</a>. Libera qualquer recurso alocado durante a execução do jogo. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad51f99e159c2049bab19b7f7f805a8e1" name="ad51f99e159c2049bab19b7f7f805a8e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad51f99e159c2049bab19b7f7f805a8e1">&#9670;&#160;</a></span>didPlayerWin()</h2>
+<a id="a854f392a053b7f1783443328c11a6964" name="a854f392a053b7f1783443328c11a6964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854f392a053b7f1783443328c11a6964">&#9670;&#160;</a></span>canCapture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Checkers::canCapture </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a peça pode capturar outra peça adversária. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">destination</td><td>Posição de destino da peça. </td></tr>
+    <tr><td class="paramname">player</td><td>Número do jogador (1 ou 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true se a peça pode capturar, caso contrário false. </dd></dl>
+
+</div>
+</div>
+<a id="a1aa1fb0f0487f88845b98597f85eb761" name="a1aa1fb0f0487f88845b98597f85eb761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa1fb0f0487f88845b98597f85eb761">&#9670;&#160;</a></span>canCaptureQueen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Checkers::canCaptureQueen </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a peça pode capturar uma dama adversária. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">destination</td><td>Posição de destino da peça. </td></tr>
+    <tr><td class="paramname">player</td><td>Número do jogador (1 ou 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true se a peça pode capturar a dama, caso contrário false. </dd></dl>
+
+</div>
+</div>
+<a id="a8a91b18cbf31a7c03cc18bca87c30652" name="a8a91b18cbf31a7c03cc18bca87c30652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a91b18cbf31a7c03cc18bca87c30652">&#9670;&#160;</a></span>captureAllAvaliablePieces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Checkers::captureAllAvaliablePieces </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>currentCoordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>playerNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a> *</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza a captura de todas as peças adversárias disponíveis no tabuleiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentCoordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">playerNumber</td><td>Número do jogador (1 ou 2). </td></tr>
+    <tr><td class="paramname">player</td><td>O jogador atual que está fazendo a captura. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a53415e88cc050fbf8dfad11eba3fe7e4" name="a53415e88cc050fbf8dfad11eba3fe7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53415e88cc050fbf8dfad11eba3fe7e4">&#9670;&#160;</a></span>didPlayerWin() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Checkers::didPlayerWin </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se o jogador venceu com base na peça dele. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>O número do jogador (1 ou 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true se o jogador venceu, caso contrário false. </dd></dl>
+
+</div>
+</div>
+<a id="a01645fca7e2056356f947d5aa19fe54f" name="a01645fca7e2056356f947d5aa19fe54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01645fca7e2056356f947d5aa19fe54f">&#9670;&#160;</a></span>didPlayerWin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,12 +408,57 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullpt
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classBoardGame.html">BoardGame</a>.</p>
+<p>Verifica se o jogador venceu o jogo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>O jogador a ser verificado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true se o jogador venceu, caso contrário false. </dd></dl>
+
+<p>Implements <a class="el" href="classBoardGame.html#a1ff735b065a6e00c40ae1d82f47c6430">BoardGame</a>.</p>
 
 </div>
 </div>
-<a id="a3aed9fc5652f1f5849c6ffb4768ca6e9" name="a3aed9fc5652f1f5849c6ffb4768ca6e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aed9fc5652f1f5849c6ffb4768ca6e9">&#9670;&#160;</a></span>readRound()</h2>
+<a id="a868a795d8328addb4a79c01f3d16c334" name="a868a795d8328addb4a79c01f3d16c334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868a795d8328addb4a79c01f3d16c334">&#9670;&#160;</a></span>readRound() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Checkers::readRound </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPlayer.html">Player</a> *</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê e executa uma jogada onde uma peça se move para uma nova posição, podendo capturar uma peça adversária. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">destination</td><td>Posição de destino da peça. </td></tr>
+    <tr><td class="paramname">player</td><td>O jogador que está fazendo a jogada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeea216ebaa9895eaecbd3274aefe7e2c" name="aeea216ebaa9895eaecbd3274aefe7e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea216ebaa9895eaecbd3274aefe7e2c">&#9670;&#160;</a></span>readRound() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,12 +484,21 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullpt
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classBoardGame.html">BoardGame</a>.</p>
+<p>Lê e executa uma jogada simples, movendo uma peça do jogador para uma nova posição. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">player</td><td>O jogador que está fazendo a jogada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classBoardGame.html#a1588a4ae703b50469797632d8a240d8a">BoardGame</a>.</p>
 
 </div>
 </div>
-<a id="ae1e3631e6e7392b4ad9bbd9b1c9c476e" name="ae1e3631e6e7392b4ad9bbd9b1c9c476e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1e3631e6e7392b4ad9bbd9b1c9c476e">&#9670;&#160;</a></span>roundIsValid()</h2>
+<a id="a85670ea7f7a87cdb1e4aaaaef96c6fc2" name="a85670ea7f7a87cdb1e4aaaaef96c6fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85670ea7f7a87cdb1e4aaaaef96c6fc2">&#9670;&#160;</a></span>roundIsValid() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +509,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullpt
         <tr>
           <td class="memname">bool Checkers::roundIsValid </td>
           <td>(</td>
-          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -289,12 +520,114 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullpt
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classBoardGame.html">BoardGame</a>.</p>
+<p>Verifica se a jogada é válida para uma peça comum (não dama). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna true se a jogada for válida, caso contrário false. </dd></dl>
+
+<p>Implements <a class="el" href="classBoardGame.html#adfa77c3ede0bb7b5db2650a823c31061">BoardGame</a>.</p>
 
 </div>
 </div>
-<a id="ad3dbcf50c1343065cf8058bf7e6e3b0b" name="ad3dbcf50c1343065cf8058bf7e6e3b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3dbcf50c1343065cf8058bf7e6e3b0b">&#9670;&#160;</a></span>startGame()</h2>
+<a id="a80bf615e4f438b47f68dc4410add5188" name="a80bf615e4f438b47f68dc4410add5188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bf615e4f438b47f68dc4410add5188">&#9670;&#160;</a></span>roundIsValid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Checkers::roundIsValid </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a jogada é válida para uma peça comum (não dama). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da peça. </td></tr>
+    <tr><td class="paramname">destination</td><td>Posição de destino da peça. </td></tr>
+    <tr><td class="paramname">player</td><td>Número do jogador (1 ou 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna o status da jogada (SUCCESS, NOT_SUCCESS ou CAPTURE_AGAIN). </dd></dl>
+
+</div>
+</div>
+<a id="a7f2117e6ada8c6c380beabdb9e56bacb" name="a7f2117e6ada8c6c380beabdb9e56bacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2117e6ada8c6c380beabdb9e56bacb">&#9670;&#160;</a></span>roundIsValidQueen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Checkers::roundIsValidQueen </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>coordinate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, int &gt;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>player</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a jogada é válida para uma dama. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coordinate</td><td>Posição inicial da dama. </td></tr>
+    <tr><td class="paramname">destination</td><td>Posição de destino da dama. </td></tr>
+    <tr><td class="paramname">player</td><td>Número do jogador (1 ou 2). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Retorna o status da jogada (SUCCESS ou NOT_SUCCESS). </dd></dl>
+
+</div>
+</div>
+<a id="abde3bc086dc2fc58a7bc0498c6e24d26" name="abde3bc086dc2fc58a7bc0498c6e24d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde3bc086dc2fc58a7bc0498c6e24d26">&#9670;&#160;</a></span>setBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Checkers::setBoard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa o tabuleiro de damas. A posição das peças é configurada para o início de um jogo de damas padrão. </p>
+
+</div>
+</div>
+<a id="acd02b621e2c2fe38d288ac33769cab92" name="acd02b621e2c2fe38d288ac33769cab92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd02b621e2c2fe38d288ac33769cab92">&#9670;&#160;</a></span>startGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,13 +653,95 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>board</b> = nullpt
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classBoardGame.html">BoardGame</a>.</p>
+<p>Inicia o jogo entre dois jogadores. Controla os turnos e executa as jogadas de ambos os jogadores até que haja um vencedor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player1</td><td>O primeiro jogador. </td></tr>
+    <tr><td class="paramname">player2</td><td>O segundo jogador. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classBoardGame.html#a0d3bb9005b449021ce97307e25c606fb">BoardGame</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acbf4f7c040f1b846a1cc352efcd2ea30" name="acbf4f7c040f1b846a1cc352efcd2ea30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf4f7c040f1b846a1cc352efcd2ea30">&#9670;&#160;</a></span>CAPTURE_AGAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Checkers::CAPTURE_AGAIN = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Captura disponível, o jogador deve capturar novamente. </p>
+
+</div>
+</div>
+<a id="a2d77b4f98ca926c5936ac1d4e42929c5" name="a2d77b4f98ca926c5936ac1d4e42929c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d77b4f98ca926c5936ac1d4e42929c5">&#9670;&#160;</a></span>NOT_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Checkers::NOT_SUCCESS = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Jogada não válida. </p>
+
+</div>
+</div>
+<a id="af41fb5b6ee51ad13bd5e0fd2f2455fc2" name="af41fb5b6ee51ad13bd5e0fd2f2455fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41fb5b6ee51ad13bd5e0fd2f2455fc2">&#9670;&#160;</a></span>SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Checkers::SUCCESS = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Jogada bem-sucedida. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="Checkers_8hpp_source.html">Checkers.hpp</a></li>
-<li>src/<b>Checkers.cpp</b></li>
+<li>src/<a class="el" href="Checkers_8cpp.html">Checkers.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

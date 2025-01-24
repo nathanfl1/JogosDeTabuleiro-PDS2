@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['readround_0',['readRound',['../classLigFour.html#ad21c4d3a6b026983e2b3c9169f3c94ed',1,'LigFour::readRound(pair&lt; int, int &gt; input, Player *player) override'],['../classLigFour.html#a4b3fc8cdee4068d918533009709b4f88',1,'LigFour::readRound(pair&lt; int, int &gt; input, pair&lt; int, int &gt; input2, Player *player)'],['../classReversi.html#a7e3dac25475b6ac6b6051b09dc2efc96',1,'Reversi::readRound(pair&lt; int, int &gt; destination, int player)'],['../classReversi.html#aeb91d4a68f6bae8207a62fe752c4b162',1,'Reversi::readRound(pair&lt; int, int &gt; destination, Player *player) override']]],
-  ['reversi_1',['Reversi',['../classReversi.html',1,'Reversi'],['../classReversi.html#a73e3ca5c21b634f9c490b404d62f0e01',1,'Reversi::Reversi()']]],
-  ['roundisvalid_2',['roundIsValid',['../classLigFour.html#ab3673bad1af0b34bea597bc7e001537f',1,'LigFour::roundIsValid()'],['../classReversi.html#a5d4e50f70f62a7d6cfe4a06199a99410',1,'Reversi::roundIsValid(pair&lt; int, int &gt; destination, int player)'],['../classReversi.html#a76c87d480dcd225fab3665953640c404',1,'Reversi::roundIsValid(pair&lt; int, int &gt;) override']]]
+  ['ligfour_0',['LIGFOUR',['../classPlayer.html#a29b7f3f853659a4c8c91080be9498cbe',1,'Player']]],
+  ['ligfour_1',['LigFour',['../classLigFour.html',1,'LigFour'],['../classLigFour.html#a64bb65f68ea9823c4e6573b0b2f79ffd',1,'LigFour::LigFour(Player *player1, Player *player2)'],['../classLigFour.html#af4586899121f9a402d535567791d3448',1,'LigFour::LigFour()']]],
+  ['ligfour_2ecpp_2',['LigFour.cpp',['../LigFour_8cpp.html',1,'']]],
+  ['ligfour_2ehpp_3',['LigFour.hpp',['../LigFour_8hpp.html',1,'']]],
+  ['loaddata_4',['loadData',['../classPlayerList.html#a49a7d057320289667ae77fada3e76778',1,'PlayerList']]]
 ];

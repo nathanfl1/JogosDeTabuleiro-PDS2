@@ -1,45 +1,45 @@
 \doxysection{Board\+Game.\+hpp}
 \hypertarget{BoardGame_8hpp_source}{}\label{BoardGame_8hpp_source}\index{include/BoardGame.hpp@{include/BoardGame.hpp}}
-
+\mbox{\hyperlink{BoardGame_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOARDGAME\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOARDGAME\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Player.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Player_8hpp}{Player.hpp}}"{}}}
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }BoardGame\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{BoardGame}}\ \{}
 \DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}\ *player1;}
 \DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}\ *player2;}
 \DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ pair<int,\ int>\ size;}
 \DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ turnCounter\ =\ 0;}
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ **board\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}{board}}\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ BoardGame(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ readRound(pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player)\ =\ 0;}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ roundIsValid(pair<int,\ int>)\ =\ 0;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ didPlayerWin(\mbox{\hyperlink{classPlayer}{Player}}\ *player)\ =\ 0;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ startGame(\mbox{\hyperlink{classPlayer}{Player}}\ *player1,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player2)\ =\ 0;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ printBoard();}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setBoard();}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setSize(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isInsideBoard(pair<int,\ int>);}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ pair<int,\ int>\ getSize();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getX();}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getY();}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}**\ getBoard();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{BoardGame}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{readRound}}(pair<int,\ int>,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player)\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}{roundIsValid}}(pair<int,\ int>)\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{didPlayerWin}}(\mbox{\hyperlink{classPlayer}{Player}}\ *player)\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{startGame}}(\mbox{\hyperlink{classPlayer}{Player}}\ *player1,\ \mbox{\hyperlink{classPlayer}{Player}}\ *player2)\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}{printBoard}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}{setBoard}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}{setSize}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}{isInsideBoard}}(pair<int,\ int>);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ pair<int,\ int>\ \mbox{\hyperlink{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}{getSize}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}{getX}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}{getY}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}{getBoard}}();}
 \DoxyCodeLine{00032\ }
 \DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ incrementTurn();}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ getTurn();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}{incrementTurn}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBoardGame_a1324d53f927d76415a412c992d4a5061}{getTurn}}();}
 \DoxyCodeLine{00036\ }
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \string~BoardGame();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}{\string~BoardGame}}();}
 \DoxyCodeLine{00039\ \ \ \ \ \};}
 \DoxyCodeLine{00040\ }
 \DoxyCodeLine{00041\ }

@@ -1,5 +1,9 @@
 \doxysection{Tic\+Tac\+Toe Class Reference}
 \hypertarget{classTicTacToe}{}\label{classTicTacToe}\index{TicTacToe@{TicTacToe}}
+
+
+{\ttfamily \#include $<$Tic\+Tac\+Toe.\+hpp$>$}
+
 Inheritance diagram for Tic\+Tac\+Toe\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,54 +13,72 @@ Inheritance diagram for Tic\+Tac\+Toe\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classTicTacToe_a9446367d0b624470f83d98853387d76a}\label{classTicTacToe_a9446367d0b624470f83d98853387d76a} 
-void {\bfseries set\+Board} ()
+\mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{Tic\+Tac\+Toe}} ()
 \item 
-\Hypertarget{classTicTacToe_a162c81e1744ded4507b43457724c82a9}\label{classTicTacToe_a162c81e1744ded4507b43457724c82a9} 
-bool {\bfseries round\+Is\+Valid} (std\+::pair$<$ int, int $>$ move)
+void \mbox{\hyperlink{classTicTacToe_a9446367d0b624470f83d98853387d76a}{set\+Board}} ()
 \item 
-\Hypertarget{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78}\label{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78} 
-void {\bfseries read\+Round} (std\+::pair$<$ int, int $>$ move, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+bool \mbox{\hyperlink{classTicTacToe_a162c81e1744ded4507b43457724c82a9}{round\+Is\+Valid}} (std\+::pair$<$ int, int $>$ move)
+\item 
+void \mbox{\hyperlink{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78}{read\+Round}} (std\+::pair$<$ int, int $>$ move, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
 \item 
 bool \mbox{\hyperlink{classTicTacToe_a0e90d12e8b4fce19f5633ac4dedfb3cc}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
 \item 
 void \mbox{\hyperlink{classTicTacToe_ad8263e957b27f08cd40b7f246cf8d1c4}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}p1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}p2)
+\item 
+\mbox{\hyperlink{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}{\texorpdfstring{$\sim$}{\string~}\+Tic\+Tac\+Toe}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Board\+Game} (int, int)
+\mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{Board\+Game}} (int, int)
 \item 
 virtual void \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{read\+Round}} (pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)=0
 \item 
 virtual bool \mbox{\hyperlink{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}{round\+Is\+Valid}} (pair$<$ int, int $>$)=0
 \item 
-void {\bfseries print\+Board} ()
+void \mbox{\hyperlink{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}{print\+Board}} ()
 \item 
-void {\bfseries set\+Board} ()
+void \mbox{\hyperlink{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}{set\+Board}} ()
 \item 
-void {\bfseries set\+Size} (int, int)
+void \mbox{\hyperlink{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}{set\+Size}} (int, int)
 \item 
-bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+bool \mbox{\hyperlink{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}{is\+Inside\+Board}} (pair$<$ int, int $>$)
 \item 
-pair$<$ int, int $>$ {\bfseries get\+Size} ()
+pair$<$ int, int $>$ \mbox{\hyperlink{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}{get\+Size}} ()
 \item 
-int {\bfseries getX} ()
+int \mbox{\hyperlink{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}{getX}} ()
 \item 
-int {\bfseries getY} ()
+int \mbox{\hyperlink{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}{getY}} ()
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}{get\+Board}} ()
 \item 
-void {\bfseries increment\+Turn} ()
+void \mbox{\hyperlink{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}{increment\+Turn}} ()
 \item 
-int {\bfseries get\+Turn} ()
+int \mbox{\hyperlink{classBoardGame_a1324d53f927d76415a412c992d4a5061}{get\+Turn}} ()
+\item 
+virtual \mbox{\hyperlink{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}{\texorpdfstring{$\sim$}{\string~}\+Board\+Game}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}{board}} = nullptr
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}\index{TicTacToe@{TicTacToe}!TicTacToe@{TicTacToe}}
+\index{TicTacToe@{TicTacToe}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{TicTacToe()}{TicTacToe()}}
+{\footnotesize\ttfamily \label{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a} 
+Tic\+Tac\+Toe\+::\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5}\index{TicTacToe@{TicTacToe}!````~TicTacToe@{\texorpdfstring{$\sim$}{\string~}TicTacToe}}
+\index{````~TicTacToe@{\texorpdfstring{$\sim$}{\string~}TicTacToe}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TicTacToe()}{\string~TicTacToe()}}
+{\footnotesize\ttfamily \label{classTicTacToe_a5e9c4ed3279034d5530cc7b94a3e10e5} 
+Tic\+Tac\+Toe\+::\texorpdfstring{$\sim$}{\string~}\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -68,7 +90,25 @@ bool Tic\+Tac\+Toe\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hy
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{Board\+Game}}.
+
+\Hypertarget{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78}\index{TicTacToe@{TicTacToe}!readRound@{readRound}}
+\index{readRound@{readRound}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}}
+{\footnotesize\ttfamily \label{classTicTacToe_a9bf041a32b75f18d481581fd8b293b78} 
+void Tic\+Tac\+Toe\+::read\+Round (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$}]{move}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classTicTacToe_a162c81e1744ded4507b43457724c82a9}\index{TicTacToe@{TicTacToe}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}}
+{\footnotesize\ttfamily \label{classTicTacToe_a162c81e1744ded4507b43457724c82a9} 
+bool Tic\+Tac\+Toe\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$}]{move}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classTicTacToe_a9446367d0b624470f83d98853387d76a}\index{TicTacToe@{TicTacToe}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{setBoard()}{setBoard()}}
+{\footnotesize\ttfamily \label{classTicTacToe_a9446367d0b624470f83d98853387d76a} 
+void Tic\+Tac\+Toe\+::set\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \Hypertarget{classTicTacToe_ad8263e957b27f08cd40b7f246cf8d1c4}\index{TicTacToe@{TicTacToe}!startGame@{startGame}}
 \index{startGame@{startGame}!TicTacToe@{TicTacToe}}
@@ -78,11 +118,11 @@ void Tic\+Tac\+Toe\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperli
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Implements \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{Board\+Game}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Tic\+Tac\+Toe.\+hpp\item 
-src/Tic\+Tac\+Toe.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{TicTacToe_8hpp}{Tic\+Tac\+Toe.\+hpp}}\item 
+src/\mbox{\hyperlink{TicTacToe_8cpp}{Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

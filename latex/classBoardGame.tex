@@ -1,5 +1,9 @@
 \doxysection{Board\+Game Class Reference}
 \hypertarget{classBoardGame}{}\label{classBoardGame}\index{BoardGame@{BoardGame}}
+
+
+{\ttfamily \#include $<$Board\+Game.\+hpp$>$}
+
 Inheritance diagram for Board\+Game\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +13,7 @@ Inheritance diagram for Board\+Game\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}\label{classBoardGame_a578f9cb3356ffa6456bac6038d98f203} 
-{\bfseries Board\+Game} (int, int)
+\mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{Board\+Game}} (int, int)
 \item 
 virtual void \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{read\+Round}} (pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)=0
 \item 
@@ -20,42 +23,48 @@ virtual bool \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{
 \item 
 virtual void \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2)=0
 \item 
-\Hypertarget{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}\label{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48} 
-void {\bfseries print\+Board} ()
+void \mbox{\hyperlink{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}{print\+Board}} ()
 \item 
-\Hypertarget{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}\label{classBoardGame_ab43ab2da43e93e98e5da2720ad535255} 
-void {\bfseries set\+Board} ()
+void \mbox{\hyperlink{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}{set\+Board}} ()
 \item 
-\Hypertarget{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}\label{classBoardGame_a97de7e07df7a7c8511a820974861d7d6} 
-void {\bfseries set\+Size} (int, int)
+void \mbox{\hyperlink{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}{set\+Size}} (int, int)
 \item 
-\Hypertarget{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}\label{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72} 
-bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+bool \mbox{\hyperlink{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}{is\+Inside\+Board}} (pair$<$ int, int $>$)
 \item 
-\Hypertarget{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}\label{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54} 
-pair$<$ int, int $>$ {\bfseries get\+Size} ()
+pair$<$ int, int $>$ \mbox{\hyperlink{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}{get\+Size}} ()
 \item 
-\Hypertarget{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}\label{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3} 
-int {\bfseries getX} ()
+int \mbox{\hyperlink{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}{getX}} ()
 \item 
-\Hypertarget{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}\label{classBoardGame_a9d4b5e343eb985225a87c25665fd6566} 
-int {\bfseries getY} ()
+int \mbox{\hyperlink{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}{getY}} ()
 \item 
-\Hypertarget{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}\label{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a} 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}{get\+Board}} ()
 \item 
-\Hypertarget{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}\label{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf} 
-void {\bfseries increment\+Turn} ()
+void \mbox{\hyperlink{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}{increment\+Turn}} ()
 \item 
-\Hypertarget{classBoardGame_a1324d53f927d76415a412c992d4a5061}\label{classBoardGame_a1324d53f927d76415a412c992d4a5061} 
-int {\bfseries get\+Turn} ()
+int \mbox{\hyperlink{classBoardGame_a1324d53f927d76415a412c992d4a5061}{get\+Turn}} ()
+\item 
+virtual \mbox{\hyperlink{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}{\texorpdfstring{$\sim$}{\string~}\+Board\+Game}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}\label{classBoardGame_aecee3147084d29f1639aff6e0ac873d2} 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}{board}} = nullptr
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}\index{BoardGame@{BoardGame}!BoardGame@{BoardGame}}
+\index{BoardGame@{BoardGame}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{BoardGame()}{BoardGame()}}
+{\footnotesize\ttfamily \label{classBoardGame_a578f9cb3356ffa6456bac6038d98f203} 
+Board\+Game\+::\+Board\+Game (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}\index{BoardGame@{BoardGame}!````~BoardGame@{\texorpdfstring{$\sim$}{\string~}BoardGame}}
+\index{````~BoardGame@{\texorpdfstring{$\sim$}{\string~}BoardGame}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BoardGame()}{\string~BoardGame()}}
+{\footnotesize\ttfamily \label{classBoardGame_a020723cb4542bd0e3ff4390abc260c35} 
+Board\+Game\+::\texorpdfstring{$\sim$}{\string~}\+Board\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -67,7 +76,55 @@ virtual bool Board\+Game\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mb
 
 
 
-Implemented in \mbox{\hyperlink{classLigFour_a796b58ff92f3213d15a6666e9cb05764}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a8da89698bbcc8612c3ec312254ae66a3}{Reversi}}.
+Implemented in \mbox{\hyperlink{classCheckers_a01645fca7e2056356f947d5aa19fe54f}{Checkers}}, \mbox{\hyperlink{classLigFour_a796b58ff92f3213d15a6666e9cb05764}{Lig\+Four}}, \mbox{\hyperlink{classReversi_a8da89698bbcc8612c3ec312254ae66a3}{Reversi}}, and \mbox{\hyperlink{classTicTacToe_a0e90d12e8b4fce19f5633ac4dedfb3cc}{Tic\+Tac\+Toe}}.
+
+\Hypertarget{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}\index{BoardGame@{BoardGame}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily \label{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a} 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Board\+Game\+::get\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}\index{BoardGame@{BoardGame}!getSize@{getSize}}
+\index{getSize@{getSize}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54} 
+pair$<$ int, int $>$ Board\+Game\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a1324d53f927d76415a412c992d4a5061}\index{BoardGame@{BoardGame}!getTurn@{getTurn}}
+\index{getTurn@{getTurn}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{getTurn()}{getTurn()}}
+{\footnotesize\ttfamily \label{classBoardGame_a1324d53f927d76415a412c992d4a5061} 
+int Board\+Game\+::get\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}\index{BoardGame@{BoardGame}!getX@{getX}}
+\index{getX@{getX}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3} 
+int Board\+Game\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}\index{BoardGame@{BoardGame}!getY@{getY}}
+\index{getY@{getY}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{classBoardGame_a9d4b5e343eb985225a87c25665fd6566} 
+int Board\+Game\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}\index{BoardGame@{BoardGame}!incrementTurn@{incrementTurn}}
+\index{incrementTurn@{incrementTurn}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{incrementTurn()}{incrementTurn()}}
+{\footnotesize\ttfamily \label{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf} 
+void Board\+Game\+::increment\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}\index{BoardGame@{BoardGame}!isInsideBoard@{isInsideBoard}}
+\index{isInsideBoard@{isInsideBoard}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{isInsideBoard()}{isInsideBoard()}}
+{\footnotesize\ttfamily \label{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72} 
+bool Board\+Game\+::is\+Inside\+Board (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}\index{BoardGame@{BoardGame}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily \label{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48} 
+void Board\+Game\+::print\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \Hypertarget{classBoardGame_a1588a4ae703b50469797632d8a240d8a}\index{BoardGame@{BoardGame}!readRound@{readRound}}
 \index{readRound@{readRound}!BoardGame@{BoardGame}}
@@ -77,7 +134,7 @@ virtual void Board\+Game\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ 
 
 
 
-Implemented in \mbox{\hyperlink{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_aeb91d4a68f6bae8207a62fe752c4b162}{Reversi}}.
+Implemented in \mbox{\hyperlink{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c}{Checkers}}, \mbox{\hyperlink{classLigFour_ad21c4d3a6b026983e2b3c9169f3c94ed}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_aeb91d4a68f6bae8207a62fe752c4b162}{Reversi}}.
 
 \Hypertarget{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}\index{BoardGame@{BoardGame}!roundIsValid@{roundIsValid}}
 \index{roundIsValid@{roundIsValid}!BoardGame@{BoardGame}}
@@ -87,7 +144,19 @@ virtual bool Board\+Game\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pai
 
 
 
-Implemented in \mbox{\hyperlink{classLigFour_ab3673bad1af0b34bea597bc7e001537f}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a76c87d480dcd225fab3665953640c404}{Reversi}}.
+Implemented in \mbox{\hyperlink{classCheckers_a85670ea7f7a87cdb1e4aaaaef96c6fc2}{Checkers}}, \mbox{\hyperlink{classLigFour_ab3673bad1af0b34bea597bc7e001537f}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a76c87d480dcd225fab3665953640c404}{Reversi}}.
+
+\Hypertarget{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}\index{BoardGame@{BoardGame}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{setBoard()}{setBoard()}}
+{\footnotesize\ttfamily \label{classBoardGame_ab43ab2da43e93e98e5da2720ad535255} 
+void Board\+Game\+::set\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}\index{BoardGame@{BoardGame}!setSize@{setSize}}
+\index{setSize@{setSize}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily \label{classBoardGame_a97de7e07df7a7c8511a820974861d7d6} 
+void Board\+Game\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
 
 \Hypertarget{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}\index{BoardGame@{BoardGame}!startGame@{startGame}}
 \index{startGame@{startGame}!BoardGame@{BoardGame}}
@@ -97,11 +166,20 @@ virtual void Board\+Game\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\h
 
 
 
-Implemented in \mbox{\hyperlink{classLigFour_ae0c48bf9942cdc464f789b7c473db33b}{Lig\+Four}}, and \mbox{\hyperlink{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}{Reversi}}.
+Implemented in \mbox{\hyperlink{classCheckers_acd02b621e2c2fe38d288ac33769cab92}{Checkers}}, \mbox{\hyperlink{classLigFour_ae0c48bf9942cdc464f789b7c473db33b}{Lig\+Four}}, \mbox{\hyperlink{classReversi_a2d1f732cd4d7cc6ab9539cca299cff70}{Reversi}}, and \mbox{\hyperlink{classTicTacToe_ad8263e957b27f08cd40b7f246cf8d1c4}{Tic\+Tac\+Toe}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}\index{BoardGame@{BoardGame}!board@{board}}
+\index{board@{board}!BoardGame@{BoardGame}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \label{classBoardGame_aecee3147084d29f1639aff6e0ac873d2} 
+char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Board\+Game\+::board = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Board\+Game.\+hpp\item 
-src/Board\+Game.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{BoardGame_8hpp}{Board\+Game.\+hpp}}\item 
+src/\mbox{\hyperlink{BoardGame_8cpp}{Board\+Game.\+cpp}}\end{DoxyCompactItemize}

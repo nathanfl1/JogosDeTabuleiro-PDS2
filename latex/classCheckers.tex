@@ -1,5 +1,9 @@
 \doxysection{Checkers Class Reference}
 \hypertarget{classCheckers}{}\label{classCheckers}\index{Checkers@{Checkers}}
+
+
+{\ttfamily \#include $<$Checkers.\+hpp$>$}
+
 Inheritance diagram for Checkers\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,127 +13,378 @@ Inheritance diagram for Checkers\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
-\item 
-void \mbox{\hyperlink{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9}{read\+Round}} (pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{classCheckers_a783785e26d6208825c44579cfb792414}\label{classCheckers_a783785e26d6208825c44579cfb792414} 
-void {\bfseries read\+Round} (pair$<$ int, int $>$, pair$<$ int, int $>$, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{classCheckers_a3aa17fe7684ce371074114c79e72ab2c}\label{classCheckers_a3aa17fe7684ce371074114c79e72ab2c} 
-int {\bfseries round\+Is\+Valid} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
-\item 
-\Hypertarget{classCheckers_a87a9e744957df32ae4536ce92325515e}\label{classCheckers_a87a9e744957df32ae4536ce92325515e} 
-int {\bfseries round\+Is\+Valid\+Queen} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
-\item 
-\Hypertarget{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4}\label{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4} 
-bool {\bfseries did\+Player\+Win} (int player)
-\item 
-\Hypertarget{classCheckers_ac8c14f666cd6daff9b26e566ca2b0d2f}\label{classCheckers_ac8c14f666cd6daff9b26e566ca2b0d2f} 
-bool {\bfseries can\+Capture\+Queen} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
-\item 
-bool \mbox{\hyperlink{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e}{round\+Is\+Valid}} (pair$<$ int, int $>$)
-\item 
-\Hypertarget{classCheckers_a52c331711f6e854acdfb3c444de07de9}\label{classCheckers_a52c331711f6e854acdfb3c444de07de9} 
-bool {\bfseries can\+Capture} (pair$<$ int, int $>$, pair$<$ int, int $>$, int)
-\item 
-\Hypertarget{classCheckers_a91fc5703d3d4f9664bb2d48cffdbf552}\label{classCheckers_a91fc5703d3d4f9664bb2d48cffdbf552} 
-void {\bfseries capture\+All\+Avaliable\+Pieces} (pair$<$ int, int $>$, int, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26}\label{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26} 
-void {\bfseries set\+Board} ()
-\item 
-void \mbox{\hyperlink{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*})
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classCheckers_aac46ea0bb5bdeb648d59710785633838}{Checkers}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classCheckers}{Checkers}. Inicia o jogo de damas, criando um tabuleiro de 8x8. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckers_a01645fca7e2056356f947d5aa19fe54f}{did\+Player\+Win}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Verifica se o jogador venceu o jogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c}{read\+Round}} (pair$<$ int, int $>$ coordinate, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Lê e executa uma jogada simples, movendo uma peça do jogador para uma nova posição. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckers_a868a795d8328addb4a79c01f3d16c334}{read\+Round}} (pair$<$ int, int $>$ coordinate, pair$<$ int, int $>$ destination, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Lê e executa uma jogada onde uma peça se move para uma nova posição, podendo capturar uma peça adversária. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCheckers_a80bf615e4f438b47f68dc4410add5188}{round\+Is\+Valid}} (pair$<$ int, int $>$ coordinate, pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Verifica se a jogada é válida para uma peça comum (não dama). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCheckers_a7f2117e6ada8c6c380beabdb9e56bacb}{round\+Is\+Valid\+Queen}} (pair$<$ int, int $>$ coordinate, pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Verifica se a jogada é válida para uma dama. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4}{did\+Player\+Win}} (int player)
+\begin{DoxyCompactList}\small\item\em Verifica se o jogador venceu com base na peça dele. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckers_a1aa1fb0f0487f88845b98597f85eb761}{can\+Capture\+Queen}} (pair$<$ int, int $>$ coordinate, pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Verifica se a peça pode capturar uma dama adversária. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckers_a85670ea7f7a87cdb1e4aaaaef96c6fc2}{round\+Is\+Valid}} (pair$<$ int, int $>$ coordinate)
+\begin{DoxyCompactList}\small\item\em Verifica se a jogada é válida para uma peça comum (não dama). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCheckers_a854f392a053b7f1783443328c11a6964}{can\+Capture}} (pair$<$ int, int $>$ coordinate, pair$<$ int, int $>$ destination, int player)
+\begin{DoxyCompactList}\small\item\em Verifica se a peça pode capturar outra peça adversária. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckers_a8a91b18cbf31a7c03cc18bca87c30652}{capture\+All\+Avaliable\+Pieces}} (pair$<$ int, int $>$ current\+Coordinate, int player\+Number, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Realiza a captura de todas as peças adversárias disponíveis no tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26}{set\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa o tabuleiro de damas. A posição das peças é configurada para o início de um jogo de damas padrão. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCheckers_acd02b621e2c2fe38d288ac33769cab92}{start\+Game}} (\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player1, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}player2)
+\begin{DoxyCompactList}\small\item\em Inicia o jogo entre dois jogadores. Controla os turnos e executa as jogadas de ambos os jogadores até que haja um vencedor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCheckers_a9805a86a35232f36bae37607b6db5ae3}{\texorpdfstring{$\sim$}{\string~}\+Checkers}} ()
+\begin{DoxyCompactList}\small\item\em Destruidor da classe \doxylink{classCheckers}{Checkers}. Libera qualquer recurso alocado durante a execução do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Board\+Game} (int, int)
+\mbox{\hyperlink{classBoardGame_a578f9cb3356ffa6456bac6038d98f203}{Board\+Game}} (int, int)
 \item 
-void {\bfseries print\+Board} ()
+void \mbox{\hyperlink{classBoardGame_a9861dcfc0dc88d5c9525c0bc9524bf48}{print\+Board}} ()
 \item 
-void {\bfseries set\+Board} ()
+void \mbox{\hyperlink{classBoardGame_ab43ab2da43e93e98e5da2720ad535255}{set\+Board}} ()
 \item 
-void {\bfseries set\+Size} (int, int)
+void \mbox{\hyperlink{classBoardGame_a97de7e07df7a7c8511a820974861d7d6}{set\+Size}} (int, int)
 \item 
-bool {\bfseries is\+Inside\+Board} (pair$<$ int, int $>$)
+bool \mbox{\hyperlink{classBoardGame_a3de4b0ee2af150cab9333b5e21f63d72}{is\+Inside\+Board}} (pair$<$ int, int $>$)
 \item 
-pair$<$ int, int $>$ {\bfseries get\+Size} ()
+pair$<$ int, int $>$ \mbox{\hyperlink{classBoardGame_a602d1299dbfc4e4c7dcb9a3b65559e54}{get\+Size}} ()
 \item 
-int {\bfseries getX} ()
+int \mbox{\hyperlink{classBoardGame_a30a83ceebdbe84b06ef83b60df7cc7f3}{getX}} ()
 \item 
-int {\bfseries getY} ()
+int \mbox{\hyperlink{classBoardGame_a9d4b5e343eb985225a87c25665fd6566}{getY}} ()
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries get\+Board} ()
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_a066365894df3e7c83346ebb86b0f1d5a}{get\+Board}} ()
 \item 
-void {\bfseries increment\+Turn} ()
+void \mbox{\hyperlink{classBoardGame_a0327c77951b0cbe6d05a9a8ca06989bf}{increment\+Turn}} ()
 \item 
-int {\bfseries get\+Turn} ()
+int \mbox{\hyperlink{classBoardGame_a1324d53f927d76415a412c992d4a5061}{get\+Turn}} ()
+\item 
+virtual \mbox{\hyperlink{classBoardGame_a020723cb4542bd0e3ff4390abc260c35}{\texorpdfstring{$\sim$}{\string~}\+Board\+Game}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2}\label{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2} 
-static const int {\bfseries SUCCESS} = 1
-\item 
-\Hypertarget{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5}\label{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5} 
-static const int {\bfseries NOT\+\_\+\+SUCCESS} = 0
-\item 
-\Hypertarget{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30}\label{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30} 
-static const int {\bfseries CAPTURE\+\_\+\+AGAIN} = 2
-\end{DoxyCompactItemize}
+static const int \mbox{\hyperlink{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2}{SUCCESS}} = 1
+\begin{DoxyCompactList}\small\item\em Jogada bem-\/sucedida. \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5}{NOT\+\_\+\+SUCCESS}} = 0
+\begin{DoxyCompactList}\small\item\em Jogada não válida. \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30}{CAPTURE\+\_\+\+AGAIN}} = 2
+\begin{DoxyCompactList}\small\item\em Captura disponível, o jogador deve capturar novamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBoardGame}{Board\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries board} = nullptr
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoardGame_aecee3147084d29f1639aff6e0ac873d2}{board}} = nullptr
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCheckers_aac46ea0bb5bdeb648d59710785633838}\index{Checkers@{Checkers}!Checkers@{Checkers}}
+\index{Checkers@{Checkers}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{Checkers()}{Checkers()}}
+{\footnotesize\ttfamily \label{classCheckers_aac46ea0bb5bdeb648d59710785633838} 
+Checkers\+::\+Checkers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classCheckers}{Checkers}. Inicia o jogo de damas, criando um tabuleiro de 8x8. 
+
+\Hypertarget{classCheckers_a9805a86a35232f36bae37607b6db5ae3}\index{Checkers@{Checkers}!````~Checkers@{\texorpdfstring{$\sim$}{\string~}Checkers}}
+\index{````~Checkers@{\texorpdfstring{$\sim$}{\string~}Checkers}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Checkers()}{\string~Checkers()}}
+{\footnotesize\ttfamily \label{classCheckers_a9805a86a35232f36bae37607b6db5ae3} 
+Checkers\+::\texorpdfstring{$\sim$}{\string~}\+Checkers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruidor da classe \doxylink{classCheckers}{Checkers}. Libera qualquer recurso alocado durante a execução do jogo. 
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1}\index{Checkers@{Checkers}!didPlayerWin@{didPlayerWin}}
+\Hypertarget{classCheckers_a854f392a053b7f1783443328c11a6964}\index{Checkers@{Checkers}!canCapture@{canCapture}}
+\index{canCapture@{canCapture}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{canCapture()}{canCapture()}}
+{\footnotesize\ttfamily \label{classCheckers_a854f392a053b7f1783443328c11a6964} 
+bool Checkers\+::can\+Capture (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a peça pode capturar outra peça adversária. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+{\em destination} & Posição de destino da peça. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a peça pode capturar, caso contrário false. 
+\end{DoxyReturn}
+\Hypertarget{classCheckers_a1aa1fb0f0487f88845b98597f85eb761}\index{Checkers@{Checkers}!canCaptureQueen@{canCaptureQueen}}
+\index{canCaptureQueen@{canCaptureQueen}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{canCaptureQueen()}{canCaptureQueen()}}
+{\footnotesize\ttfamily \label{classCheckers_a1aa1fb0f0487f88845b98597f85eb761} 
+bool Checkers\+::can\+Capture\+Queen (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a peça pode capturar uma dama adversária. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+{\em destination} & Posição de destino da peça. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a peça pode capturar a dama, caso contrário false. 
+\end{DoxyReturn}
+\Hypertarget{classCheckers_a8a91b18cbf31a7c03cc18bca87c30652}\index{Checkers@{Checkers}!captureAllAvaliablePieces@{captureAllAvaliablePieces}}
+\index{captureAllAvaliablePieces@{captureAllAvaliablePieces}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{captureAllAvaliablePieces()}{captureAllAvaliablePieces()}}
+{\footnotesize\ttfamily \label{classCheckers_a8a91b18cbf31a7c03cc18bca87c30652} 
+void Checkers\+::capture\+All\+Avaliable\+Pieces (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{current\+Coordinate}{, }\item[{int}]{player\+Number}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Realiza a captura de todas as peças adversárias disponíveis no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Coordinate} & Posição inicial da peça. \\
+\hline
+{\em player\+Number} & Número do jogador (1 ou 2). \\
+\hline
+{\em player} & O jogador atual que está fazendo a captura. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4}\index{Checkers@{Checkers}!didPlayerWin@{didPlayerWin}}
 \index{didPlayerWin@{didPlayerWin}!Checkers@{Checkers}}
-\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}}
-{\footnotesize\ttfamily \label{classCheckers_ad51f99e159c2049bab19b7f7f805a8e1} 
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classCheckers_a53415e88cc050fbf8dfad11eba3fe7e4} 
+bool Checkers\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o jogador venceu com base na peça dele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & O número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o jogador venceu, caso contrário false. 
+\end{DoxyReturn}
+\Hypertarget{classCheckers_a01645fca7e2056356f947d5aa19fe54f}\index{Checkers@{Checkers}!didPlayerWin@{didPlayerWin}}
+\index{didPlayerWin@{didPlayerWin}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{didPlayerWin()}{didPlayerWin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classCheckers_a01645fca7e2056356f947d5aa19fe54f} 
 bool Checkers\+::did\+Player\+Win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Verifica se o jogador venceu o jogo. 
 
-\Hypertarget{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9}\index{Checkers@{Checkers}!readRound@{readRound}}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & O jogador a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o jogador venceu, caso contrário false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame_a1ff735b065a6e00c40ae1d82f47c6430}{Board\+Game}}.
+
+\Hypertarget{classCheckers_a868a795d8328addb4a79c01f3d16c334}\index{Checkers@{Checkers}!readRound@{readRound}}
 \index{readRound@{readRound}!Checkers@{Checkers}}
-\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}}
-{\footnotesize\ttfamily \label{classCheckers_a3aed9fc5652f1f5849c6ffb4768ca6e9} 
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classCheckers_a868a795d8328addb4a79c01f3d16c334} 
+void Checkers\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{pair$<$ int, int $>$}]{destination}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Lê e executa uma jogada onde uma peça se move para uma nova posição, podendo capturar uma peça adversária. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+{\em destination} & Posição de destino da peça. \\
+\hline
+{\em player} & O jogador que está fazendo a jogada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c}\index{Checkers@{Checkers}!readRound@{readRound}}
+\index{readRound@{readRound}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{readRound()}{readRound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classCheckers_aeea216ebaa9895eaecbd3274aefe7e2c} 
 void Checkers\+::read\+Round (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Lê e executa uma jogada simples, movendo uma peça do jogador para uma nova posição. 
 
-\Hypertarget{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e}\index{Checkers@{Checkers}!roundIsValid@{roundIsValid}}
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+{\em player} & O jogador que está fazendo a jogada. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame_a1588a4ae703b50469797632d8a240d8a}{Board\+Game}}.
+
+\Hypertarget{classCheckers_a85670ea7f7a87cdb1e4aaaaef96c6fc2}\index{Checkers@{Checkers}!roundIsValid@{roundIsValid}}
 \index{roundIsValid@{roundIsValid}!Checkers@{Checkers}}
-\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}}
-{\footnotesize\ttfamily \label{classCheckers_ae1e3631e6e7392b4ad9bbd9b1c9c476e} 
-bool Checkers\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classCheckers_a85670ea7f7a87cdb1e4aaaaef96c6fc2} 
+bool Checkers\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Verifica se a jogada é válida para uma peça comum (não dama). 
 
-\Hypertarget{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b}\index{Checkers@{Checkers}!startGame@{startGame}}
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a jogada for válida, caso contrário false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBoardGame_adfa77c3ede0bb7b5db2650a823c31061}{Board\+Game}}.
+
+\Hypertarget{classCheckers_a80bf615e4f438b47f68dc4410add5188}\index{Checkers@{Checkers}!roundIsValid@{roundIsValid}}
+\index{roundIsValid@{roundIsValid}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{roundIsValid()}{roundIsValid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classCheckers_a80bf615e4f438b47f68dc4410add5188} 
+int Checkers\+::round\+Is\+Valid (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a jogada é válida para uma peça comum (não dama). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da peça. \\
+\hline
+{\em destination} & Posição de destino da peça. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o status da jogada (SUCCESS, NOT\+\_\+\+SUCCESS ou CAPTURE\+\_\+\+AGAIN). 
+\end{DoxyReturn}
+\Hypertarget{classCheckers_a7f2117e6ada8c6c380beabdb9e56bacb}\index{Checkers@{Checkers}!roundIsValidQueen@{roundIsValidQueen}}
+\index{roundIsValidQueen@{roundIsValidQueen}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{roundIsValidQueen()}{roundIsValidQueen()}}
+{\footnotesize\ttfamily \label{classCheckers_a7f2117e6ada8c6c380beabdb9e56bacb} 
+int Checkers\+::round\+Is\+Valid\+Queen (\begin{DoxyParamCaption}\item[{pair$<$ int, int $>$}]{coordinate}{, }\item[{pair$<$ int, int $>$}]{destination}{, }\item[{int}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a jogada é válida para uma dama. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinate} & Posição inicial da dama. \\
+\hline
+{\em destination} & Posição de destino da dama. \\
+\hline
+{\em player} & Número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o status da jogada (SUCCESS ou NOT\+\_\+\+SUCCESS). 
+\end{DoxyReturn}
+\Hypertarget{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26}\index{Checkers@{Checkers}!setBoard@{setBoard}}
+\index{setBoard@{setBoard}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{setBoard()}{setBoard()}}
+{\footnotesize\ttfamily \label{classCheckers_abde3bc086dc2fc58a7bc0498c6e24d26} 
+void Checkers\+::set\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa o tabuleiro de damas. A posição das peças é configurada para o início de um jogo de damas padrão. 
+
+\Hypertarget{classCheckers_acd02b621e2c2fe38d288ac33769cab92}\index{Checkers@{Checkers}!startGame@{startGame}}
 \index{startGame@{startGame}!Checkers@{Checkers}}
 \doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
-{\footnotesize\ttfamily \label{classCheckers_ad3dbcf50c1343065cf8058bf7e6e3b0b} 
+{\footnotesize\ttfamily \label{classCheckers_acd02b621e2c2fe38d288ac33769cab92} 
 void Checkers\+::start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player1}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{player2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classBoardGame}{Board\+Game}}.
+Inicia o jogo entre dois jogadores. Controla os turnos e executa as jogadas de ambos os jogadores até que haja um vencedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1} & O primeiro jogador. \\
+\hline
+{\em player2} & O segundo jogador. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classBoardGame_a0d3bb9005b449021ce97307e25c606fb}{Board\+Game}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30}\index{Checkers@{Checkers}!CAPTURE\_AGAIN@{CAPTURE\_AGAIN}}
+\index{CAPTURE\_AGAIN@{CAPTURE\_AGAIN}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{CAPTURE\_AGAIN}{CAPTURE\_AGAIN}}
+{\footnotesize\ttfamily \label{classCheckers_acbf4f7c040f1b846a1cc352efcd2ea30} 
+const int Checkers\+::\+CAPTURE\+\_\+\+AGAIN = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Captura disponível, o jogador deve capturar novamente. 
+
+\Hypertarget{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5}\index{Checkers@{Checkers}!NOT\_SUCCESS@{NOT\_SUCCESS}}
+\index{NOT\_SUCCESS@{NOT\_SUCCESS}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{NOT\_SUCCESS}{NOT\_SUCCESS}}
+{\footnotesize\ttfamily \label{classCheckers_a2d77b4f98ca926c5936ac1d4e42929c5} 
+const int Checkers\+::\+NOT\+\_\+\+SUCCESS = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Jogada não válida. 
+
+\Hypertarget{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2}\index{Checkers@{Checkers}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!Checkers@{Checkers}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \label{classCheckers_af41fb5b6ee51ad13bd5e0fd2f2455fc2} 
+const int Checkers\+::\+SUCCESS = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Jogada bem-\/sucedida. 
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Checkers.\+hpp\item 
-src/Checkers.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Checkers_8hpp}{Checkers.\+hpp}}\item 
+src/\mbox{\hyperlink{Checkers_8cpp}{Checkers.\+cpp}}\end{DoxyCompactItemize}

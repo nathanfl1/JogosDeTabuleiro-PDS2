@@ -340,7 +340,7 @@ void Checkers::captureAllAvaliablePieces(pair<int, int> currentCoordinate, int p
 
 void Checkers::startGame(Player *player1, Player *player2)
 {
-    cout << player1->getNickname() << " versus " << player2->getNickname() << endl;
+    cout << "<" << player1->getNickname() << " versus " << player2->getNickname() << ">" << endl;
     setBoard();
     printBoard();
     int playerNumber = 1;
@@ -421,4 +421,5 @@ void Checkers::startGame(Player *player1, Player *player2)
 
 Checkers::~Checkers()
 {
+    delete[] board;
 }

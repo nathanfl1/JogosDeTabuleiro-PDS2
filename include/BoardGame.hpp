@@ -35,7 +35,7 @@ class BoardGame {
         int getTurn();
 
 
-        ~BoardGame();
+        virtual ~BoardGame();
     };
 
 

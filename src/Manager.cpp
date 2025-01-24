@@ -31,21 +31,27 @@ string Manager::getParam2() {
 
 void Manager::showPrincipalMenu()
 {
-    cout << "JOGOS DE TABULEIROS" << endl;
+    cout << "JOGOS DE TABULEIRO" << endl;
     cout << "Escolha uma opção:" << endl;
-    cout << "CJ - Cadastrar jogador" << endl;
-    cout << "RJ - Remover jogador" << endl;
-    cout << "LJ - Listar jogadores" << endl;
-    cout << "EP - Jogar" << endl;
+    cout << "CJ - Cadastrar jogador <Apelido> <Nome>" << endl;
+    cout << "RJ - Remover jogador <Apelido>" << endl;
+    cout << "LJ - Listar jogadores [A|N|VT|VL|VD|VR|VV] (VT: Vitorias totais, VL: Vitorias LigFour...)" << endl;
+    cout << "EP - Jogo (R|L|V|D) <Apelido Jogador 1> <Apelido Jogador 2>" << endl;
     cout << "FS - Sair" << endl;
     
     selectOption();
 }
 
+//    cout << "A. Ordenar por apelido" << endl;
+//     cout << "N. Ordenar por nome" << endl;
+//     cout << "VT. Ordenar por vitórias totais" << endl;
+//     cout << "VL. Ordenar por vitórias no LigFour" << endl;
+//     cout << "VD. Ordenar por vitórias no Dama" << endl;
+//     cout << "VR. Ordenar por vitórias no Reversi" << endl;
+//     cout << "VV. Ordenar por vitórias no Velha" << endl;
+
 void Manager::selectOption()
 {
-    Player *player1 = nullptr;
-    Player *player2 = nullptr;
 
     string option;
 
@@ -72,7 +78,7 @@ void Manager::selectOption()
             showListMenu();
 
         else if (option == "FS")
-            break;
+            exit(0);
     }
 }
 
@@ -101,14 +107,14 @@ void Manager::showRemoveMenu()
 
 void Manager::showListMenu()
 {
-    cout << "Escolha um critério de ordenação: " << endl;
-    cout << "A. Ordenar por apelido" << endl;
-    cout << "N. Ordenar por nome" << endl;
-    cout << "VT. Ordenar por vitórias totais" << endl;
-    cout << "VL. Ordenar por vitórias no LigFour" << endl;
-    cout << "VD. Ordenar por vitórias no Dama" << endl;
-    cout << "VR. Ordenar por vitórias no Reversi" << endl;
-    cout << "VV. Ordenar por vitórias no Velha" << endl;
+    // cout << "Escolha um critério de ordenação: " << endl;
+    // cout << "A. Ordenar por apelido" << endl;
+    // cout << "N. Ordenar por nome" << endl;
+    // cout << "VT. Ordenar por vitórias totais" << endl;
+    // cout << "VL. Ordenar por vitórias no LigFour" << endl;
+    // cout << "VD. Ordenar por vitórias no Dama" << endl;
+    // cout << "VR. Ordenar por vitórias no Reversi" << endl;
+    // cout << "VV. Ordenar por vitórias no Velha" << endl;
 
     cin >> param1;
 
@@ -138,11 +144,11 @@ void Manager::showListMenu()
 
 void Manager::showGameMenu()
 {
-    cout << "Escolha um jogo: " << endl;
-    cout << "R. Reversi" << endl;
-    cout << "L. LigFour" << endl;
-    cout << "V. TicTacToe" << endl;
-    cout << "D. Checkers" << endl;
+    // cout << "Escolha um jogo: " << endl;
+    // cout << "R. Reversi" << endl;
+    // cout << "L. LigFour" << endl;
+    // cout << "V. TicTacToe" << endl;
+    // cout << "D. Checkers" << endl;
 
     Player *player1 = nullptr;
     Player *player2 = nullptr;
@@ -230,4 +236,13 @@ void Manager::showGameMenu()
     default:
         break;
     }
+}
+
+
+Manager::~Manager() {
+    delete playerList;
+    delete lig;
+    delete check;
+    delete rev;
+    delete tic;
 }

@@ -30,7 +30,28 @@ Para executar essa aplicação através do arquivo main, é necessário possuir 
 ### 3. Compilação
 Deve ser realizada na seguinte ordem dentro da pasta descompatada JogosDeTabuleiro-PDS2:
 
+```make clean```
+
 ```make```
 
 ```bin/./main```
 
+### 4. DOXYGEN
+
+Para verificar o Doxygen, basta entrar na pasta <strong>html</strong> e procurar por <strong>index.html</strong>. Ao abrir o arquivo, redireciona-se para a web, onde está toda a documentação do código.
+
+### 5. DOCTEST
+
+No trabalho foi utilizada a biblioteca de teste de software Doctest, em sua versão 2.4.11. O arquivo de cabeçalho da biblioteca encontra-se na pasta third_party.
+
+Os arquivos de teste das classes estão na pasta tests, e podem ser compilados pelo comando:
+
+```make test_NOMEJOGO```
+
+onde NOMEJOGO é checkers, ligfour, tictactoe ou reversi.
+
+Para executar os jogos, basta digitar o comando:
+
+```bin/./testeNOMEJOGO```
+
+onde NOMEJOGO é Checkers, LigFour, TicTacToe ou Reversi.

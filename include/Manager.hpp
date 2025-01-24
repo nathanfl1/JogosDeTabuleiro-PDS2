@@ -11,6 +11,7 @@
 class Manager {
     public:
         Manager();
+        ~Manager();
         void showPrincipalMenu();
 
         void setParam1(string);

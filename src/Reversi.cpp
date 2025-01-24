@@ -225,6 +225,7 @@ void Reversi::readRound(pair<int, int> coord, Player *player)
 
 Reversi::~Reversi()
 {
+    
 }
 
 bool Reversi::didPlayerWin(Player *p)

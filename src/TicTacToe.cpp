@@ -124,4 +124,6 @@ void TicTacToe::startGame(Player *p1, Player *p2) {
 }
 
 // Destrutor
-TicTacToe::~TicTacToe() {}
+TicTacToe::~TicTacToe() {
+    
+}

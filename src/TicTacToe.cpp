@@ -1,7 +1,7 @@
 #include "../include/TicTacToe.hpp"
 #include <iostream>
 #include <vector>
-#include <sstream>
+#include <climits>
 
 using namespace std;
 
@@ -85,15 +85,13 @@ void TicTacToe::startGame(Player *p1, Player *p2) {
 
         cout << "Turno de jogador " << currentPlayer->getNickname() << ": ";
 
-        string input;
-        getline(cin, input);
-
-        // Valida a entrada no formato linha coluna
-        stringstream ss(input);
-        int x, y;
-
-        if (!(ss >> x >> y)) {
+        int x,y; 
+        
+        // Validação de entrada com cin
+        if (!(cin >> x >> y)) {
             cout << "ERRO: Entrada inválida. Digite dois números inteiros." << endl;
+            cin.clear();               // Limpa o estado de erro do cin
+            cin.ignore(INT_MAX, '\n'); // Ignora o restante da linha
             continue;
         }
 
@@ -116,6 +114,7 @@ void TicTacToe::startGame(Player *p1, Player *p2) {
         } else {
             cout << "Jogada inválida. Tente novamente." << endl;
         }
+        cin.ignore(INT_MAX, '\n'); // Ignora entradas extras
     }
 
     // Caso ocorra empate
